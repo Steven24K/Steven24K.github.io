@@ -1,7 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import {NavBar} from "./components/navbar";
 
 ReactDOM.render(
-    <div className="jumbotron"><h1>This website is under development</h1></div>,
+           <NavBar/>,
     document.getElementById("react-content")
 );

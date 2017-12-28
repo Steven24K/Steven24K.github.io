@@ -72,8 +72,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(1);
 const ReactDOM = __webpack_require__(2);
-ReactDOM.render(React.createElement("div", { className: "jumbotron" },
-    React.createElement("h1", null, "This website is under development")), document.getElementById("react-content"));
+const navbar_1 = __webpack_require__(3);
+ReactDOM.render(React.createElement(navbar_1.NavBar, null), document.getElementById("react-content"));
 
 
 /***/ }),
@@ -87,6 +87,36 @@ module.exports = React;
 /***/ (function(module, exports) {
 
 module.exports = ReactDOM;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(1);
+class NavBar extends React.Component {
+    constructor() {
+        super();
+    }
+    render() {
+        return React.createElement("nav", { className: "navbar navbar-expand-lg bg-light" },
+            React.createElement("ul", { className: "navbar-nav" },
+                React.createElement("li", null,
+                    React.createElement("a", { className: "navbar-brand", href: "#" }, "Home")),
+                React.createElement("li", null,
+                    React.createElement("a", { className: "nav-link", href: "#" }, "About")),
+                React.createElement("li", null,
+                    React.createElement("a", { className: "nav-link", href: "#" }, "Projects")),
+                React.createElement("li", null,
+                    React.createElement("a", { className: "nav-link", href: "#" }, "Blog")),
+                React.createElement("li", null,
+                    React.createElement("a", { className: "nav-link", href: "#" }, "Contact"))));
+    }
+}
+exports.NavBar = NavBar;
+
 
 /***/ })
 /******/ ]);
