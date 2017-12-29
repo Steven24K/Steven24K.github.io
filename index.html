@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/site.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -31,9 +32,6 @@
                           <a class="nav-link" href="#projects">Projecten</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#blog">Blog</a>
-                        </li> 
-                        <li class="nav-item">
                           <a class="nav-link" href="#contact">Contact</a>
                         </li> 
                       </ul>
@@ -43,11 +41,8 @@
             <!--End navbar-->
 
            <!--Home section-->
-           <div id="home" class="jumbotron">
-                
-                      <div class="row">
-                          
-                        <div class="col-md-2">
+           <div id="home" class="row">                          
+                        <div id="profile" class="col-md-2">
                             <img width="100%" class="rounded-circle img-fluid" src="static/images/profiel.jpg" alt="profile_picture">
                         </div>
 
@@ -55,7 +50,7 @@
                                <h2>Skills en Vaardigheden</h2>
                                <!--Collapse skills section-->
                                <div id="accordion">
-                                    
+
                                       <div class="card">
                                         <div class="card-header">
                                           <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#skill1">
@@ -112,9 +107,8 @@
                                <!--End skills section-->
                                
                         </div>
-                    </div>
 
-                    <div class="row">
+                    <div id="homerowtwo" class="row">
                         <div class="col-md-12">
                                 <h3>Software Engineer - Web developer - App developer - C#/.NET - Python</h3>
                                 <a type="button" target="_blank" href="static/pdf/Curriculum_Vitea_Steven_Koerts.pdf" class="btn btn-lg btn-success"><b>Download mijn Curriculum Vitea</b></a>
@@ -126,9 +120,13 @@
             <!--About section-->
             <div id="about" class="row">
                 <div class="col-md-12">
-                      <h1>Over mij</h1>
-                      <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      <h1 class="about">Over mij</h1>
+                      <p id="aboutText">
+                        A little bit more about myself, ofcourse I like programming and creating things. That is the main reason why I chose for computer science(informatica). I was looking for a study that was both technical and creative, so this was the right place for me to be. I realy like to build stuff myself and it would be great to do it for a living, also how awesome is it to see other people use your product that you have created. Sometimes when I am in the subway I try to imagine that all those people who are busy on there phone are using my app. Besides programming I also like acting and the theatre, I like to visit the theatre once in a while. But I also like to play and act myself. It is perfect way to express myself and it is realy something what I want me to keep continue doing. I have allready been on some TV series, as a featured extra. I started acting when I was 12 years old at an amature theatre school in Schiedam. I did a couple of productions and I still try to play as much as possible.
+                        
+                        Allright enough about my acting carreer, lets get back to my programming skills. When it comes to programming I am mostly intrested in the back-end side of an application. The way something is build. I started programming with just HTML and CSS and later PHP and Javascript. When I started my study of computer science, I learned Python. I also learned more about open source frameworks such as pygame(an open source game engine). When I programmed in Python I was curious about how to build websites in an other way than I was used to. So started googling:"How to build a website in Python". I stumbled uppon a framework called Django and ended up with a new project from a week, when I build a website in Python. This helped me with the basic understanding of the MVC pattern and now I am also able to build website in other object oriented languages, such as C#. I have a little experience with C# Asp.Net. When it comes to styling from websites I rather use an open source CSS framework(i.e. Bootstrap) than building the CSS from scratch. 
+                        
+                        Right now I have good basic and basic understanding of object orriented programming and every day I am learning more and more about programming.
                       </p>
                 </div>
             </div>
@@ -138,34 +136,65 @@
             <div id="projects" class="row">
                     <div class="col-md-12">
                           <h1>Projecten waar ik trots op ben</h1>
-                          <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
+                          <!--Start carousal-->
+                          <div id="demo" class="carousel slide" data-ride="carousel">
+                              
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                  <li data-target="#demo" data-slide-to="1"></li>
+                                  <li data-target="#demo" data-slide-to="2"></li>
+                                </ul>
+                              
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="rounded img-fluid" src="static/images/projects/project_1.jpg" alt="Los Angeles">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="rounded img-fluid" src="static/images/projects/project_2.jpg" alt="Chicago">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="rounded img-fluid" src="static/images/projects/project_3.jpg" alt="New York">
+                                  </div>
+                                </div>
+                              
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                  <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                  <span class="carousel-control-next-icon"></span>
+                                </a>
+                              
+                              </div>
+
+                          <!--End carousal-->
+                         
                     </div>
                 </div>
             <!--End projects section-->
-        
-            <!--Blog section-->
-            <div id="blog" class="row">
-                    <div class="col-md-12">
-                          <h1>Mijn blog</h1>
-                          <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                    </div>
-                </div>
-            <!--End Blog section-->
 
             <!--contact section-->
             <div id="contact" class="row">
                     <div class="col-md-12">
-                          <h1>Contact</h1>
-                          <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          <h1 class="contact">Contact</h1>
+                          <p class="contact">
+                                Als je meer over me wilt weten, voel je vrij om een email naar mij te sturen.<br/>
+                                <a class="btn btn-info" target="_top" href="mailto:info@stevenkoerts.nl">Stuur email</a>
                           </p>
                     </div>
                 </div>
             <!--End Contact section-->
+
+            <!--Footer section-->
+            <footer>
+              <div class="row">
+                <div class="col-md-12">
+                  Made by Steven Koerts
+                </div>
+              </div>
+            </footer>
 
     </body>
 </html>
