@@ -7,21 +7,165 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
+        
         <title>Portfolio under development</title>
     </head>
-    <body>
-        <div id="react-content">
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+             <!--Navbar section-->
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+                <!--Navbar header-->    
+                <a class="navbar-brand" href="#home">Steven Koerts</a>
+                  
+                 <!--Collapse button-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <!--Navbar items section-->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#about">Over mij</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#projects">Projecten</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#blog">Blog</a>
+                        </li> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="#contact">Contact</a>
+                        </li> 
+                      </ul>
+                    </div> 
+                    <!--end navbar items-->
+            </nav>
+            <!--End navbar-->
 
-        </div>
+           <!--Home section-->
+           <div id="home" class="jumbotron">
+                
+                      <div class="row">
+                          
+                        <div class="col-md-2">
+                            <img width="100%" class="rounded-circle img-fluid" src="static/images/profiel.jpg" alt="profile_picture">
+                        </div>
 
+                        <div class="col-md-10">
+                               <h2>Skills en Vaardigheden</h2>
+                               <!--Collapse skills section-->
+                               <div id="accordion">
+                                    
+                                      <div class="card">
+                                        <div class="card-header">
+                                          <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#skill1">
+                                            Over mij <small>(in short)</small>
+                                          </a>
+                                        </div>
+                                        <div id="skill1" class="collapse">
+                                          <div class="card-body">
+                                            Lorem ipsum..
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                      <div class="card">
+                                        <div class="card-header">
+                                          <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#skill2">
+                                            Tools
+                                          </a>
+                                        </div>
+                                        <div id="skill2" class="collapse">
+                                          <div class="card-body">
+                                            Lorem ipsum..
+                                          </div>
+                                        </div>
+                                      </div>
 
-        <!-- Dependencies -->
-        <script src="dist/npm/react/umd/react.development.js"></script>
-        <script src="dist/npm/react-dom/umd/react-dom.development.js"></script>
+                                      <div class="card">
+                                            <div class="card-header">
+                                              <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#skill3">
+                                                Programmeertalen
+                                              </a>
+                                            </div>
+                                            <div id="skill3" class="collapse">
+                                              <div class="card-body">
+                                                Lorem ipsum..
+                                              </div>
+                                            </div>
+                                      </div>
+                                    
+                                      <div class="card">
+                                        <div class="card-header">
+                                          <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#skill4">
+                                            Hobbies
+                                          </a>
+                                        </div>
+                                        <div id="skill4" class="collapse">
+                                          <div class="card-body">
+                                            Lorem ipsum..
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                    </div>
+                               <!--End skills section-->
+                               
+                        </div>
+                    </div>
 
-        <!-- Main -->
-        <script src="dist/bundle.js"></script>
+                    <div class="row">
+                        <div class="col-md-12">
+                                <h3>Software Engineer - Web developer - App developer - C#/.NET - Python</h3>
+                                <a type="button" target="_blank" href="static/pdf/Curriculum_Vitea_Steven_Koerts.pdf" class="btn btn-lg btn-success"><b>Download mijn Curriculum Vitea</b></a>
+                        </div>
+                    </div>
+            </div>
+            <!--End home section-->
+
+            <!--About section-->
+            <div id="about" class="row">
+                <div class="col-md-12">
+                      <h1>Over mij</h1>
+                      <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      </p>
+                </div>
+            </div>
+            <!--End about section-->
+
+            <!--Projects section-->
+            <div id="projects" class="row">
+                    <div class="col-md-12">
+                          <h1>Projecten waar ik trots op ben</h1>
+                          <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </p>
+                    </div>
+                </div>
+            <!--End projects section-->
+        
+            <!--Blog section-->
+            <div id="blog" class="row">
+                    <div class="col-md-12">
+                          <h1>Mijn blog</h1>
+                          <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </p>
+                    </div>
+                </div>
+            <!--End Blog section-->
+
+            <!--contact section-->
+            <div id="contact" class="row">
+                    <div class="col-md-12">
+                          <h1>Contact</h1>
+                          <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </p>
+                    </div>
+                </div>
+            <!--End Contact section-->
 
     </body>
 </html>
