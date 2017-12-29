@@ -2,8 +2,8 @@
 
 #home{
     background-color: #3fda99b4;
-    padding-top:100px; 
-    padding-bottom: 100px;
+    padding-top:180px; 
+    padding-bottom: 180px;
 }
 
 #profile{
@@ -34,9 +34,7 @@
 
 #about{
     padding-top:180px; 
-    padding-bottom: 100px; 
-    margin-left:auto;
-    margin-right: auto; 
+    padding-bottom: 180px; 
     background-color: #a115e2 ;
 }
 
@@ -54,19 +52,15 @@ h1.about{
 
 #projects{
     padding-top:180px; 
-    padding-bottom: 100px; 
-    margin-left:auto;
-    margin-right: auto; 
+    padding-bottom: 180px; 
     background-color: #e9a30c ;
     text-align: center;
 }
 
 /*Contact style*/
 #contact{
-    padding-top:180px; 
-    padding-bottom: 100px; 
-    margin-left:auto;
-    margin-right: auto; 
+    padding-top:200px; 
+    padding-bottom: 200px; 
     background-color: #82e90c ;
 }
 
