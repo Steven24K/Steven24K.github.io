@@ -71,6 +71,37 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./cms/home/HomeViewModel.tsx":
+/*!************************************!*\
+  !*** ./cms/home/HomeViewModel.tsx ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var pair_1 = __webpack_require__(/*! ../../utils/pair */ "./utils/pair.tsx");
+var HomeViewModel = /** @class */ (function () {
+    function HomeViewModel() {
+        this.SkillsSection = new pair_1.Pair("Skills & Vaardigheden", ["Webdeveloper",
+            "Software Engineer",
+            "Scrum/Agile",
+            "C#/.NET(Object Oriented Programming)",
+            "Pyton",
+            "Acting😎"]);
+        this.CurrentStatus = new pair_1.Pair("Wat doe ik op dit moment?", "Op dit moment studeer ik!!");
+        this.News = new pair_1.Pair("Nieuws: Nieuwe website gehost met GitHub", "Deze website is gemaakt met React, Typescript en gehost via GitHub pages.");
+        this.CV = "cms/home/Curriculum_Vitea_Steven_Koerts.pdf";
+        this.Profile = "cms/home/profiel.jpg";
+    }
+    return HomeViewModel;
+}());
+exports.HomeViewModel = HomeViewModel;
+
+
+/***/ }),
+
 /***/ "./node_modules/fbjs/lib/emptyFunction.js":
 /*!************************************************!*\
   !*** ./node_modules/fbjs/lib/emptyFunction.js ***!
@@ -5765,7 +5796,7 @@ var About = /** @class */ (function (_super) {
         return _this;
     }
     About.prototype.render = function () {
-        return (React.createElement("div", null,
+        return (React.createElement("div", { className: "container" },
             React.createElement("h1", null, "Over mij")));
     };
     return About;
@@ -5806,6 +5837,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
 var Navigation_1 = __webpack_require__(/*! ./Navigation */ "./src/components/Navigation.tsx");
 var Routes_1 = __webpack_require__(/*! ./Routes */ "./src/components/Routes.tsx");
+var Footer_1 = __webpack_require__(/*! ./Footer */ "./src/components/Footer.tsx");
 var Props = { title1: "Steven Koerts", title2: "Made with React!!!" };
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
@@ -5834,7 +5866,8 @@ var App = /** @class */ (function (_super) {
     App.prototype.render = function () {
         return (React.createElement("div", null,
             React.createElement(Navigation_1.Navigation, null),
-            React.createElement(Routes_1.Routes, null)));
+            React.createElement(Routes_1.Routes, null),
+            React.createElement(Footer_1.Footer, null)));
     };
     return App;
 }(React.Component));
@@ -5874,12 +5907,58 @@ var Contact = /** @class */ (function (_super) {
         return _this;
     }
     Contact.prototype.render = function () {
-        return (React.createElement("div", null,
+        return (React.createElement("div", { className: "container" },
             React.createElement("h1", null, "Neem contact met mij op!!!")));
     };
     return Contact;
 }(React.Component));
 exports.Contact = Contact;
+
+
+/***/ }),
+
+/***/ "./src/components/Footer.tsx":
+/*!***********************************!*\
+  !*** ./src/components/Footer.tsx ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "react");
+var Footer = /** @class */ (function (_super) {
+    __extends(Footer, _super);
+    function Footer(props) {
+        return _super.call(this, props) || this;
+    }
+    Footer.prototype.render = function () {
+        return (React.createElement("footer", null,
+            React.createElement("div", { className: "container" },
+                React.createElement("div", { className: "row" },
+                    React.createElement("div", { className: "col-lg-4" }),
+                    React.createElement("div", { className: "col-lg-4" },
+                        React.createElement("h1", null, "Deze website is op dit moment in development, er wordt hard aan gewerkt.")),
+                    React.createElement("div", { className: "col-lg-4" },
+                        React.createElement("h3", null,
+                            "Neem ook een kijkje op mijn andere website, ",
+                            React.createElement("a", { href: "http://stevenkoerts.nl/" }, "www.stevenkoerts.nl/"),
+                            " "))))));
+    };
+    return Footer;
+}(React.Component));
+exports.Footer = Footer;
 
 
 /***/ }),
@@ -5905,16 +5984,42 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
+var HomeViewModel_1 = __webpack_require__(/*! ../../cms/home/HomeViewModel */ "./cms/home/HomeViewModel.tsx");
 var Home = /** @class */ (function (_super) {
     __extends(Home, _super);
     function Home(props) {
         var _this = _super.call(this, props) || this;
         _this.state = { title: "Home" };
+        _this.model = new HomeViewModel_1.HomeViewModel();
         return _this;
     }
     Home.prototype.render = function () {
-        return (React.createElement("div", null,
-            React.createElement("h1", null, "Welkom op mijn homepage!!!")));
+        return (React.createElement("div", { className: "container" },
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-12" },
+                    React.createElement("h1", null, this.state.title))),
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-4" },
+                    React.createElement("div", { className: "row center" },
+                        React.createElement("div", { className: "col-lg-12" },
+                            React.createElement("img", { className: "img-fluid rounded-circle", src: this.model.Profile }))),
+                    React.createElement("div", { className: "row center" },
+                        React.createElement("div", { className: "col-lg-12" },
+                            React.createElement("a", { target: "_blank", href: this.model.CV, className: "btn btn-lg btn-success" }, "Curricilum Vitae")))),
+                React.createElement("div", { className: "col-lg-4" },
+                    React.createElement("div", { className: "card" },
+                        React.createElement("div", { className: "card-header" }, this.model.SkillsSection.Item1),
+                        React.createElement("ul", { className: "list-group" }, this.model.SkillsSection.Item2.map(function (skill) { return React.createElement("li", { className: "list-group-item" }, skill); })))),
+                React.createElement("div", { className: "col-lg-4" },
+                    React.createElement("div", { className: "card" },
+                        React.createElement("div", { className: "card-header" }, this.model.CurrentStatus.Item1),
+                        React.createElement("div", { className: "card-body" }, this.model.CurrentStatus.Item2)))),
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-8" },
+                    React.createElement("div", { className: "card" },
+                        React.createElement("div", { className: "card-header" }, this.model.News.Item1),
+                        React.createElement("div", { className: "card-body" }, this.model.News.Item2))),
+                React.createElement("div", { className: "col-lg-4" }))));
     };
     return Home;
 }(React.Component));
@@ -6026,11 +6131,10 @@ var Routes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Routes.prototype.render = function () {
-        return (React.createElement("main", null,
-            React.createElement(react_router_dom_1.Switch, null,
-                React.createElement(react_router_dom_1.Route, { exact: true, path: '/', component: Home_1.Home }),
-                React.createElement(react_router_dom_1.Route, { path: '/about', component: About_1.About }),
-                React.createElement(react_router_dom_1.Route, { path: '/contact', component: Contact_1.Contact }))));
+        return (React.createElement(react_router_dom_1.Switch, null,
+            React.createElement(react_router_dom_1.Route, { exact: true, path: '/', component: Home_1.Home }),
+            React.createElement(react_router_dom_1.Route, { path: '/about', component: About_1.About }),
+            React.createElement(react_router_dom_1.Route, { path: '/contact', component: Contact_1.Contact })));
     };
     return Routes;
 }(React.Component));
@@ -6055,6 +6159,40 @@ var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_mod
 var App_1 = __webpack_require__(/*! ./components/App */ "./src/components/App.tsx");
 ReactDOM.render((React.createElement(react_router_dom_1.HashRouter, null,
     React.createElement(App_1.App, null))), document.getElementById("react-app"));
+
+
+/***/ }),
+
+/***/ "./utils/pair.tsx":
+/*!************************!*\
+  !*** ./utils/pair.tsx ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Pair = /** @class */ (function () {
+    function Pair(one, two) {
+        this.item1 = one;
+        this.item2 = two;
+    }
+    Object.defineProperty(Pair.prototype, "Item1", {
+        get: function () { return this.item1; },
+        set: function (item) { this.item1 = item; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Pair.prototype, "Item2", {
+        get: function () { return this.item2; },
+        set: function (item) { this.item2 = item; },
+        enumerable: true,
+        configurable: true
+    });
+    return Pair;
+}());
+exports.Pair = Pair;
 
 
 /***/ }),

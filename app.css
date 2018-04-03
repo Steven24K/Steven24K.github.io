@@ -6,3 +6,21 @@
     color:white;
     font-size:150%; 
 }
+
+.center{
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.row{
+    /*Just to make sure the rows keep some distance*/
+    padding-top:2%; 
+    padding-bottom: 2%;
+}
+
+footer{
+    padding-top:5%; 
+    padding-bottom: 5%;
+    background-color: #3073dd;
+}
