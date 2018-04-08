@@ -84,12 +84,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var pair_1 = __webpack_require__(/*! ../../utils/pair */ "./utils/pair.tsx");
 var HomeViewModel = /** @class */ (function () {
     function HomeViewModel() {
-        this.SkillsSection = new pair_1.Pair("Skills & Vaardigheden", ["Webdeveloper",
-            "Software Engineer",
-            "Scrum/Agile",
-            "C#/.NET(Object Oriented Programming)",
-            "Pyton",
-            "Acting😎"]);
+        this.SkillsSection = new pair_1.Pair("Skills en Vaardigheden", ["Software Engineer", "Webdeveloper", "Scrum/Agile", "C#/.NET(Object Oriented Programming)", "Python", "Acting😎"]);
         this.CurrentStatus = new pair_1.Pair("Wat doe ik op dit moment?", "Op dit moment studeer ik!!");
         this.News = new pair_1.Pair("Nieuws: Nieuwe website gehost met GitHub", "Deze website is gemaakt met React, Typescript en gehost via GitHub pages.");
         this.CV = "cms/home/Curriculum_Vitea_Steven_Koerts.pdf";
@@ -5985,6 +5980,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
 var HomeViewModel_1 = __webpack_require__(/*! ../../cms/home/HomeViewModel */ "./cms/home/HomeViewModel.tsx");
+var loadDoc_1 = __webpack_require__(/*! ../../utils/loadDoc */ "./utils/loadDoc.tsx");
 var Home = /** @class */ (function (_super) {
     __extends(Home, _super);
     function Home(props) {
@@ -5994,6 +5990,7 @@ var Home = /** @class */ (function (_super) {
         return _this;
     }
     Home.prototype.render = function () {
+        loadDoc_1.loadDoc("skills", "src/skills.txt");
         return (React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
@@ -6009,7 +6006,7 @@ var Home = /** @class */ (function (_super) {
                 React.createElement("div", { className: "col-lg-4" },
                     React.createElement("div", { className: "card" },
                         React.createElement("div", { className: "card-header" }, this.model.SkillsSection.Item1),
-                        React.createElement("ul", { className: "list-group" }, this.model.SkillsSection.Item2.map(function (skill) { return React.createElement("li", { className: "list-group-item" }, skill); })))),
+                        React.createElement("div", { id: "skills" }))),
                 React.createElement("div", { className: "col-lg-4" },
                     React.createElement("div", { className: "card" },
                         React.createElement("div", { className: "card-header" }, this.model.CurrentStatus.Item1),
@@ -6159,6 +6156,31 @@ var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_mod
 var App_1 = __webpack_require__(/*! ./components/App */ "./src/components/App.tsx");
 ReactDOM.render((React.createElement(react_router_dom_1.HashRouter, null,
     React.createElement(App_1.App, null))), document.getElementById("react-app"));
+
+
+/***/ }),
+
+/***/ "./utils/loadDoc.tsx":
+/*!***************************!*\
+  !*** ./utils/loadDoc.tsx ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function loadDoc(elementId, file) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(elementId).innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", file, true);
+    xhttp.send();
+}
+exports.loadDoc = loadDoc;
 
 
 /***/ }),
