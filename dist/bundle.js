@@ -5990,7 +5990,7 @@ var Home = /** @class */ (function (_super) {
         return _this;
     }
     Home.prototype.render = function () {
-        loadDoc_1.loadDoc("skills", "src/skills.txt");
+        loadDoc_1.loadDoc("skills", "cms/home/skills.txt");
         return (React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
