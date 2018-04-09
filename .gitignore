@@ -1,4 +1,9 @@
 node_modules/
 src/
+utils/
+.vscode/
 *.tsx
 *.ts
+package-lock.json
+tsconfig.json
+webpack.config.json

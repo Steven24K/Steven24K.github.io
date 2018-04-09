@@ -7,6 +7,10 @@
     font-size:150%; 
 }
 
+nav{
+    background-color: #15e2a5;
+}
+
 .center{
     margin-left: auto; 
     margin-right: auto;
@@ -23,7 +27,9 @@
     padding-bottom: 5%;
 }
 
+
+
 footer{
-    padding-top:5%; 
-    background-color: #3073dd;
+    padding-top:1%; 
+    background-color: #15e2a5;
 }

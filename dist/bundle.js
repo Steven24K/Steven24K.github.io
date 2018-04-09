@@ -5766,17 +5766,17 @@ var About = /** @class */ (function (_super) {
         return _this;
     }
     About.prototype.render = function () {
-        loadDoc_1.loadDoc("row1_collum_1", "cms/about/row1_collum_1.html");
-        loadDoc_1.loadDoc("row1_collum_2", "cms/about/row1_collum_2.html");
+        loadDoc_1.loadDoc("about_1", "cms/about/about_1.html");
+        loadDoc_1.loadDoc("about_2", "cms/about/about_2.html");
         return (React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
                     React.createElement("h1", null, this.state.title))),
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "row1_collum_1" })),
+                    React.createElement("div", { id: "about_1" })),
                 React.createElement("div", { className: "col-lg-8" },
-                    React.createElement("div", { id: "row1_collum_2" })))));
+                    React.createElement("div", { id: "about_2" })))));
     };
     return About;
 }(React.Component));
@@ -5884,17 +5884,17 @@ var Contact = /** @class */ (function (_super) {
         return _this;
     }
     Contact.prototype.render = function () {
-        loadDoc_1.loadDoc("row1_collom_1", "cms/contact/row1_collum_1.html");
-        loadDoc_1.loadDoc("row1_collom_2", "cms/contact/row1_collum_2.html");
+        loadDoc_1.loadDoc("contact_1", "cms/contact/contact_1.html");
+        loadDoc_1.loadDoc("contact_2", "cms/contact/contact_2.html");
         return (React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
                     React.createElement("h1", null, this.state.title))),
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-6" },
-                    React.createElement("div", { id: "row1_collom_1" })),
+                    React.createElement("div", { id: "contact_1" })),
                 React.createElement("div", { className: "col-lg-6" },
-                    React.createElement("div", { id: "row1_collom_2" })))));
+                    React.createElement("div", { id: "contact_2" })))));
     };
     return Contact;
 }(React.Component));
@@ -5924,6 +5924,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
+var loadDoc_1 = __webpack_require__(/*! ../../utils/loadDoc */ "./utils/loadDoc.tsx");
 var Footer = /** @class */ (function (_super) {
     __extends(Footer, _super);
     function Footer(props) {
@@ -5932,17 +5933,19 @@ var Footer = /** @class */ (function (_super) {
         return _this;
     }
     Footer.prototype.render = function () {
+        loadDoc_1.loadDoc("footer_1", "cms/footer/footer_1.html");
+        loadDoc_1.loadDoc("footer_2", "cms/footer/footer_2.html");
+        loadDoc_1.loadDoc("footer_3", "cms/footer/footer_3.html");
         return (React.createElement("footer", null,
             React.createElement("div", { className: "container" },
                 React.createElement("div", { className: "row" },
-                    React.createElement("div", { className: "col-lg-4" }),
+                    React.createElement("div", { className: "col-lg-12" },
+                        React.createElement("div", { id: "footer_1" }))),
+                React.createElement("div", { className: "row" },
                     React.createElement("div", { className: "col-lg-4" },
-                        React.createElement("h1", null, "Deze website is op dit moment in development, er wordt hard aan gewerkt.")),
-                    React.createElement("div", { className: "col-lg-4" },
-                        React.createElement("h3", null,
-                            "Neem ook een kijkje op mijn andere website, ",
-                            React.createElement("a", { href: "http://stevenkoerts.nl/" }, "www.stevenkoerts.nl/"),
-                            " "))),
+                        React.createElement("div", { id: "footer_2" })),
+                    React.createElement("div", { className: "col-lg-8" },
+                        React.createElement("div", { id: "footer_3" }))),
                 React.createElement("div", { className: "row" },
                     React.createElement("div", { className: "col-lg-12 center" },
                         "\u00A9 All rights reserved | Made by Steven Koerts ",
@@ -5985,24 +5988,24 @@ var Home = /** @class */ (function (_super) {
         return _this;
     }
     Home.prototype.render = function () {
-        loadDoc_1.loadDoc("row1_collum_1", "cms/home/row1_collum_1.html");
-        loadDoc_1.loadDoc("row1_collum_2", "cms/home/row1_collum_2.html");
-        loadDoc_1.loadDoc("row1_collum_3", "cms/home/row1_collum_3.html");
-        loadDoc_1.loadDoc("row2_collum_1", "cms/home/row2_collum_1.html");
+        loadDoc_1.loadDoc("home_1", "cms/home/home_1.html");
+        loadDoc_1.loadDoc("home_2", "cms/home/home_2.html");
+        loadDoc_1.loadDoc("home_3", "cms/home/home_3.html");
+        loadDoc_1.loadDoc("home_4", "cms/home/home_4.html");
         return (React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
                     React.createElement("h1", null, this.state.title))),
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "row1_collum_1" })),
+                    React.createElement("div", { id: "home_1" })),
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "row1_collum_2" })),
+                    React.createElement("div", { id: "home_2" })),
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "row1_collum_3" }))),
+                    React.createElement("div", { id: "home_3" }))),
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
-                    React.createElement("div", { id: "row2_collum_1" })))));
+                    React.createElement("div", { id: "home_4" })))));
     };
     return Home;
 }(React.Component));
@@ -6061,7 +6064,7 @@ var Navigation = /** @class */ (function (_super) {
     Navigation.prototype.render = function () {
         var _this = this;
         return (React.createElement("header", null,
-            React.createElement("nav", { className: "navbar navbar-expand-sm bg-primary" },
+            React.createElement("nav", { className: "navbar navbar-expand-sm" },
                 React.createElement(react_router_dom_1.Link, { className: "navbar-brand", to: "/" }, "Steven Koerts"),
                 React.createElement("button", { onClick: function () { return _this.toggleMenu(); }, className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#collapsibleNavbar" },
                     React.createElement("span", { className: "navbar-toggler-icon" }, this.state.menuIn)),
