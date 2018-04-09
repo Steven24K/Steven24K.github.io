@@ -19,8 +19,11 @@
     padding-bottom: 2%;
 }
 
+.container{
+    padding-bottom: 5%;
+}
+
 footer{
     padding-top:5%; 
-    padding-bottom: 5%;
     background-color: #3073dd;
 }

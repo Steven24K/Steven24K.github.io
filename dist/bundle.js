@@ -5755,18 +5755,28 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
+var loadDoc_1 = __webpack_require__(/*! ../../utils/loadDoc */ "./utils/loadDoc.tsx");
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
 var About = /** @class */ (function (_super) {
     __extends(About, _super);
     function About(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { title: "About" };
+        _this.state = { title: "Over Mij" };
         return _this;
     }
     About.prototype.render = function () {
+        loadDoc_1.loadDoc("row1_collum_1", "cms/about/row1_collum_1.html");
+        loadDoc_1.loadDoc("row1_collum_2", "cms/about/row1_collum_2.html");
         return (React.createElement("div", { className: "container" },
-            React.createElement("h1", null, "Over mij")));
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-12" },
+                    React.createElement("h1", null, this.state.title))),
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-4" },
+                    React.createElement("div", { id: "row1_collum_1" })),
+                React.createElement("div", { className: "col-lg-8" },
+                    React.createElement("div", { id: "row1_collum_2" })))));
     };
     return About;
 }(React.Component));
@@ -5829,9 +5839,6 @@ var App = /** @class */ (function (_super) {
         _this.state = { title: "Steven Koerts" };
         return _this;
     }
-    App.prototype.componentWillMount = function () {
-        this.changeTitle();
-    };
     App.prototype.render = function () {
         return (React.createElement("div", null,
             React.createElement(Navigation_1.Navigation, null),
@@ -5866,6 +5873,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
+var loadDoc_1 = __webpack_require__(/*! ../../utils/loadDoc */ "./utils/loadDoc.tsx");
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
 var Contact = /** @class */ (function (_super) {
@@ -5876,8 +5884,17 @@ var Contact = /** @class */ (function (_super) {
         return _this;
     }
     Contact.prototype.render = function () {
+        loadDoc_1.loadDoc("row1_collom_1", "cms/contact/row1_collum_1.html");
+        loadDoc_1.loadDoc("row1_collom_2", "cms/contact/row1_collum_2.html");
         return (React.createElement("div", { className: "container" },
-            React.createElement("h1", null, "Neem contact met mij op!!!")));
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-12" },
+                    React.createElement("h1", null, this.state.title))),
+            React.createElement("div", { className: "row" },
+                React.createElement("div", { className: "col-lg-6" },
+                    React.createElement("div", { id: "row1_collom_1" })),
+                React.createElement("div", { className: "col-lg-6" },
+                    React.createElement("div", { id: "row1_collom_2" })))));
     };
     return Contact;
 }(React.Component));
@@ -5910,7 +5927,9 @@ var React = __webpack_require__(/*! react */ "react");
 var Footer = /** @class */ (function (_super) {
     __extends(Footer, _super);
     function Footer(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = { date: new Date() };
+        return _this;
     }
     Footer.prototype.render = function () {
         return (React.createElement("footer", null,
@@ -5923,7 +5942,11 @@ var Footer = /** @class */ (function (_super) {
                         React.createElement("h3", null,
                             "Neem ook een kijkje op mijn andere website, ",
                             React.createElement("a", { href: "http://stevenkoerts.nl/" }, "www.stevenkoerts.nl/"),
-                            " "))))));
+                            " "))),
+                React.createElement("div", { className: "row" },
+                    React.createElement("div", { className: "col-lg-12 center" },
+                        "\u00A9 All rights reserved | Made by Steven Koerts ",
+                        this.state.date.getFullYear())))));
     };
     return Footer;
 }(React.Component));
@@ -5962,26 +5985,24 @@ var Home = /** @class */ (function (_super) {
         return _this;
     }
     Home.prototype.render = function () {
-        loadDoc_1.loadDoc("profile", "cms/home/profile.html");
-        loadDoc_1.loadDoc("skills", "cms/home/skills.html");
-        loadDoc_1.loadDoc("current", "cms/home/currentStatus.html");
+        loadDoc_1.loadDoc("row1_collum_1", "cms/home/row1_collum_1.html");
+        loadDoc_1.loadDoc("row1_collum_2", "cms/home/row1_collum_2.html");
+        loadDoc_1.loadDoc("row1_collum_3", "cms/home/row1_collum_3.html");
+        loadDoc_1.loadDoc("row2_collum_1", "cms/home/row2_collum_1.html");
         return (React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-12" },
                     React.createElement("h1", null, this.state.title))),
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "profile" })),
+                    React.createElement("div", { id: "row1_collum_1" })),
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "skills" })),
+                    React.createElement("div", { id: "row1_collum_2" })),
                 React.createElement("div", { className: "col-lg-4" },
-                    React.createElement("div", { id: "current" }))),
+                    React.createElement("div", { id: "row1_collum_3" }))),
             React.createElement("div", { className: "row" },
-                React.createElement("div", { className: "col-lg-8" },
-                    React.createElement("div", { className: "card" },
-                        React.createElement("div", { className: "card-header" }, "Nieuws"),
-                        React.createElement("div", { className: "card-body" }, "Lorum ipsum..."))),
-                React.createElement("div", { className: "col-lg-4" }))));
+                React.createElement("div", { className: "col-lg-12" },
+                    React.createElement("div", { id: "row2_collum_1" })))));
     };
     return Home;
 }(React.Component));
@@ -6049,9 +6070,9 @@ var Navigation = /** @class */ (function (_super) {
                         React.createElement("li", { className: "nav-item" },
                             React.createElement(react_router_dom_1.Link, { className: "nav-link", to: '/' }, "Home")),
                         React.createElement("li", { className: "nav-item" },
-                            React.createElement(react_router_dom_1.Link, { className: "nav-link", to: '/about' }, "About")),
+                            React.createElement(react_router_dom_1.Link, { className: "nav-link", to: '/about' }, "Over Mij")),
                         React.createElement("li", { className: "nav-item" },
-                            React.createElement(react_router_dom_1.Link, { className: "nav-link", to: '/contact' }, "Contact")))))));
+                            React.createElement(react_router_dom_1.Link, { className: "nav-link", to: '/contact' }, "Neem Contact Op")))))));
     };
     return Navigation;
 }(React.Component));
