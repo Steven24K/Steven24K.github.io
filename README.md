@@ -1,3 +1,5 @@
 # Steven24K.github.io
 
-This website is going to be my personal website, I am currently working on it. I am building it in Typescript with React, in case you was wondering. ;)
+I am hosting my personal website from this repository, it is available at [stevenkoerts.nl](http://stevenkoerts.nl/) and [steven24k.github.io](https://steven24k.github.io/#/).
+
+<iframe src="https://steven24k.github.io/#/"></iframe>
