@@ -1,0 +1,57 @@
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color:#1eeaa3;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+
+
+ul.sidenav li a {
+    display: block;
+    color: rgb(73, 73, 71);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: rgb(218, 132, 35);
+    color: white;
+}
+
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+
+a.Button{
+    color: 'black';
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

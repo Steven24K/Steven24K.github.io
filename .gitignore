@@ -1,9 +1,8 @@
-node_modules/
-src/
-utils/
-.vscode/
-*.tsx
-*.ts
-package-lock.json
-tsconfig.json
-webpack.config.json
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+
+# Build directory
+/public
+.DS_Store
