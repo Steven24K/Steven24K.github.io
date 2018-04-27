@@ -7,3 +7,5 @@ utils/
 package-lock.json
 tsconfig.json
 webpack.config.json
+\.cache/
+public/
