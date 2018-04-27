@@ -3,10 +3,8 @@ import typography from "../utils/typography"
 import LinkButton from '../components/button';
 const rhythm = typography.rhythm
 
-const ProfilePic = require("../images/profiel.jpg")
-const CV = require("../pdf/Curriculum_Vitea_Steven_Koerts.pdf");
 
-const Bio = () => (
+const Bio = ({profile, cv}) => (
     <div style={{
         marginBottom: rhythm(1.5),
       }}>
@@ -17,7 +15,7 @@ const Bio = () => (
               marginRight: rhythm(1 / 4),
               marginBottom: 0,
             }}
-            width="20%" height="20%" src={ProfilePic}/>
+            width="20%" height="20%" src={profile}/>
 
         <p>
             Op dit moment studeer ik informatica(computer science) aan de Hogeschool van Rotterdam. Ik zit in het tweede jaar van mijn opleiding, 
@@ -36,8 +34,8 @@ const Bio = () => (
         </ul>
 
 
-        <LinkButton to={CV} text="Curriculum Vitae" color="#11af43" target="_blank"/>
-
+        <LinkButton to={cv} text="Curriculum Vitae" color="#11af43" target="_blank"/>
+       
     </div>
 );
 

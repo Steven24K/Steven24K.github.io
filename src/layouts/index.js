@@ -39,6 +39,8 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        profilePic
+        CV
       }
     }
   }
