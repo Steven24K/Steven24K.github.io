@@ -1,5 +1,5 @@
 {
-  "name": "Steven24K.github.io",
+  "name": "steven24kgithubio",
   "description": "This is my personal website",
   "version": "1.0.0",
   "author": "Steven Koerts",
@@ -27,7 +27,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "deploy": "gatsby build --prefix-paths && master -d public",
+    "deploy": "gatsby build && gh-pages -b master -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
