@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "Steven24K.github.io",
+  "description": "This is my personal website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Steven Koerts",
   "dependencies": {
     "bootstrap": "^4.1.0",
     "gatsby": "^1.9.247",
@@ -27,7 +27,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && master -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
