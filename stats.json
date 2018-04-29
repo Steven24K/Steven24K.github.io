@@ -1,40 +1,36 @@
 {
   "assetsByChunkName": {
-    "path---blog-test-test": [
-      "path---blog-test-test-10ed13326895e46e5b77.js",
-      "path---blog-test-test-10ed13326895e46e5b77.js.map"
-    ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-681fa82a1667e9a9be4d.js",
-      "component---src-pages-index-js-681fa82a1667e9a9be4d.js.map"
+      "component---src-pages-index-js-33509db1f45570c8a30f.js",
+      "component---src-pages-index-js-33509db1f45570c8a30f.js.map"
     ],
-    "path---projects-test-test": [
-      "path---projects-test-test-03668e3ea372a969ea5d.js",
-      "path---projects-test-test-03668e3ea372a969ea5d.js.map"
+    "path---empty": [
+      "path---empty-5e5a2bbb073dc4826b28.js",
+      "path---empty-5e5a2bbb073dc4826b28.js.map"
     ],
     "path---blog": [
-      "path---blog-63e8e40ea60f864a2b74.js",
-      "path---blog-63e8e40ea60f864a2b74.js.map"
+      "path---blog-02376fcc62299c93f643.js",
+      "path---blog-02376fcc62299c93f643.js.map"
     ],
     "path---": [
       "path----db5dc85b4bbb3299ac44.js",
       "path----db5dc85b4bbb3299ac44.js.map"
     ],
     "component---src-pages-contact-js": [
-      "component---src-pages-contact-js-3f57d3ff60b22a9d04e3.js",
-      "component---src-pages-contact-js-3f57d3ff60b22a9d04e3.js.map"
+      "component---src-pages-contact-js-6213d40cf7d33072fc34.js",
+      "component---src-pages-contact-js-6213d40cf7d33072fc34.js.map"
     ],
     "path---projects": [
-      "path---projects-cf38954367534cd8b02d.js",
-      "path---projects-cf38954367534cd8b02d.js.map"
+      "path---projects-02376fcc62299c93f643.js",
+      "path---projects-02376fcc62299c93f643.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-c7c275c2bb96ee332557.js",
-      "component---src-layouts-index-js-c7c275c2bb96ee332557.js.map"
+      "component---src-layouts-index-js-3bfbb65787ed37d4087e.js",
+      "component---src-layouts-index-js-3bfbb65787ed37d4087e.js.map"
     ],
     "component---src-templates-detail-js": [
-      "component---src-templates-detail-js-a67d49257b8f3d7dcc89.js",
-      "component---src-templates-detail-js-a67d49257b8f3d7dcc89.js.map"
+      "component---src-templates-detail-js-51315e85376561dc01f3.js",
+      "component---src-templates-detail-js-51315e85376561dc01f3.js.map"
     ],
     "path---index": [
       "path---index-cd42dd1f174bfedb5a5b.js",
@@ -51,8 +47,8 @@
       "build-js-styles.css.map"
     ],
     "component---src-pages-videos-js": [
-      "component---src-pages-videos-js-32d8bc28d0b7f6cb7a2a.js",
-      "component---src-pages-videos-js-32d8bc28d0b7f6cb7a2a.js.map"
+      "component---src-pages-videos-js-f94ceca2d1296e7cb324.js",
+      "component---src-pages-videos-js-f94ceca2d1296e7cb324.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -63,22 +59,22 @@
       "path---contact-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-blog-js": [
-      "component---src-pages-blog-js-eff422919dde77a0abb9.js",
-      "component---src-pages-blog-js-eff422919dde77a0abb9.js.map"
+      "component---src-pages-blog-js-eecb34ac847ce5d5c06a.js",
+      "component---src-pages-blog-js-eecb34ac847ce5d5c06a.js.map"
     ],
     "component---src-pages-projects-js": [
-      "component---src-pages-projects-js-3dfcf0034bcd76bc2326.js",
-      "component---src-pages-projects-js-3dfcf0034bcd76bc2326.js.map"
+      "component---src-pages-projects-js-cdd971607b50e7e00fc3.js",
+      "component---src-pages-projects-js-cdd971607b50e7e00fc3.js.map"
     ],
     "app": [
-      "app-7fec1ac789234a22b4b6.js",
+      "app-4ba031cf645d9b83a5c2.js",
       "build-js-styles.css",
-      "app-7fec1ac789234a22b4b6.js.map",
+      "app-4ba031cf645d9b83a5c2.js.map",
       "build-js-styles.css.map"
     ],
     "path---videos": [
-      "path---videos-d6444b17270441c4b8cd.js",
-      "path---videos-d6444b17270441c4b8cd.js.map"
+      "path---videos-88e44ecb11f9a0021cf3.js",
+      "path---videos-88e44ecb11f9a0021cf3.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",

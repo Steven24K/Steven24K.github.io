@@ -1,0 +1,2 @@
+webpackJsonp([0xdc9335751175],{357:function(e,t){e.exports={data:{allVideosCsv:{totalCount:1,edges:[{node:{field1:"https://www.youtube.com/embed/Cfe0IwTDM2U",field2:"2016-08-01"}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---videos-88e44ecb11f9a0021cf3.js.map
