@@ -1,6 +1,4 @@
 const path = require(`path`);
-const _ = require("lodash")
-
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
@@ -16,49 +14,33 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 };
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-    const { createPage } = boundActionCreators
-    return new Promise((resolve, reject) => {
-      //Create the different templates
-      const projectDetail = path.resolve("src/templates/detail.js")
-      graphql(`
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
-                }
+  const { createPage } = boundActionCreators
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
               }
             }
           }
         }
-      `
-  ).then(result => {
-       if(result.errors){
-          console.log(result.errors)
-          resolve()
-       }
-
-       //Create project page
-       _.each(result.data.allMarkdownRemark.edges, edge => {
-        createPage({
-          path: edge.node.fields.slug, // required
-          component: projectDetail,
-          context: {
-            slug: edge.node.fields.slug,
-          },
-        })
-      })
-
-
-      
-
-       resolve()
-      })
+      }
+    `
+).then(result => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/detail.js`),
+      context: {
+        // Data passed to context is available in page queries as GraphQL variables.
+        slug: node.fields.slug,
+      },
     })
-  };
-
-
-  
-
-  
+  })
+      resolve()
+    })
+  })
+};

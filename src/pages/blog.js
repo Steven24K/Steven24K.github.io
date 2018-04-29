@@ -1,7 +1,9 @@
 import React from "react"
 import "../layouts/index.css"
 
-export default ({ data }) => (
+export default ({ data }) => {
+    if(data.allFile != null){
+    return (
     <div>
         <h1>Blog</h1>
 
@@ -24,7 +26,11 @@ export default ({ data }) => (
 
 
     </div>
-)
+    )
+    }else{
+        return <h1>Helaas er staan nog geen blog posts, maar hou deze website in de gaten er wordt hard aan gewerkt.</h1>
+    }
+}
 
 export const query = graphql`
     query getAllblogposts{

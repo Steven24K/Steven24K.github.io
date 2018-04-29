@@ -2,9 +2,10 @@ import React from "react"
 import "../layouts/index.css"
 
 
-const folderImage = require("../../src/images/folder.png");
+const folderImage = require("../../static/images/folder.png");
 
 export default ({ data }) => {
+  if(data.allFile != null){
     return(
     <div>
         <h1>Projecten waar ik trots op ben</h1>
@@ -46,6 +47,11 @@ export default ({ data }) => {
         </table>
     </div>
     )
+  }else{
+    return(
+      <h1>Helaas zijn er nog geen projecten op de website geplaatst, we werken er hard aan.</h1>
+    )
+  }
 }
 
 
