@@ -57,16 +57,10 @@ a.Button{
 }
 
 footer{
-    padding-bottom:0; 
-    padding-top:10%; 
-    margin-left: 30%;
-    text-align: justify;
+    padding-top:30%; 
 }
 
-.footer-icons{
-    margin-left: 5px;
-}
-
-.icon-holder{
-    margin-left: 5%; 
+.footer-list{
+    display: inline;
+    background-color: aqua;
 }

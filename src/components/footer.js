@@ -6,21 +6,52 @@ const YouTubeIcon = require("../../static/images/youtube.png")
 const LinkedInIcon = require("../../static/images/linkedin.png")
 const instructIcon = require("../../static/images/instruct.png")
 
+const images = [[GitHubIcon,""],
+     [YouTubeIcon, ""], 
+     [LinkedInIcon, ""], 
+     [instructIcon, ""]
+    ];
+
 const Footer = () =>{
     return(
-        <footer className="footer-icons">
-            <a className="icon-holder" href="">
-               <img height="150px" width="150px" src={GitHubIcon}/>
+        <footer style={{
+            paddingTop: 200,
+            textAlign:"center",
+            marginLeft:"auto",
+            marginRight:"auto",
+        }}>
+
+           <ul style={{
+               listStyleType:"none",
+               display:"inline",
+
+           }}>
+           
+               <li style={{display:"inline"}}>
+           <a className="icon-holder" target="_blank" href="https://github.com/Steven24K">
+               <img height="20%" width="20%" src={GitHubIcon}/>
             </a>
-            <a className="icon-holder" href="">
-               <img height="150px" width="150px" src={YouTubeIcon}/>
+               </li>
+
+               <li style={{display:"inline"}}>
+            <a className="icon-holder" target="_blank" href="https://nl.linkedin.com/in/steven-koerts-223aa3135">
+               <img height="20%" width="20%" src={LinkedInIcon}/>
             </a>
-            <a className="icon-holder" href="">
-               <img height="150px" width="150px" src={LinkedInIcon}/>
+                </li>
+
+                <li style={{display:"inline"}}>
+            <a className="icon-holder" target="_blank" href="https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured">
+               <img height="20%" width="20%" src={YouTubeIcon}/>
             </a>
-            <a className="icon-holder" href="">
-               <img height="150px" width="150px" src={instructIcon}/>
+                </li>
+
+                <li style={{display:"inline"}}>
+            <a className="icon-holder" target="_blank" href="https://www.instructables.com/member/stevenk102/">
+               <img height="20%" width="20%" src={instructIcon}/>
             </a>
+               </li>
+
+           </ul>
         </footer>
     );
 }

@@ -6,6 +6,11 @@ const folderImage = require("../../static/images/folder.png");
 
 export default ({ data }) => {
   if(data.allFile != null){
+    let titles = [];
+    data.allMarkdownRemark.edges.map(({ node }, index) => {
+      if(node.frontmatter.title != "" && node.frontmatter.title != null)titles[index] = node.frontmatter.title;
+    }); 
+   console.log(titles)
     return(
     <div>
         <h1>Projecten waar ik trots op ben</h1>
@@ -57,21 +62,30 @@ export default ({ data }) => {
 
 export const query = graphql`
 query getAllprojects{
-    allFile(
-      filter:{dir: {regex: "/(projects)/"}, extension:{eq:"md"}},
-      sort: {fields:[birthTime], order: DESC},
-    ){
-      totalCount
-      edges{
-        node{
-          prettySize
-          birthTime(fromNow:true)
-          extension
-          name
-          relativePath
-          dir
-        }
+  allFile(
+    filter:{dir: {regex: "/(projects)/"}, extension:{eq:"md"}},
+    sort: {fields:[birthTime], order: DESC},
+  ){
+    totalCount
+    edges{
+      node{
+        prettySize
+        birthTime(fromNow:true)
+        extension
+        name
+        relativePath
+        dir
       }
     }
+  }
+allMarkdownRemark{
+  edges{
+    node{
+      frontmatter{
+        title
+      }
+    }
+  }
+}
   }
 `
