@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-33509db1f45570c8a30f.js",
-      "component---src-pages-index-js-33509db1f45570c8a30f.js.map"
+      "component---src-pages-index-js-51e122103fd579d8e483.js",
+      "component---src-pages-index-js-51e122103fd579d8e483.js.map"
     ],
     "path---empty": [
       "path---empty-5e5a2bbb073dc4826b28.js",
@@ -16,21 +16,29 @@
       "path----db5dc85b4bbb3299ac44.js",
       "path----db5dc85b4bbb3299ac44.js.map"
     ],
+    "path---projects-data-project-data-project": [
+      "path---projects-data-project-data-project-53d992067e0349e1ea20.js",
+      "path---projects-data-project-data-project-53d992067e0349e1ea20.js.map"
+    ],
     "component---src-pages-contact-js": [
-      "component---src-pages-contact-js-6213d40cf7d33072fc34.js",
-      "component---src-pages-contact-js-6213d40cf7d33072fc34.js.map"
+      "component---src-pages-contact-js-c88aa59da61bd7fa30f6.js",
+      "component---src-pages-contact-js-c88aa59da61bd7fa30f6.js.map"
     ],
     "path---projects": [
-      "path---projects-02376fcc62299c93f643.js",
-      "path---projects-02376fcc62299c93f643.js.map"
+      "path---projects-132f941b120ac8ae7b40.js",
+      "path---projects-132f941b120ac8ae7b40.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-3bfbb65787ed37d4087e.js",
-      "component---src-layouts-index-js-3bfbb65787ed37d4087e.js.map"
+      "component---src-layouts-index-js-6fa071551284010a43b8.js",
+      "component---src-layouts-index-js-6fa071551284010a43b8.js.map"
     ],
     "component---src-templates-detail-js": [
-      "component---src-templates-detail-js-51315e85376561dc01f3.js",
-      "component---src-templates-detail-js-51315e85376561dc01f3.js.map"
+      "component---src-templates-detail-js-4797e5e500a902738cf7.js",
+      "component---src-templates-detail-js-4797e5e500a902738cf7.js.map"
+    ],
+    "path---projects-project-pygame-project-pygame": [
+      "path---projects-project-pygame-project-pygame-3d6738aeb3728b7a9f52.js",
+      "path---projects-project-pygame-project-pygame-3d6738aeb3728b7a9f52.js.map"
     ],
     "path---index": [
       "path---index-cd42dd1f174bfedb5a5b.js",
@@ -54,6 +62,10 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---projects-project-crossplatform-app-crossplatform-app": [
+      "path---projects-project-crossplatform-app-crossplatform-app-da50dffbd83642d6b87a.js",
+      "path---projects-project-crossplatform-app-crossplatform-app-da50dffbd83642d6b87a.js.map"
+    ],
     "path---contact": [
       "path---contact-a0e39f21c11f6a62c5ab.js",
       "path---contact-a0e39f21c11f6a62c5ab.js.map"
@@ -63,22 +75,30 @@
       "component---src-pages-blog-js-eecb34ac847ce5d5c06a.js.map"
     ],
     "component---src-pages-projects-js": [
-      "component---src-pages-projects-js-cdd971607b50e7e00fc3.js",
-      "component---src-pages-projects-js-cdd971607b50e7e00fc3.js.map"
+      "component---src-pages-projects-js-e6bd2cb5cd0c996bc77a.js",
+      "component---src-pages-projects-js-e6bd2cb5cd0c996bc77a.js.map"
+    ],
+    "path---projects-project-webshop-webshop-squiller-fashion": [
+      "path---projects-project-webshop-webshop-squiller-fashion-2d211121b3d52affe04b.js",
+      "path---projects-project-webshop-webshop-squiller-fashion-2d211121b3d52affe04b.js.map"
     ],
     "app": [
-      "app-4ba031cf645d9b83a5c2.js",
+      "app-17767ab72590c4e1b6bd.js",
       "build-js-styles.css",
-      "app-4ba031cf645d9b83a5c2.js.map",
+      "app-17767ab72590c4e1b6bd.js.map",
       "build-js-styles.css.map"
     ],
     "path---videos": [
-      "path---videos-88e44ecb11f9a0021cf3.js",
-      "path---videos-88e44ecb11f9a0021cf3.js.map"
+      "path---videos-797019e6d5066dcd1269.js",
+      "path---videos-797019e6d5066dcd1269.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
       "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---projects-project-borspel-project-bordspel": [
+      "path---projects-project-borspel-project-bordspel-f2802f53418782d80ed2.js",
+      "path---projects-project-borspel-project-bordspel-f2802f53418782d80ed2.js.map"
     ],
     "component---src-pages-about-js": [
       "component---src-pages-about-js-61d8e798ab4df15f062e.js",
