@@ -70,7 +70,7 @@ query getAllprojects{
     edges{
       node{
         prettySize
-        birthTime(fromNow:true)
+        birthTime(formatString:"DD-MM-YYYY")
         extension
         name
         relativePath
