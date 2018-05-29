@@ -11,4 +11,6 @@ Dit was het tweede project wat ik gemaakt heb voor mijn opleiding aan de Hogesch
 
 Als je de game wilt spelen dan is die te downloaden via mijn <a href="https://github.com/Steven24K/Project-2-Game">GitHub</a>. De game was origineel gebouwd in Python 3.2, maar later heb ik alles compatible gemaakt met Python 3.6.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/NOCupqNu5Ts" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="responsive">
+<iframe class="responsive-iframe" width="640" height="360" src="https://www.youtube.com/embed/NOCupqNu5Ts" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

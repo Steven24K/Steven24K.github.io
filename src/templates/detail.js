@@ -8,7 +8,10 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div style={{
+       marginLeft: 'auto',
+       marginRight: 'auto', 
+       }} dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
 };

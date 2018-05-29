@@ -11,4 +11,6 @@ Dit is het vijfde project dat ik heb gedaan voor mijn opleiding, informatica. He
 Voor meer info en technische details over het project kijk ook op mijn GitHub: 
 <a href="https://github.com/Steven24K/SquillerWebshop">Source code</a>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/nf2ex320JJs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="responsive">
+<iframe class="responsive-iframe" width="640" height="360" src="https://www.youtube.com/embed/nf2ex320JJs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

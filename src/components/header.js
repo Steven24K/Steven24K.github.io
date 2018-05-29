@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
       <ul className={styles.sidenav}>
         <li><h1>{siteTitle}</h1></li>
         <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/about/">Over Mij</ListLink>
         <ListLink to="/projects/">Projecten</ListLink>
         <ListLink to="/videos/">Video's</ListLink>
         <ListLink to="/blog/">Blog</ListLink>
