@@ -1,0 +1,2 @@
+webpackJsonp([49683490770531],{359:function(t,e){t.exports={data:{allFile:{totalCount:1,edges:[{node:{prettySize:"1.97 kB",birthTime:"2018-05-29",extension:"md",name:"GitHub-als-Content-Managment-Systeem",relativePath:"blog/GitHub-als-Content-Managment-Systeem/GitHub-als-Content-Managment-Systeem.md",dir:"C:/Users/steve/Documents/GitKraken/Steven24K.github.io/src/blog/GitHub-als-Content-Managment-Systeem"}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-d15b21b1c7985e95ddf6.js.map
