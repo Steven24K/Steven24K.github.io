@@ -1,0 +1,76 @@
+/* your custom css */
+.skill-list {
+    list-style-type: none;
+    text-align: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    display: inline-block;
+    list-style-type: circle;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: rgb(64, 212, 6);
+    font-weight: bolder;
+    font-family: 'fantasy';
+    font-size: 2em;
+    padding: 20px;
+}
+
+.cv {
+    margin-left: 20%;
+    font-size: 2em;
+}
+
+
+
+.skills{
+    text-align: center;
+    
+}
+
+.row {
+    padding-bottom: 3%;
+}
+
+.videos {
+    margin: 1%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-bar img {
+    margin: 2%;
+}
+
+
+.social-bar powered {
+    margin-left: 10%;
+}
+
+.footer-content img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.footer-content {
+    color: white;
+    margin: 3%;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
