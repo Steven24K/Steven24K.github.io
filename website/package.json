@@ -6,7 +6,8 @@
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
     "build": "docusaurus-build",
-    "publish-gh-pages": "docusaurus-publish",
+    "deploy": "docusaurus-build && gh-pages -b master -d build/Portfolio",
+    "deploy-without-build": "gh-pages -b master -d build/Portfolio",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version"
@@ -15,5 +16,8 @@
     "docusaurus": "^1.3.0"
   },
   "author": "Steven K",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
 }
