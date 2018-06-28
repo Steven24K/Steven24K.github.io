@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>GitHub als content management systeem · Steven Koerts</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Deze website wordt gehost vanuit een public repository, via &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub pages&lt;/a&gt;. Onder het motto van low budget webdevelopment, aangezien ik gebruik maak van een gratis GitHub account."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="GitHub als content management systeem · Steven Koerts"/><meta property="og:type" content="website"/><meta property="og:url" content="https://steven24k.github.io/blog/2018/06/26/GitHub-als-CMS.html"/><meta property="og:description" content="Deze website wordt gehost vanuit een public repository, via &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub pages&lt;/a&gt;. Onder het motto van low budget webdevelopment, aangezien ik gebruik maak van een gratis GitHub account."/><meta property="og:image" content="https://steven24k.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://steven24k.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/profiel.jpg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://steven24k.github.io/blog/atom.xml" title="Steven Koerts Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://steven24k.github.io/blog/feed.xml" title="Steven Koerts Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/profiel.jpg" alt="Steven Koerts"/><h2 class="headerTitleWithLogo">Steven Koerts</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/en/about.html" target="_self">Over Mij</a></li><li class=""><a href="/docs/projecten.html" target="_self">Projecten</a></li><li class="siteNavGroupActive"><a href="/blog" target="_self">Blog</a></li><li class=""><a href="/en/videos.html" target="_self">Videos</a></li><li class=""><a href="/en/contact.html" target="_self">Contact</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2018/06/26/GitHub-als-CMS.html">GitHub als content management systeem</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/06/26/GitHub-als-CMS.html">GitHub als content management systeem</a></h1><p class="post-meta">June 26, 2018</p><div class="authorBlock"></div></header><div><span><p>Deze website wordt gehost vanuit een public repository, via <a href="https://pages.github.com/">GitHub pages</a>. Onder het motto van low budget webdevelopment, aangezien ik gebruik maak van een gratis GitHub account.</p>
+<!--truncate-->
+<p>Hiervoor hostte ik mijn website via
+<a href="https://www.versio.nl/webhosting">Versio</a>, dit was het goedkoopste hosting bedrijf dat ik online kon vinden 1500MB SSD schijfruimte voor €0,50/maand plus de kosten voor mijn domeinnaam <a href="http://stevenkoerts.nl/">stevenkoerts.nl</a>.<br>
+Verder over gratis webhosting via GitHub pages, er zijn een hoop websites en bedrijven die gebruik maken van deze dienst. Zo zijn er bedrijven die alles via GitHub pages regelen, zoals: <a href="https://github.com/twbs/bootstrap">getbootstrap</a> of <a href="https://github.com/BlackrockDigital/startbootstrap">startbootstrap</a> en <a href="http://stevenkoerts.nl/">stevenkoerts.nl</a>(vanaf nu ook.)</p>
+<p>Eerst heb ik gekozen voor <a href="https://www.gatsbyjs.org/">Gatsby</a>, dat is een open-source Javascript static site generator voor <a href="https://reactjs.org/">React</a>. De website van React is trouwens ook gebouwd met Gatsby, volgens de showcase in de <a href="https://github.com/gatsbyjs/gatsby">README.md</a> file van hun GitHub en mijn website staat daar ook mooi tussen.</p>
+<p>Er zijn ook een hoop andere static site generator beschikbaar, kijk hier voor een complete <a href="https://www.staticgen.com/">lijst</a>.
+Deze website is gemaakt met docusaurus, een static site generator die gebruik maakt van Reacts component structure. De reden waarom ik van Gatsby ben afgestapt is vanwege deze <a href="https://github.com/gatsbyjs/gatsby/issues/2440">issue</a>, die al een aantal jaren loopt. Ik wou afbeeldingen toevoegen in de
+markdown files, maar dat werkt dus niet bij gatsby. Bij docusaurus is dat een stuk eenvoudiger door simpel weg je afbeeldingen in
+website/blog/assets of docs/assets te pushen. Verder blijf ik bij GitHub pages, webhosting.</p>
+<p><b>GitHub pages heeft voor zowel bedrijven als individueelen veel voordelen:</b>
+<ul>
+<li>Het is gratis</li>
+<li>Makkelijk in onderhoud</li>
+<li>Onbeperkt opslagruimte</li>
+<li>Snel een website online met <a href="https://jekyllrb.com/">Jekyll</a>(gratis templates)</li>
+</ul></p>
+<p><b>Nadelen:</b>
+<ul>
+<li>Support geen serverside processen, alleen statische HTML, JS en CSS</li>
+<li>Jekyll werkt alleen (lokaal) op Apple of LUNIX</li>
+</ul></p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="footer-content"><div class="row"><div class="col-lg-4"><a href="/"><img src="/img/profiel.jpg" alt="Steven Koerts" width="55" height="58"/></a></div><div class="col-lg-4 social-bar"><h5>Find me on:</h5><a href="https://github.com/Steven24K" target="_blank"><img height="90px" width="90px" src="img/GitHub.png"/></a><a href="https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured" target="_blank"><img height="80px" width="100px" src="img/youtube.png"/></a><a href="https://nl.linkedin.com/in/steven-koerts-223aa3135" target="_blank"><img height="90px" width="90px" src="img/linkedin.png"/></a><a href="https://www.instructables.com/member/stevenk102/" target="_blank"><img height="90px" width="90px" src="img/instruct.png"/></a></div><div class="col-lg-4 powered"><h5>Powerd by:</h5><a href="https://docusaurus.io/" target="_blank"><img height="80px" width="80px" src="img/docusaurus.svg"/></a><a href="https://pages.github.com/" target="_blank"><img height="100px" width="250px" src="img/pages.png"/></a><a class="github-button" href="https://github.com/Steven24K/steven24k.github.io" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></div></section><section class="copyright">Copyright © 2018 Made by Steven Koerts</section></footer></div></body></html>
