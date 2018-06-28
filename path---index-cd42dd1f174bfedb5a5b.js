@@ -1,2 +1,0 @@
-webpackJsonp([0x81b8806e4260],{362:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Steven Koerts",profilePic:"profiel.jpg",CV:"Curriculum_Vitea_Steven_Koerts.pdf"}}},pathContext:{}}}});
-//# sourceMappingURL=path---index-cd42dd1f174bfedb5a5b.js.map

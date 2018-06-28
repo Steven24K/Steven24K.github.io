@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://steven24k.github.io/blog</id>
+    <title>Steven Koerts Blog</title>
+    <updated>2018-06-26T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://steven24k.github.io/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Steven Koerts news and events.</subtitle>
+    <logo>https://steven24k.github.io/img/profiel.jpg</logo>
+    <rights>Copyright © 2018 Made by Steven Koerts</rights>
+    <entry>
+        <title type="html"><![CDATA[GitHub als content management systeem]]></title>
+        <id>https://steven24k.github.io/blog/2018/06/26/GitHub-als-CMS.html</id>
+        <link href="https://steven24k.github.io/blog/2018/06/26/GitHub-als-CMS.html">
+        </link>
+        <updated>2018-06-26T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Deze website wordt gehost vanuit een public repository, via <a href="https://pages.github.com/">GitHub pages</a>. Onder het motto van low budget webdevelopment, aangezien ik gebruik maak van een gratis GitHub account.</p>
+]]></summary>
+        <author>
+        </author>
+    </entry>
+</feed>

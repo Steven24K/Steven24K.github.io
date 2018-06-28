@@ -1,2 +1,0 @@
-webpackJsonp([42631115822675],{361:function(e,s){e.exports={data:{markdownRemark:{html:"<!-- \nThis is just an empty file to make sure the gatsby-node.js page builder will always find a markdown file, even\nif there are no blog posts, projects or video's. \nThe user will never see this file, if hhe visits www.example.com/empty/\n-->"}},pathContext:{slug:"/empty/"}}}});
-//# sourceMappingURL=path---empty-5e5a2bbb073dc4826b28.js.map

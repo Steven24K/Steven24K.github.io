@@ -1,2 +1,0 @@
-webpackJsonp([97786326051841],{357:function(t,e){t.exports={data:{allFile:{totalCount:1,edges:[{node:{prettySize:"125 B",birthTime:"3 minutes ago",extension:"md",name:"test",relativePath:"projects/test/test.md",dir:"C:/Users/steve/Documents/GitKraken/Steven24K.github.io/src/projects/test"}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---projects-43f4d5624a3c761f9390.js.map

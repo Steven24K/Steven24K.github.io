@@ -1,2 +1,0 @@
-webpackJsonp([49683490770531],{359:function(t,e){t.exports={data:{allFile:{totalCount:1,edges:[{node:{prettySize:"1.97 kB",birthTime:"2018-05-29",extension:"md",name:"GitHub-als-CMS",relativePath:"blog/GitHub-als-CMS/GitHub-als-CMS.md",dir:"C:/Users/steve/Documents/GitKraken/Steven24K.github.io/src/blog/GitHub-als-CMS"}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---blog-660acf81183831e407fe.js.map

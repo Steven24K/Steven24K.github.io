@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Steven Koerts Blog</title>
+        <link>https://steven24k.github.io/blog</link>
+        <description>The best place to stay up-to-date with the latest Steven Koerts news and events.</description>
+        <lastBuildDate>Tue, 26 Jun 2018 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Steven Koerts Blog</title>
+            <url>https://steven24k.github.io/img/profiel.jpg</url>
+            <link>https://steven24k.github.io/blog</link>
+        </image>
+        <copyright>Copyright © 2018 Made by Steven Koerts</copyright>
+        <item>
+            <title><![CDATA[GitHub als content management systeem]]></title>
+            <link>https://steven24k.github.io/blog/2018/06/26/GitHub-als-CMS.html</link>
+            <guid>https://steven24k.github.io/blog/2018/06/26/GitHub-als-CMS.html</guid>
+            <pubDate>Tue, 26 Jun 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Deze website wordt gehost vanuit een public repository, via <a href="https://pages.github.com/">GitHub pages</a>. Onder het motto van low budget webdevelopment, aangezien ik gebruik maak van een gratis GitHub account.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
