@@ -33,16 +33,16 @@ class Footer extends React.Component {
 
           <div className="col-lg-4 social-bar">
             <h5>Find me on:</h5>
-            <a href="https://github.com/Steven24K" target="_blank"><img height="90px" width="90px" src="img/GitHub.png"/></a>
-            <a href="https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured" target="_blank"><img height="80px" width="100px" src="img/youtube.png"/></a>
-            <a href="https://nl.linkedin.com/in/steven-koerts-223aa3135" target="_blank"><img height="90px" width="90px" src="img/linkedin.png"/></a>
-            <a href="https://www.instructables.com/member/stevenk102/" target="_blank"><img height="90px" width="90px" src="img/instruct.png"/></a>
+            <a href="https://github.com/Steven24K" target="_blank"><img height="90px" width="90px" src={`${this.props.config.baseUrl}img/GitHub.png`}/></a>
+            <a href="https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured" target="_blank"><img height="80px" width="100px" src={`${this.props.config.baseUrl}img/youtube.png`}/></a>
+            <a href="https://nl.linkedin.com/in/steven-koerts-223aa3135" target="_blank"><img height="90px" width="90px" src={`${this.props.config.baseUrl}img/linkedin.png`}/></a>
+            <a href="https://www.instructables.com/member/stevenk102/" target="_blank"><img height="90px" width="90px" src={`${this.props.config.baseUrl}img/instruct.png`}/></a>
           </div>
 
           <div className="col-lg-4 powered">
               <h5>Powerd by:</h5>
-              <a href="https://docusaurus.io/" target="_blank"><img height="80px" width="80px" src="img/docusaurus.svg"/></a>
-              <a href="https://pages.github.com/" target="_blank"><img height="100px" width="250px" src="img/pages.png"/></a>
+              <a href="https://docusaurus.io/" target="_blank"><img height="80px" width="80px" src={`${this.props.config.baseUrl}img/docusaurus.svg`}/></a>
+              <a href="https://pages.github.com/" target="_blank"><img height="100px" width="250px" src={`${this.props.config.baseUrl}img/pages.png`}/></a>
 
               <a
               className="github-button"

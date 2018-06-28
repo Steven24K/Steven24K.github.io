@@ -6,8 +6,8 @@
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
     "build": "docusaurus-build",
-    "deploy": "docusaurus-build && gh-pages -b master -d build/Portfolio",
-    "deploy-without-build": "gh-pages -b master -d build/Portfolio",
+    "deploy": "docusaurus-build && gh-pages -b master -d build/Steven24K.github.io",
+    "deploy-without-build": "gh-pages -b master -d build/Steven24K.github.io",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version"
