@@ -61,6 +61,9 @@ const siteConfig = {
     ]
   },*/
 
+  cleanUrl: true,
+  customDocsPath: 'projects',
+
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
     'Copyright © ' +
@@ -73,14 +76,24 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'
+  ],
+
+  stylesheets: [
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css',
+  ],
+
+  scrollToTop: true,
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/profiel.jpg',
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

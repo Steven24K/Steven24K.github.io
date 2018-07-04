@@ -1,4 +1,8 @@
+//Add a new video by just adding the URL to the video in the array.
+//No embeded link or iframe, the site takes care of embeding automaticly.
+
 const videos = [
+        "https://www.youtube.com/watch?v=GNrQMuSgUWg",
         "https://www.youtube.com/watch?v=pLZORE6hHBc", 
         "https://www.youtube.com/watch?v=nf2ex320JJs", 
         "https://www.youtube.com/watch?v=l1s6ytxzlIk",

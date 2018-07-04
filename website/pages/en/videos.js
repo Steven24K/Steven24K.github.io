@@ -15,15 +15,57 @@ class Videos extends React.Component {
                Hier zijn video's die ik heb gemaakt of waar ik in voorkom. 
                <b> {videos.length} Video's</b>
 
-               <div className="row">
+               <div className="row center">
+                   <div className="col-lg-12">
 
-                      {
-                          videos.map((video) => {
-                              return <iframe className="videos" key={video} width="300" height="150" src={createEmbed(video)} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                          })
-                      }
+                             <a className="btn btn-primary video-control-left" href="#videoShow" data-slide="prev">
+                                <span className="carousel-control-prev-icon"></span>
+                             </a>
+
+
+
+                             <a className="btn btn-primary video-control-right" href="#videoShow" data-slide="next">
+                               <span className="carousel-control-next-icon"></span>
+                             </a>
+
+
+                   </div>
+               </div>
+
+               <div className="row center">
+                  <div className="col-lg-12">
+
+                <div id="videoShow" className="carousel slide" data-ride="carousel" data-interval="false">
+                       
+                    <div className="carousel-inner">
+                        {
+                            videos.map((video, index) => {
+                                if (index == 0) {
+                                    return (
+                                        <div key={index} className="carousel-item active">
+                                          <div className="embed-responsive embed-responsive-16by9">
+                                             <iframe className="videos embed-responsive-item" key={video} src={createEmbed(video)} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                                          </div>
+                                        </div>
+                                    )
+                                }
+                                else {
+                                    return (
+                                        <div key={index} className="carousel-item">
+                                          <div className="embed-responsive embed-responsive-16by9">
+                                             <iframe className="videos embed-responsive-item" key={video} src={createEmbed(video)} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                                          </div>
+                                      </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+
+                </div>
                      
-               
+
+                 </div>
                </div>
 
             </div>

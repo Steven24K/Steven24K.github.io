@@ -60,6 +60,14 @@
     margin: 3%;
 }
 
+.video-control-left {
+    margin-right: 30%;
+}
+
+.video-control-right {
+    margin-left: 30%; 
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
