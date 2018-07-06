@@ -12,3 +12,4 @@ Dit zijn projecten die ik binnen mijn opleiding informatica heb gedaan.
 4. [Revento: Xamarin, crossplatform app](first-app)
 5. [Webshop Squiller fashion](webshop)
 6. [Project B: Hear](hear)
+7. [Kaartverkoop Koning Lier](lier)
