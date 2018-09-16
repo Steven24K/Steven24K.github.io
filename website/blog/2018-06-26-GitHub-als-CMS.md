@@ -9,7 +9,7 @@ Deze website wordt gehost vanuit een public repository, via <a href="https://pag
 
  Hiervoor hostte ik mijn website via 
 <a href="https://www.versio.nl/webhosting">Versio</a>, dit was het goedkoopste hosting bedrijf dat ik online kon vinden 1500MB SSD schijfruimte voor €0,50/maand plus de kosten voor mijn domeinnaam <a href="http://stevenkoerts.nl/">stevenkoerts.nl</a>.<br>
-Verder over gratis webhosting via GitHub pages, er zijn een hoop websites en bedrijven die gebruik maken van deze dienst. Zo zijn er bedrijven die alles via GitHub pages regelen, zoals: <a href="https://github.com/twbs/bootstrap">getbootstrap</a> of <a href="https://github.com/BlackrockDigital/startbootstrap">startbootstrap</a> en <a href="http://stevenkoerts.nl/">stevenkoerts.nl</a>(vanaf nu ook.)
+Verder over gratis webhosting via GitHub pages, er zijn een hoop websites en bedrijven die gebruik maken van deze dienst. Zo zijn er bedrijven die alles via GitHub pages regelen, zoals: <a href="https://github.com/twbs/bootstrap">getbootstrap</a> of <a href="https://github.com/BlackrockDigital/startbootstrap">startbootstrap</a> en <a href="http://stevenkoerts.nl/">stevenkoerts.nl</a>(vanaf nu ook.) Het hosten van een website via GitHub heeft een hoop voordelen, alle content van de site staat in je repository. Dus er zijn geen databases die opgezet moeten, geen ingewikkelde content management systemen die gebouwd moeten worden en je hoeft je geen zorgen te maken over de structuur van je website. Je kan je op deze manier beter focussen op de inhoud. 
 
 Eerst heb ik gekozen voor <a href="https://www.gatsbyjs.org/">Gatsby</a>, dat is een open-source Javascript static site generator voor <a href="https://reactjs.org/">React</a>. De website van React is trouwens ook gebouwd met Gatsby, volgens de showcase in de <a href="https://github.com/gatsbyjs/gatsby">README.md</a> file van hun GitHub en mijn website staat daar ook mooi tussen.
 
@@ -23,6 +23,7 @@ website/blog/assets of docs/assets te pushen. Verder blijf ik bij GitHub pages, 
             <li>Het is gratis</li>
             <li>Makkelijk in onderhoud</li>
             <li>Onbeperkt opslagruimte</li>
+            <li>Geen databases</li>
             <li>Snel een website online met <a href="https://jekyllrb.com/">Jekyll</a>(gratis templates)</li>
         </ul>
 

@@ -14,7 +14,7 @@ const siteConfig = {
   tagline: 'Mijn persoonlijke blog, website en portfolio',
   cv: "pdf/Curriculum_Vitea_Steven_Koerts.pdf",
   email: "info@stevenkoerts.nl",
-  url: 'https://steven24k.github.io' /* your website url */,
+  url: 'http://stevenkoerts.nl/' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -24,8 +24,7 @@ const siteConfig = {
   projectName: 'Steven24K.github.io',
   organizationName: 'Steven24K',
   // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
+
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
@@ -76,17 +75,21 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags
+  //Add jquery, popper and bootstrap to site javascript files
   scripts: [
     'https://buttons.github.io/buttons.js',
     'https://code.jquery.com/jquery-3.3.1.slim.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49',
-    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'
+    'https://unpkg.com/popper.js/dist/umd/popper.min.js',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js',
+    '/js/custom.js'
   ],
 
+//Add bootstrap stylesheet to site
   stylesheets: [
     'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css',
   ],
 
+  //Create a scroll to to top button
   scrollToTop: true,
 
   /* On page navigation for the current documentation page */
@@ -97,6 +100,8 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
+
+  //Link to GitHub repository
    repoUrl: 'https://github.com/Steven24K/steven24k.github.io',
 };
 
