@@ -3,7 +3,7 @@ title: "GitHub als content management systeem"
 ---
 
 
-Deze website wordt gehost vanuit een public repository, via <a href="https://pages.github.com/">GitHub pages</a>. Onder het motto van low budget webdevelopment, aangezien ik gebruik maak van een gratis GitHub account.
+Deze website wordt gehost vanuit een public repository, via <a href="https://pages.github.com/">GitHub pages</a>. Onder het motto van low budget web development, aangezien ik gebruik maak van een gratis GitHub account.
 
 <!--truncate-->
 
@@ -18,7 +18,7 @@ Deze website is gemaakt met docusaurus, een static site generator die gebruik ma
 markdown files, maar dat werkt dus niet bij gatsby. Bij docusaurus is dat een stuk eenvoudiger door simpel weg je afbeeldingen in 
 website/blog/assets of docs/assets te pushen. Verder blijf ik bij GitHub pages, webhosting. 
 
-<b>GitHub pages heeft voor zowel bedrijven als individueelen veel voordelen:</b>
+<b>GitHub pages heeft voor zowel bedrijven als individuelen veel voordelen:</b>
         <ul>
             <li>Het is gratis</li>
             <li>Makkelijk in onderhoud</li>

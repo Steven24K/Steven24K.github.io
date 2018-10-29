@@ -13,3 +13,4 @@ Dit zijn projecten die ik binnen mijn opleiding informatica heb gedaan.
 5. [Webshop Squiller fashion](webshop)
 6. [Project B: Hear](hear)
 7. [Kaartverkoop Koning Lier](lier)
+8. [Master database: ShipHappens](shiphappens)
