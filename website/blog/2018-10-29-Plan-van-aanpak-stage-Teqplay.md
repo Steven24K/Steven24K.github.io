@@ -1,13 +1,19 @@
 ---
-title: "Portfolio Stage TeqPlay"
+title: "Voorbereiding op stage bij TeqPlay"
 ---
+
+## Stage documenten
+
+1. [Stage plan V1](assets/Stageplan-1-Teqplay-Steven-Koerts-0904861.pdf)
+2. [Stage plan V2](assets/Stageplan-2-Teqplay-Steven-Koerts-0904861.pdf)
+3. [Stage plan V3](assets/Stageplan-3-Teqplay-Steven-Koerts-0904861.pdf)
 
 ## Over TeqPlay
 
 ### Oprichting
 *Bedrijfsoriëntatie*
 
-[TeqPlay B.V.](https://teqplay.nl/nl/) is begonnen als een IT startup, opgericht in 2014 door Leon Gommans([medeoprichter van Rotterdam opendata](http://rotterdamopendata.nl/dataset)) en Richard van Klaveren [Bron](https://drimble.nl/bedrijf/rotterdam/30943744/teqplay-bv.html) en hebben vanaf heden 13 vaste werknemers. De reden dat TeqPlay is opgericht was omdat de oprichters zagen dat er heel veel data in de haven van Rotterdam te vinden was. Een groot deel was gewoon openbaar en gratis te verkrijgen, alleen zagen ze dat er zo weinig met die data werd gedaan en namen zo het initiatief om zelf aan de slag te gaan met al die gegevens. TeqPlay is gevestigd in De Van Nellefabriek in Rotterdam samen met een hoop andere bedrijven. Het bedrijf richt zich voornamelijk op de maritieme sector en de logistiek in de haven en dan vooral op de Rotterdamse haven. De missie van het bedrijf is om de haven slimmer te [maken](https://www.youtube.com/watch?v=X9R-sWoStDE), door middel van nieuwe of bestaande IT oplossingen. Dit doen ze door data over de haven van Rotterdam te verzamelen, die data vervolgens te analyseren en kijken of ze daar conclusies uit kunnen trekken
+[TeqPlay B.V.](https://teqplay.nl/nl/) is begonnen als een IT startup, opgericht in 2014 door Leon Gommans([medeoprichter van Rotterdam opendata](http://rotterdamopendata.nl/dataset)) en Richard van Klaveren [Bron](https://drimble.nl/bedrijf/rotterdam/30943744/teqplay-bv.html) en hebben vanaf heden 13 vaste werknemers. De reden dat TeqPlay is opgericht was omdat de oprichters zagen dat er heel veel data in de haven van Rotterdam te vinden was. Een groot deel was gewoon openbaar en gratis te verkrijgen, alleen zagen ze dat er zo weinig met die data werd gedaan en namen zo het initiatief om zelf aan de slag te gaan met al die gegevens. TeqPlay is gevestigd in De Van Nellefabriek in Rotterdam samen met een hoop andere bedrijven. Het bedrijf richt zich voornamelijk op de maritieme sector en de logistiek in de haven en dan vooral op de Rotterdamse haven. De missie van het bedrijf is om de haven slimmer te maken [bron](https://www.youtube.com/watch?v=X9R-sWoStDE), door middel van nieuwe of bestaande IT oplossingen. Dit doen ze door data over de haven van Rotterdam te verzamelen, die data vervolgens te analyseren en kijken of ze daar conclusies uit kunnen trekken
 
 <!--truncate-->
 
@@ -102,7 +108,7 @@ Bij deze competentie gaat het erbij mij om, om een bepaalde casus uit de praktij
 ### Adviseren 
 Vanuit de opleiding heb ik al een hoop meegekregen over design paterns en dergelijken, een stage is een mooie gelegenheid om de geleerde technieken in de praktijk toe te passen. Hierbij andere programmeurs en developers proberen te overtuigen om een bepaalde techniek wel of niet toe te passen in een applicatie.  
  
-##3 Ontwerpen 
+## Ontwerpen 
 Bij deze competentie komt het geleerde over de Unified Modeling Language(UML) van toepassing, voordat je begint met programmeren maak je eerst een ontwerp van het systeem. Zodat je weet wat er gebouwd moet worden en nog belangrijker dat andere weten wat je gaat bouwen.  
  
 ### Realiseren 
@@ -127,7 +133,7 @@ Bij Teqplay werken ze met Trello boards waar we elke twee weken een nieuwe backl
  **Analyseren**
 - AN1. Je kunt een analyse van een opdracht uitvoeren gebaseerd op een praktische onderzoeksvraag en maakt hierbij gebruik van bestaande methoden en technieken.
 
-Analyseren van de casus van een praktijkprobleem met onderzoeksvraag: Hoe kun je data uit verschillende bronnen combineren tot éen masterdatabase?  Hiervoor moet eerst het probleem in kaart worden gebracht op gedeeld in kleinere stukjes. Welke bronnen zijn er tot onze beschikking? Hoe zien die bronnen eruit? Overeenkomsten en verschillen?  Met een techniek genaamd Reversed Engineering8 kan worden uitgezocht wat Teqplay al heeft aan databronnen en systemen. Hierbij worden ook nieuwe diagrammen gemaakt om het systeem in kaart te brengen.  
+Analyseren van de casus van een praktijkprobleem met onderzoeksvraag: Hoe kun je data uit verschillende bronnen combineren tot éen masterdatabase?  Hiervoor moet eerst het probleem in kaart worden gebracht op gedeeld in kleinere stukjes. Welke bronnen zijn er tot onze beschikking? Hoe zien die bronnen eruit? Overeenkomsten en verschillen?  Met een techniek genaamd [Reversed Engineering]() kan worden uitgezocht wat Teqplay al heeft aan databronnen en systemen. Hierbij worden ook nieuwe diagrammen gemaakt om het systeem in kaart te brengen.  
 
 - AN2. Je kunt een requirement analyse uitvoeren voor een (deel van een) software systeem met verschillende belanghebbenden en je houdt hierbij rekening met de kwaliteitsstandaarden die gelden bij het bedrijf. 
 
