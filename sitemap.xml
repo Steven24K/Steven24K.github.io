@@ -15,6 +15,6 @@
 <url> <loc>http://stevenkoerts.nl/docs/project-data</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/docs/project-data.html" /> </url>
 <url> <loc>http://stevenkoerts.nl/docs/projecten</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/docs/projecten.html" /> </url>
 <url> <loc>http://stevenkoerts.nl/docs/pygame</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/docs/pygame.html" /> </url>
-<url> <loc>http://stevenkoerts.nl/docs/shiphappens</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/docs/shiphappens.html" /> </url>
+<url> <loc>http://stevenkoerts.nl/docs/ShipHappens</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/docs/ShipHappens.html" /> </url>
 <url> <loc>http://stevenkoerts.nl/docs/webshop</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/docs/webshop.html" /> </url>
 </urlset>
