@@ -16,14 +16,11 @@ const siteConfig = {
   email: "info@stevenkoerts.nl",
   url: 'http://stevenkoerts.nl/' /* your website url */,
   baseUrl: '/' /* base url for your project */,
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  cname: 'stevenkoerts.nl',
 
   // Used for publishing and more
   projectName: 'Steven24K.github.io',
   organizationName: 'Steven24K',
-  // For top-level user or org sites, the organization is still the same.
 
 
   // For no header links in the top nav bar -> headerLinks: [],
@@ -48,17 +45,7 @@ const siteConfig = {
     secondaryColor: '#14e877',
   },
 
-  /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },*/
+  noIndex: false,
 
   cleanUrl: true,
   customDocsPath: 'projects',

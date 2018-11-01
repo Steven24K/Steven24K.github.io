@@ -4,9 +4,9 @@ title: "Voorbereiding op stage bij TeqPlay"
 
 ## Stage documenten
 
-1. [Stage plan V1](assets/Stageplan-1-Teqplay-Steven-Koerts-0904861.pdf)
-2. [Stage plan V2](assets/Stageplan-2-Teqplay-Steven-Koerts-0904861.pdf)
-3. [Stage plan V3](assets/Stageplan-3-Teqplay-Steven-Koerts-0904861.pdf)
+1. [Stage plan V1 (pdf)](/blog/assets/Stageplan-1-Teqplay-Steven-Koerts-0904861.pdf)
+2. [Stage plan V2 (pdf)](/blog/assets/Stageplan-2-Teqplay-Steven-Koerts-0904861.pdf)
+3. [Stage plan V3 (pdf)](/blog/assets/Stageplan-3-Teqplay-Steven-Koerts-0904861.pdf)
 
 ## Over TeqPlay
 

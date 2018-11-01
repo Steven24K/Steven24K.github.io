@@ -1,5 +1,5 @@
 ---
-id: shiphappens
+id: ShipHappens
 title: "Master DataBase: ShipHappens" 
 ---
 
@@ -7,13 +7,13 @@ title: "Master DataBase: ShipHappens"
 
 ## Inleiding
 
-Dit project heb ik gedaan voor mijn stage bij [TeqPlay](https://link), TeqPlay is een bedrijf gevestigd in de [Van Nelle fabriek](https://link). Het idee achter
+Dit project heb ik gedaan voor mijn stage bij [TeqPlay](https://teqplay.nl/en/), TeqPlay is een bedrijf gevestigd in de [Van Nelle fabriek](https://www.google.com/maps/search/van%20nelle%20fabriek%20rotterdam). Het idee achter
 dit project was om een master database to bouwen voor scheepsinformatie gecombineerd uit meerdere bronnen. Inclusief met een API die de *master data* weer beschikbaar maakt. 
 
 
 ## Het project ShipHappens
 
-In de eerste week van mijn stage kreeg ik te horen wat de opdracht precies zou zijn, die het bedrijf voor ons bedacht had. Dat was dus het bouwen van éen master databron voor scheepsdata waar andere applicaties van TeqPlay in de toekomst hun informatie vandaan kunnen halen. Eerst wat achtergrond over hoe hoed it project to stand is gekomen. TeqPlay heeft een intern systeem dat continu informatie binnenhaalt en doorgeeft aan andere applicaties waaronder [RiverGuide](https://link). Die data komt uit verschillende bronnen, onder andere de [AIS](https://link) van schepen zend een hoop informatie uit, verder halen ze ook informatie uit hun eigen apps. Dit is user generated data, ingevoerd door de schipper. 
+In de eerste week van mijn stage kreeg ik te horen wat de opdracht precies zou zijn, die het bedrijf voor ons bedacht had. Dat was dus het bouwen van éen master databron voor scheepsdata waar andere applicaties van TeqPlay in de toekomst hun informatie vandaan kunnen halen. Eerst wat achtergrond over hoe hoed it project to stand is gekomen. TeqPlay heeft een intern systeem dat continu informatie binnenhaalt en doorgeeft aan andere applicaties waaronder [RiverGuide](https://play.google.com/store/apps/details?id=nl.teqplay.riverguide). Die data komt uit verschillende bronnen, onder andere de [AIS](https://en.wikipedia.org/wiki/Automatic_identification_system) van schepen zend een hoop informatie uit, verder halen ze ook informatie uit hun eigen apps. Dit is user generated data, ingevoerd door de schipper. 
 
 Het probleem is dat al deze data in verschillende tabellen en databases zit en ook uit verschillende bronnen komt. Het bedrijf zo het ideaal vinden als al deze gegevens dus gebundeld worden to éen centrale bron. 
 Dit is dus wat ShipHappens moet gaan realiseren. 
