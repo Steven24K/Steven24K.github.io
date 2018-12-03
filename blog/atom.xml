@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://stevenkoerts.nl//blog</id>
     <title>Steven Koerts Blog</title>
-    <updated>2018-10-30T06:00:00Z</updated>
+    <updated>2018-12-03T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="http://stevenkoerts.nl//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Steven Koerts news and events.</subtitle>
     <logo>http://stevenkoerts.nl//img/profiel.jpg</logo>
     <rights>Copyright © 2018 Made by Steven Koerts</rights>
+    <entry>
+        <title type="html"><![CDATA[Stage Teqplay: Het vervolg]]></title>
+        <id>http://stevenkoerts.nl//blog/2018/12/03/Stage-TeqPlay-Het-vervolg.html</id>
+        <link href="http://stevenkoerts.nl//blog/2018/12/03/Stage-TeqPlay-Het-vervolg.html">
+        </link>
+        <updated>2018-12-03T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Vanaf dit moment ben ik 13 weken bezig met mijn stage, we hebben al flink wat geprogrammeerd en een mooi product neergezet. Naast de backend ben ik nu ook bezig met de frontend en het design van een mooie user interface. Je merkt dat we in 10 weken tijd een stabiele basis hadden voor het project met een duidelijk doel van het systeem moet kunnen. In de komende weken zal ik meer gaan werken naar het gebruik toe, om de te kunnen zorgen dat in eerste instantie andere werknemers het systeem kunnen gebruiken.</p>
+]]></summary>
+        <author>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stage TeqPlay: De eerste 8 weken]]></title>
         <id>http://stevenkoerts.nl//blog/2018/10/30/Stage-TeqPlay-eerste-8-weken.html</id>

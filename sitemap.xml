@@ -5,6 +5,7 @@
 <url> <loc>http://stevenkoerts.nl/help</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/en/help" /> </url>
 <url> <loc>http://stevenkoerts.nl/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/en/index" /> </url>
 <url> <loc>http://stevenkoerts.nl/videos</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="http://stevenkoerts.nl/en/videos" /> </url>
+<url> <loc>http://stevenkoerts.nl/2018/12/03/Stage-TeqPlay-Het-vervolg</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>http://stevenkoerts.nl/2018/10/30/Stage-TeqPlay-eerste-8-weken</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>http://stevenkoerts.nl/2018/10/29/Plan-van-aanpak-stage-Teqplay</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>http://stevenkoerts.nl/2018/06/26/GitHub-als-CMS</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
