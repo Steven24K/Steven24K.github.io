@@ -3,6 +3,7 @@ const siteConfig = require(process.cwd() + '/siteConfig.js');
 
 const videos = require(process.cwd() +'/video-data.js')
 
+//This function takes care of converting a standar youtube video link to a embed link to be included in an iframe
 function createEmbed(url) {
     return url.replace("watch?v=", "embed/")
 }

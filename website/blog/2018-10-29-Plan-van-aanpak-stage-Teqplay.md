@@ -108,7 +108,7 @@ Bij deze competentie gaat het erbij mij om, om een bepaalde casus uit de praktij
 ### Adviseren 
 Vanuit de opleiding heb ik al een hoop meegekregen over design paterns en dergelijken, een stage is een mooie gelegenheid om de geleerde technieken in de praktijk toe te passen. Hierbij andere programmeurs en developers proberen te overtuigen om een bepaalde techniek wel of niet toe te passen in een applicatie.  
  
-## Ontwerpen 
+### Ontwerpen 
 Bij deze competentie komt het geleerde over de Unified Modeling Language(UML) van toepassing, voordat je begint met programmeren maak je eerst een ontwerp van het systeem. Zodat je weet wat er gebouwd moet worden en nog belangrijker dat andere weten wat je gaat bouwen.  
  
 ### Realiseren 

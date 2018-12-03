@@ -7,11 +7,7 @@
 }
 
 .skill-list li {
-    display: inline-block;
-    list-style-type: circle;
-    text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-color: rgb(64, 212, 6);
     font-weight: bolder;
     font-family: 'fantasy';
     font-size: 2em;

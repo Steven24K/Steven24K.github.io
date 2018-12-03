@@ -13,7 +13,7 @@ const siteConfig = {
   title: 'Steven Koerts' /* title for your website */,
   tagline: 'Mijn persoonlijke blog, website en portfolio',
   cv: "pdf/Curriculum_Vitea_Steven_Koerts.pdf",
-  email: "info@stevenkoerts.nl",
+  email: "no-mail",//"info@stevenkoerts.nl",
   url: 'http://stevenkoerts.nl/' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   cname: 'stevenkoerts.nl',

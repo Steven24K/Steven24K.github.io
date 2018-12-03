@@ -27,7 +27,7 @@ class Welcome extends React.Component {
         <div className="row">
 
           <div className="col-lg-6 center">
-            <img className="rounded-circle img-fluid" src={siteConfig.headerIcon}/>
+            <img width="100%" height="100%" className="rounded-circle img-fluid" src={siteConfig.headerIcon}/>
           </div>
        
            <div className="col-lg-6 center">
@@ -36,8 +36,6 @@ class Welcome extends React.Component {
               <ul className="skill-list">
                   <li>Software Engineer</li>
                   <li>Web Developer</li>
-                  <li>Back-End &amp; Front-End</li>
-                  <li>Computer Science</li>
                   <li>Acteur</li>
               </ul>
            </div>
@@ -59,8 +57,8 @@ class Bio extends React.Component {
          <div className="card-body">
          Op dit moment studeer ik informatica(computer science) aan de Hogeschool van Rotterdam. 
          Ik zit in het derder jaar van mijn opleiding en loop stage bij Teqplay B.V. , op dit moment beheers ik de programmeertalen: Python, C#, Java, Javascript, Typescript, SQL, Java, Kotlin, HTML, CSS, PHP en R😉. 
-         Het leukste aan mijn opleiding vind ik dat het een zowel technische als creatieve opleiding is, bij het bouwen van een website komt een hoop techniek kijken, maar bij de front-end helpt het als je je creatieviteit de vrije loop laat gaan. 
-         Zelf heb heb ik een voorkeur voor de back-end en gebruik ik de front-end als visualitatie van wat er in de back-end gebeurt.
+         Het leukste aan mijn opleiding vind ik dat het een zowel technische als creatieve opleiding is, bij het bouwen van een website komt een hoop techniek kijken, maar bij de front-end helpt het als je je creativiteit de vrije loop laat gaan. 
+         Zelf heb heb ik een voorkeur voor de back-end en gebruik ik de front-end als visualisatie van wat er in de back-end gebeurt.
          </div>
       </div>
     </div>
@@ -74,19 +72,19 @@ class Skills extends React.Component {
       <div className="row">
          <div className="col-lg-6 skills">
             <ul className="list-group">
-              <li className="list-group-item">C#/.NET</li>
-              <li className="list-group-item">Python</li>
-              <li className="list-group-item">PHP</li>
-              <li className="list-group-item">HTML, CSS, Javascript/Typescript</li>
+            <h3>Bedrijven</h3>
+              <li className="list-group-item"><a href="/blog/2018/10/29/Plan-van-aanpak-stage-Teqplay">TeqPlay B.V.</a></li>
+              <li className="list-group-item"></li>
+              <li className="list-group-item"></li>
             </ul>
          </div>
 
           <div className="col-lg-6 skills">
             <ul className="list-group">
-              <li className="list-group-item">R Statistiek</li>
-              <li className="list-group-item">Tensorflow</li>
-              <li className="list-group-item">React, Angular, Docusaurus, Gatsby</li>
-              <li className="list-group-item">SQL</li>
+              <h3>Vaardigheden</h3>
+              <li className="list-group-item">C#/.NET, Java/Kotlin, Python, R, SQL</li>
+              <li className="list-group-item">PHP, HTML, CSS, Javascript/Typescript</li>
+              <li className="list-group-item">React, Angular, Docusaurus, Gatsby, Bootstrap</li>
             </ul>
          </div>
       </div>

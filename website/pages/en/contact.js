@@ -19,7 +19,9 @@ class Contact extends React.Component {
 
                <h2>Staat uw reden voor contact opnemen hier niet bij? Twijfel dan niet en stuur mij een E-Mail!</h2>
 
-               <a className="btn btn-lg btn-warning" href={"mailto:" + siteConfig.email}>Stuur een E-Mail</a>
+            <abbr title="Op dit moment ben ik bezig met een stage dus zal ik het email verkeer binnen de site niet beantwoorden">
+               <a className="btn btn-lg btn-warning disabled" href={"mailto:" + siteConfig.email}>Stuur een E-Mail</a>
+            </abbr>
             </div>
         )
     }
