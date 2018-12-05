@@ -8,6 +8,8 @@ title: "Voorbereiding op stage bij TeqPlay"
 2. [Stage plan V2 (pdf)](/blog/assets/Stageplan-2-Teqplay-Steven-Koerts-0904861.pdf)
 3. [Stage plan V3 (pdf)](/blog/assets/Stageplan-3-Teqplay-Steven-Koerts-0904861.pdf)
 
+<!--truncate-->
+
 ## Over TeqPlay
 
 ### Oprichting
@@ -15,7 +17,6 @@ title: "Voorbereiding op stage bij TeqPlay"
 
 [TeqPlay B.V.](https://teqplay.nl/nl/) is begonnen als een IT startup, opgericht in 2014 door Leon Gommans([medeoprichter van Rotterdam opendata](http://rotterdamopendata.nl/dataset)) en Richard van Klaveren [Bron](https://drimble.nl/bedrijf/rotterdam/30943744/teqplay-bv.html) en hebben vanaf heden 13 vaste werknemers. De reden dat TeqPlay is opgericht was omdat de oprichters zagen dat er heel veel data in de haven van Rotterdam te vinden was. Een groot deel was gewoon openbaar en gratis te verkrijgen, alleen zagen ze dat er zo weinig met die data werd gedaan en namen zo het initiatief om zelf aan de slag te gaan met al die gegevens. TeqPlay is gevestigd in De Van Nellefabriek in Rotterdam samen met een hoop andere bedrijven. Het bedrijf richt zich voornamelijk op de maritieme sector en de logistiek in de haven en dan vooral op de Rotterdamse haven. De missie van het bedrijf is om de haven slimmer te maken [bron](https://www.youtube.com/watch?v=X9R-sWoStDE), door middel van nieuwe of bestaande IT oplossingen. Dit doen ze door data over de haven van Rotterdam te verzamelen, die data vervolgens te analyseren en kijken of ze daar conclusies uit kunnen trekken
 
-<!--truncate-->
 
 Hierbij kun je jezelf afvragen wat betekent die data? Wat zegt die data over de toekomst? Is het data van goede kwaliteit? Vooral die laatste is lastig om te beantwoorden, want hoe kun je kwaliteit uitdrukken? Wat vooral belangrijke factoren zijn voor de kwaliteit van de data is waar de data vandaan komt, de herkomst, is het door een mens ingevoerd of komt het van sensoren vandaan. Een populaire bron van data bij TeqPlay is gps-data van schepen. Elk schip heeft een kastje aan boord genaamd de AIS(Automatic Identification System). Een AIS verstuurt informatie over het schip, zoals de locatie, snelheid, bestemming, naam etc. De data is open-source, dus iedereen kan die gegevens ophalen en gebruiken, als je beschikt over een AIS receiver. Het bedrijf heeft zo een receiver op het kantoor staan, die continu data over schepen ontvangt. AIS is een betrouwbare informatiebron aangezien de data door een computer wordt gegenereerd als het gaat om de GPS coördinaten. De bestemming van het schip wordt handmatig door de schipper ingevoerd.  Een andere factor die de kwaliteit van de data beïnvloed is hoe oud de data is, is de informatie nog wel relevant.  
  

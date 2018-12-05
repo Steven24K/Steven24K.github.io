@@ -2,9 +2,13 @@
 title: "Stage TeqPlay: De eerste 8 weken"
 ---
 
-Mijn stage bij TeqPlay begon al meteen het bekend maken van de opdracht, dat werd dus de masterdatabase. Wij zijn er aan gaan werken onder de naam [ShipHappens](/docs/shiphappens). Deze opdracht leek me het meest intressant omdat je dan daadwerkelijk aan de slag met de data van schepen, het uiteindelijke doel is dus ook zoveel mogelijk data verzamelen en beschikbaar stellen. Aangezien we gebruik moeten maken van verschillende bronnen is de hoofdvraag van het project: Hoe kun je data uit verschillende bronnen combineren tot 1 bron?
+Mijn stage bij TeqPlay begon al meteen het bekend maken van de opdracht, dat werd dus de masterdatabase. Wij zijn er aan gaan werken onder de naam [ShipHappens](/docs/shiphappens). 
 
 <!--truncate-->
+
+Deze opdracht leek me het meest intressant omdat je dan daadwerkelijk aan de slag met de data van schepen, het uiteindelijke doel is dus ook zoveel mogelijk data verzamelen en beschikbaar stellen. Aangezien we gebruik moeten maken van verschillende bronnen is de hoofdvraag van het project: Hoe kun je data uit verschillende bronnen combineren tot 1 bron?
+
+
 
 ## Analyseren
 **AN1)** In de eerste weken zijn we meteen aan de slag gegaan met het analyseren van de hoofdvraag, de vraag hoe je verschillende bronnen kunt combineren kan je opdelen in kleinere stukken. Eerste moet je weten welke data we tot onze beschikking hebben, hoe ziet die data er vervolgens uit, zitten er dubbele waardes bij de verschillende bronnen? Zo ja, welke waarde heeft dan voorrang op de andere? Hoeronder is een diagram die weergeeft hoe een *een schip er uit ziet*. 
