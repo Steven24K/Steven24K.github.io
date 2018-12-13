@@ -33,29 +33,273 @@ Later kwamen er al gauw meer databronnen bij en voordat we aan de slag gingen me
 
 
 ## Realiseren
-**R2)** Voor het project hebben we een aantal tests geschreven om de onderhoudbaarheid van de software te bevorderen. Het bedrijf heeft aangeraden om om unit tests te schrijven voor de losse componenten in het systeem. Zo kom je er ook meteen achter of een bepaalde functie te groot is, dan kun je hem opdelen in kleinere stukken. Een unit test bestaat uit een test case, de wat en waarom je gaat testen. De test is vervolgens opgebouwd uit een verwacht resultaat en een werkelijk resultaat, deze worden met elkaar vergeleken. Als ze hetzelfde zijn dan is de test succesvol, zijn er afwijkingen dan heeft de test gefaald. 
+**R2)** Voor het project hebben we een aantal tests geschreven om de onderhoudbaarheid van de software te bevorderen. Het bedrijf heeft aangeraden om om unit tests te schrijven voor de losse componenten in het systeem. Zo kom je er ook meteen achter of een bepaalde functie te groot is, dan kun je hem opdelen in kleinere stukken. Een unit test bestaat uit een test case, de wat en waarom je gaat testen. De test is vervolgens opgebouwd uit een verwacht resultaat en een werkelijk resultaat, deze worden met elkaar vergeleken. Als ze hetzelfde zijn dan is de test succesvol, zijn er afwijkingen dan heeft de test gefaald. Verder is er ook nog de intergratie test deze is vrijwel hetzelfde als een unit test alleen is het enige verschil dat een unit test een onderdeel van het systeem test en een intergratie test, test een gedeelte dat afhankelijk is van een ander systeem onder andere via een internet verbinding. 
 
-## TEST: Database filters
+## UNIT TEST: TRAVERSING THE MAP
 
-Een zeer kritisch onderdeel van het systeem is het filter systeem. Het doel van dit onderdeel is op dynamische wijze filters maken om te kunnen zoeken binnen onze master database. 
-Dit is een belangrijk onderdeel omdat dit de informatie uit onze database vrijgeeft, we geven geen hele datasets vrij. Alleen gefilterde data van wat de gebruiker heeft opgezocht, het idee is dus dat wij al die gegevens over schepen hebben en alleen vrijgeven als de gebruiker weet waar hij naar op zoek is. 
-
-### Test case
-
-En functie voor het genereren van MongoDB queries aan de hand van een key value pair, die een filter maakt voor het vergelijken van een attribuut met een bepaalde waarde bijvoorbeeld: het vergelijken van de `"name"` van een schip met waarde `"BETELGEUZE"`. 
-
-- input waarde van de functie is `mapOf("name" to "BETELGEUZE"`) 
-- Verwachte output is `{ $or: [ { "name" : "BETELGEUZE" } ] }`
-
-Op het moment dat je de output runt in mongo dan worden alle schepen terug gegeven waar de naam gelijk is aan BETELGEUZE. 
-
-Het success resultaat is alsvolgt: 
-![alt](/blog/assets/test-success.PNG)
+Een belangrijk onderdeel van het systeem is het verzamelen van data, zo halen we informatie uit verschillende bronnen. Eén van die bronnen is het TeqPlay platform zelf. De development omgeving bevat zo een 400.000 schepen en de productie omgeving zo een 5.000.000 schepen. Als je dit allemaal in één keer binnen zou halen dan zou dat erg veel zijn voor ons systeem. Daarom willen we de mogelijkheid om een bepaald gebied in stukken te kunnen binnenhalen. Om dit te kunnen realiseren heb ik een script geschreven die een groot gebied opdeelt in een x aantal kleine gebieden.
+![alt](/blog/assets/traversing-the-map.PNG) Resultaat van de functie getekend in [Poly line tool](https://www.keene.edu/campus/maps/tool/?coordinates=15.0000000%2C%2055.0000000%0A15.0000000%2C%2040.0000000%0A0.0000000%2C%2040.0000000%0A0.0000000%2C%2055.0000000%0A15.0000000%2C%2055.0000000%0A15.0000000%2C%2049.0000000%0A9.0000000%2C%2049.0000000%0A9.0000000%2C%2055.0000000%0A9.0000000%2C%2055.0000000%0A9.0000000%2C%2049.0000000%0A3.0000000%2C%2049.0000000%0A3.0000000%2C%2055.0000000%0A3.0000000%2C%2055.0000000%0A3.0000000%2C%2049.0000000%0A0.0000000%2C%2049.0000000%0A0.0000000%2C%2055.0000000%0A15.0000000%2C%2049.0000000%0A15.0000000%2C%2043.0000000%0A9.0000000%2C%2043.0000000%0A9.0000000%2C%2049.0000000%0A9.0000000%2C%2049.0000000%0A9.0000000%2C%2043.0000000%0A3.0000000%2C%2043.0000000%0A3.0000000%2C%2049.0000000%0A3.0000000%2C%2049.0000000%0A3.0000000%2C%2043.0000000%0A0.0000000%2C%2043.0000000%0A0.0000000%2C%2049.0000000%0A15.0000000%2C%2043.0000000%0A15.0000000%2C%2040.0000000%0A9.0000000%2C%2040.0000000%0A9.0000000%2C%2043.0000000%0A9.0000000%2C%2043.0000000%0A9.0000000%2C%2040.0000000%0A3.0000000%2C%2040.0000000%0A3.0000000%2C%2043.0000000%0A3.0000000%2C%2043.0000000%0A3.0000000%2C%2040.0000000%0A0.0000000%2C%2040.0000000%0A0.0000000%2C%2043.0000000)
 
 
-*De te testen component*
-![alt](/blog/assets/function-to-test.PNG)
+Zie de code hieronder:
 
+```
+/**
+ * Class to hold information about an area, from longitude and latitude. The information is enough to draw a square.
+ * @author Steven K*/
+data class Area (
+        var TopLeftLat: Double,
+        var TopLeftLon: Double,
+        var BottomRightLat: Double,
+        var BottomRightLon: Double
+) {
+    /**
+     * Method to calculate the size of the area, the area is calculates as folows:
+     * It is the product of the difference between the longitude and the latitude.
+     * (TopLeftLon - BottomRightLon) * (TopLeftLat - BottomRightLat)
+     *
+     * @return Double*/
+    fun calculateTotalArea() = (TopLeftLon - BottomRightLon) * (TopLeftLat - BottomRightLat)
 
-*De unit test*
-![alt](/blog/assets/unit-test.PNG)
+    /**
+     * Function that returns a string representation of a polyline,
+     * the result can be copy and pasted straight into: @see https://www.keene.edu/campus/maps/tool/
+     * This is useful for debugging purposes
+     *
+     * @return String*/
+    fun toPolyLine() = """
+            $TopLeftLon, $TopLeftLat
+            $TopLeftLon, $BottomRightLat
+            $BottomRightLon, $BottomRightLat
+            $BottomRightLon, $TopLeftLat
+        """.trimIndent()
+
+    /**
+     * This method divides the main area in smaller areas, this is used to traverse the TeqPlay platform in smaller chunks.
+     * It returns a list of all areas, the sum of these areas should be equal to the total area.
+     *
+     * The method starts with traversing the main area from the upper right corner to the bottom left corner.
+     * NOTE: The variable names are called topLeft... and bottomRight...
+     *
+     * It moves with steps equals to size from the right to the left. When it has reached the end it of a row it moves one step to the bottom and starts back
+     * at the right side. If the size fits exactly all the areas have equal sizes, when it doesn't fit the areas at the boundary will be cut to size
+     * so they fit inside the area.
+     *
+     * When the main area size is equals or bigger than the size the method will only return one area in the list.
+     *
+     * @param size the size of the smaller areas, the total area will be the size squared.
+     *
+     * @return ArrayList<Area>*/
+    fun divideArea(size: Double): ArrayList<Area> {
+        val result = arrayListOf<Area>()
+        //The start coordinates of the area
+        var currentTopLat = this.TopLeftLat
+        var currentTopLon: Double
+
+        println(this.toPolyLine())
+
+        //The outer while loop traverses the latitude and goes a step down every iteration
+        //The inner while loop traverses the longitude and goes a step right every iteration
+        while (currentTopLat > this.BottomRightLat) {
+            //The longitude will be re-initialized every iteration.
+            currentTopLon = this.TopLeftLon
+            while (currentTopLon > this.BottomRightLon) {
+                var currentBottomLat = currentTopLat - size
+                var currentBottomLon = currentTopLon - size
+                if (currentBottomLat < this.BottomRightLat) currentBottomLat = this.BottomRightLat
+                if (currentBottomLon < this.BottomRightLon) currentBottomLon = this.BottomRightLon
+                result.add(Area(
+                        TopLeftLat = currentTopLat,
+                        TopLeftLon = currentTopLon,
+                        BottomRightLat = currentBottomLat,
+                        BottomRightLon = currentBottomLon
+                ))
+                println(result.last().toPolyLine())
+                currentTopLon -= size
+            }
+            currentTopLat -= size
+        }
+        return result
+    }
+
+}
+```
+
+Tijdens het bouwen ben ik de volgende issues tegengekomen die bij de complexiteit van de functie komen: 
+- De functie sloeg de randen van het gebied over
+- De functie ging buiten het aangeven gebieden
+
+Verder is er nog een veel voorkomede issue voor als je de aarde rond wil gaan bij de coördinaten: (185, 85, -185, -85)
+
+Bij deze functie heb ik ook een aantal unit tests geschreven, met de volgende test criteria: 
+- De hoeveelheid gebieden waarin het gebied wordt opgedeeld is gelijk aan de totaal oppervlakte gedeeld door grootte van de losse gebieden.
+- De meest rechts bovenste coördinaten van het eerste gebied zijn hetzelfde als de meest rechts bovenste coördinaten van het grootte gebied.
+- De meest links onderste coördinaten van het laatste gebied zijn hetzelfde als de meest links onderste coördinaten van het grootte gebied.
+- De totale oppervlakte van alle gebiedjes moet gelijk zijn als de totaal oppervlakte van het grote gebied. 
+
+Verder zijn er nog een aantal bijzondere gevallen: 
+- Als de grote van de gebieden niet precies uitkomt worden de randen afgerond zodat ze niet buiten het hoofd gebied vallen. 
+- Als de oppervlakte van het de gespecificeerde gebied gelijk of groter is aan de totale oppervlakte van het grote gebied, dan returned de functie maar één gebied met dezelfde grote als het hoofdgebied.  
+
+Zie hieronder de uitgewerkte unit tests: 
+```
+internal class TraverseMapTest {
+    //A simple area where every value is divide-able by 5
+    private val testArea = Area(55.0, 15.0, 40.0, 0.0)
+    //Real world scenario for the area of west Europe
+    private val westEuropeArea =  Area(54.378286,10.719496,48.964649,-0.379124)
+    //A relatively larger area
+    private  val largeArea = Area(185.0, 85.0, -185.0, -85.0)
+
+    @Test
+    fun totalAreaTest() {
+        Assert.assertEquals(225.0, testArea.calculateTotalArea(), 0.0)
+        Assert.assertEquals(60.08389988094002, westEuropeArea.calculateTotalArea(), 0.0)
+        Assert.assertEquals(7303.033038288478, largeArea.calculateTotalArea(), 0.0)
+    }
+
+    @Test
+    fun toPolyLineTest() {
+        Assert.assertEquals("""
+            15.0, 55.0
+            15.0, 40.0
+            0.0, 40.0
+            0.0, 55.0
+        """.trimIndent(), testArea.toPolyLine())
+        Assert.assertEquals("""
+            10.719496, 54.378286
+            10.719496, 48.964649
+            -0.379124, 48.964649
+            -0.379124, 54.378286
+        """.trimIndent(), westEuropeArea.toPolyLine())
+        Assert.assertEquals("""
+            -48.955596, 59.943996
+            -48.955596, -0.553685
+            -169.671513, -0.553685
+            -169.671513, 59.943996
+        """.trimIndent(), largeArea.toPolyLine())
+    }
+
+    @Test
+    fun traverseAreaPerfectFitTest() {
+        val size = 5.0
+        val result = testArea.divideArea(size)
+        var sumOfAllareas = 0.0
+        for (area in result) sumOfAllareas += area.calculateTotalArea()
+
+        Assert.assertEquals(9, result.size)
+        Assert.assertEquals(Area(55.0, 15.0, 50.0, 10.0), result.first())
+        Assert.assertEquals(Area(45.0, 5.0, 40.0, 0.0), result.last())
+        Assert.assertEquals(225.0, sumOfAllareas, 0.0)
+    }
+
+    @Test
+    fun traversAreaNoPerfectFitTest() {
+        val size = 6.0
+        val result = testArea.divideArea(size)
+        var sumOfAllareas = 0.0
+        for (area in result) sumOfAllareas += area.calculateTotalArea()
+
+        Assert.assertEquals(9, result.size)
+        Assert.assertEquals(Area(55.0, 15.0, 49.0, 9.0), result.first())
+        Assert.assertEquals(Area(43.0, 3.0, 40.0, 0.0), result.last())
+        Assert.assertEquals(225.0, sumOfAllareas, 0.0)
+    }
+
+    @Test
+    fun traverseAreaMaxSizeTest() {
+        val size = 16.0
+        val result = testArea.divideArea(size)
+
+        Assert.assertEquals(1, result.size)
+        Assert.assertEquals(Area(55.0, 15.0, 40.0, 0.0), result.first())
+        Assert.assertEquals(225.0, result.first().calculateTotalArea(), 0.0)
+    }
+
+    @Test
+    fun traverseAreaOutOfBoundsTest() {
+        val size = 16.0
+        val result = testArea.divideArea(size)
+
+        Assert.assertEquals(1, result.size)
+        Assert.assertEquals(Area(55.0, 15.0, 40.0, 0.0), result.first())
+        Assert.assertEquals(225.0, result.first().calculateTotalArea(), 0.0)
+    }
+
+    @Test
+    fun traverserWestEuropeTest() {
+        val size = 0.5
+        val result = westEuropeArea.divideArea(size)
+        var sumOfAllareas = 0.0
+        for (area in result) sumOfAllareas += area.calculateTotalArea()
+
+        Assert.assertEquals(253, result.size)
+        Assert.assertEquals(Area(54.378286, 10.719496, 53.878286, 10.219496), result.first())
+        Assert.assertEquals(Area(49.378286, -0.28050400000000053, 48.964649, -0.379124), result.last())
+        Assert.assertEquals(westEuropeArea.calculateTotalArea(), sumOfAllareas, 1.0)
+    }
+
+    @Test
+    fun traverseWesEuropeMaxValue() {
+        val size = 61.0
+        val result = westEuropeArea.divideArea(size)
+
+        Assert.assertEquals(1, result.size)
+        Assert.assertEquals(Area(54.378286, 10.719496, 48.964649, -0.379124), result.first())
+        Assert.assertEquals(60.0, result.first().calculateTotalArea(), 1.0)
+    }
+
+    @Test
+    fun traverseLargeAreaTest() {
+        val size = 10.0
+        val result = largeArea.divideArea(size)
+
+        Assert.assertEquals(629, result.size)
+    }
+}
+```
+
+## INTEGRATIE TEST: COLLECTING DATA FROM THE TEQPLAY PLATFORM
+Zoals je kunt lezen in de unit tests hierboven verzamelen we data uit het TeqPlay platform, dit is één van de eerste dingen die gebouwd is voor ons systeem. 
+Een script dat een API request maakt naar de het TeqPlay platform en zo schepen binnenhaalt, om dit te testen moet je een intergratie test gebruiken omdat het stuk code afhankelijk is van een derde partij. Als die derde partij dan iets veranderd in de API dan zie je dat meteen terug in het test resultaat.
+
+Zie hieronder de code om een request te maken naar het platform: 
+
+```
+
+fun platformParser(token: String, area: Area, showAged: Boolean = false, includeAgent: Boolean = false ): ResponseEntity<Array<ShipInfoStaticPlatform>>{
+    val headers = HttpHeaders()
+
+    //Login into the platform
+    headers.add("Authorization", token)
+
+    val url = "${ConfigCreator.getPlatformConfig().host}/ship/details?topLeftLat=${area.TopLeftLat}&topLeftLon=${area.TopLeftLon}&bottomRightLat=${area.BottomRightLat}&bottomRightLon=${area.BottomRightLon}&showAged=$showAged&includeAgent=$includeAgent"
+    return RestTemplate().exchange(url,
+            HttpMethod.GET,
+            HttpEntity<String>(headers),
+            Array<ShipInfoStaticPlatform>::class.java)
+
+}
+```
+
+Er is getest onder de volgende criteria: 
+- De response van het platform moet een statuscode 200(OK)terug geven.
+- Het dat in de response body zit moet groter zijn dan 0. 
+
+Als één van deze resultaten afwijkt dan zou je kunnen concluderen dat er iets mis gaat aan de kant van het platform of de verbinding daartussen. Zie hieronder de test: 
+
+```
+@Category(IntegrationServiceImpl::class)
+internal class PlatformParserTest {
+
+    @Test
+    fun checkRequest(){
+        val token = login().body.token
+        val conf = ConfigCreator.getPlatformAreaConfig()
+        val result = platformParser(token, Area(conf.maxTopLeftLat, conf.maxTopLeftLon, conf.minBottomRightLat, conf.minBottomRightLon))
+
+        Assert.assertEquals(HttpStatus.OK, result.statusCode)
+        Assert.assertNotEquals(0, result.body.size)
+    }
+}
+```
