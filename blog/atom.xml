@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://stevenkoerts.nl//blog</id>
     <title>Steven Koerts Blog</title>
-    <updated>2018-12-03T06:00:00Z</updated>
+    <updated>2018-12-17T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="http://stevenkoerts.nl//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Steven Koerts news and events.</subtitle>
     <logo>http://stevenkoerts.nl//img/profiel.jpg</logo>
     <rights>Copyright © 2018 Made by Steven Koerts</rights>
+    <entry>
+        <title type="html"><![CDATA[Stage TeqPlay: Mijn verwachtingen]]></title>
+        <id>http://stevenkoerts.nl//blog/2018/12/17/Stage-TeqPlay-Mijn-verwachtingen.html</id>
+        <link href="http://stevenkoerts.nl//blog/2018/12/17/Stage-TeqPlay-Mijn-verwachtingen.html">
+        </link>
+        <updated>2018-12-17T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Ik ben nu een aantal weken bezig met mijn stage bij TeqPlay, ben zelfs al over de helft van de stage periode. Dus dit leek mij een mooi moment om terug te blikken op het begin, mijn verwachtingen die ik had over het bedrijf en hoe deze verwachtingen in de praktijk zijn uitgevallen.</p>
+]]></summary>
+        <author>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stage Teqplay: Het vervolg]]></title>
         <id>http://stevenkoerts.nl//blog/2018/12/03/Stage-TeqPlay-Het-vervolg.html</id>
