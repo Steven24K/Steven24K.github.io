@@ -23,6 +23,4 @@ Iets wat ook heel typisch is aan IT bedrijven is dat er altijd wel een activitei
 Wat uit de code review blijkt dus onder andere wat spelfouten zitten in de documentatieen, dat er meer comments geplaatst moeten worden en een conf file gemaakt moet worden. Dit zijn allemaal voorbeelden van hoe de code leesbaarder, schaalbaarder en onderhoudtbaarder wordt. 
 
 
-<br>
-
 Ik zit dus nu in de laatste week van het jaar van mijn stage, deze week ben voornamelijk bezig met het verbeteren van code in het project, documentatie schrijven en zorgen dat het systeem stabiel kan draaien op de student server van TeqPlay. Ervoor zorgen dat alle code leesbaar is en het project voor mijn gevoel goed afgerond wordt. 

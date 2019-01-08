@@ -15,7 +15,9 @@ Naast de backend ben ik nu ook bezig met de frontend en het design van een mooie
 
 Wat te zien is in dit diagram zijn de verschillende gebruikers en systeem onderdelen die iets te maken hebben met het systeem en wat er van het systeem verwacht wordt. Een aantal eisen zijn dat het systeem nieuwe informatie moet binnenhalen in een vastgesteld tijd schema. Andere onderdelen zijn dat het systeem alle veranderingen op de database bij moet houden en als een schip handmatig wordt aangepast dat het dan in een aparte collectie wordt opgeslagen. 
 
+Deze use cases worden vervolgens omgezet in kaarten die worden toegevoegd op het Trello bord. 
 
+![alt](/blog/assets/trello-bord-bij-AN2-3.PNG)
 
 ## Ontwerpen
 **O2)**

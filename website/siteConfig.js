@@ -32,7 +32,9 @@ const siteConfig = {
     {page: 'contact', label: 'Contact'}
   ],
 
-
+  blogSidebarCount: 15, //Max amount of blog items in sidebar
+  blogSidebarTitle: "Laatste posts", //Custom title for sidebar
+  
 
   /* path to images for header/footer */
   headerIcon: 'img/profiel.jpg',
