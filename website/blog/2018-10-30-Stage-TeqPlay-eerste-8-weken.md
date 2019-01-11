@@ -2,16 +2,16 @@
 title: "Stage TeqPlay: De eerste 8 weken"
 ---
 
-Mijn stage bij TeqPlay begon al meteen het bekend maken van de opdracht, dat werd dus de masterdatabase. Wij zijn er aan gaan werken onder de naam [ShipHappens](/docs/shiphappens). 
+Mijn stage bij TeqPlay begon al met het bekend maken van de opdracht, dat werd dus de masterdatabase. Ik ben er in teamverband aan gaan werken, onder de naam [ShipHappens](/docs/ShipHappens). 
 
 <!--truncate-->
 
-Deze opdracht leek me het meest intressant omdat je dan daadwerkelijk aan de slag met de data van schepen, het uiteindelijke doel is dus ook zoveel mogelijk data verzamelen en beschikbaar stellen. Aangezien we gebruik moeten maken van verschillende bronnen is de hoofdvraag van het project: Hoe kun je data uit verschillende bronnen combineren tot 1 bron?
+Deze opdracht leek me het meest intressant omdat je dan daadwerkelijk aan de slag met de data van schepen, het uiteindelijke doel is dus ook om zoveel mogelijk data te verzamelen en beschikbaar te stellen. Aangezien we gebruik moeten maken van verschillende bronnen is de hoofdvraag van het project: Hoe kun je data uit verschillende bronnen combineren tot één bron?
 
 
 
 ## Analyseren
-**AN1)** In de eerste weken zijn we meteen aan de slag gegaan met het analyseren van de hoofdvraag, de vraag hoe je verschillende bronnen kunt combineren kan je opdelen in kleinere stukken. Eerste moet je weten welke data we tot onze beschikking hebben, hoe ziet die data er vervolgens uit, zitten er dubbele waardes bij de verschillende bronnen? Zo ja, welke waarde heeft dan voorrang op de andere? Hoeronder is een diagram die weergeeft hoe een *een schip er uit ziet*. 
+**AN1)** In de eerste weken zijn we meteen aan de slag gegaan met het analyseren van de hoofdvraag, de vraag hoe je verschillende bronnen kunt combineren kan je opdelen in kleinere stukken. Eerst moet je weten welke data we tot onze beschikking hebben, hoe ziet die data er vervolgens uit, zitten er dubbele waardes bij de verschillende bronnen? Zo ja, welke waarde heeft dan voorrang op de andere? Hoeronder is een diagram die weergeeft hoe een *een schip er uit ziet*. 
 
 ![modelShip](/blog/assets/Data-with-there-identifiers.png)
 *Data van het TeqPlay platform*
@@ -23,7 +23,7 @@ Later kwamen er al gauw meer databronnen bij en voordat we aan de slag gingen me
 ![sources-class](/blog/assets/models-for-sources.png)
 
 ## Beheren
-**B1)** Om project matig te werken wordt bij TeqPlay met Scrum en Agile gewerkt, sprints duren twee weken en elke sprint begint met het maken van nieuwe taken op het Trello bord en eindigt met een demo van wat we in die sprint hebben gedaan. Voor meer info wat ik elke sprint heb gedaan en de afspraken die zijn gemaakt zie mijn [sprint logboek](assets/Sprint-logboek.pdf). 
+**B1)** Om project matig te werken wordt bij TeqPlay met Scrum en Agile gewerkt, sprints duren twee weken en elke sprint begint met het maken van nieuwe taken op het Trello bord en eindigt met een demo van wat we in die sprint hebben gedaan. Voor meer info wat ik elke sprint heb gedaan en de afspraken die zijn gemaakt zie mijn [sprint logboek](assets/Sprint-logboek.pdf). Deze heb ik gedurende mijn stage ook om de twee weken bijgehouden. 
 ![trello](/blog/assets/trello-bord-sprint-2.PNG)
 
 
@@ -125,9 +125,9 @@ data class Area (
 }
 ```
 
-Tijdens het bouwen ben ik de volgende issues tegengekomen die bij de complexiteit van de functie komen: 
+Tijdens het bouwen ben ik de volgende issues tegengekomen die bij de complexiteit van de functie komen kijken: 
 - De functie sloeg de randen van het gebied over
-- De functie ging buiten het aangeven gebieden
+- De functie ging buiten het aangeven gebied
 
 Verder is er nog een veel voorkomede issue voor als je de aarde rond wil gaan bij de coördinaten: (185, 85, -185, -85)
 

@@ -2,9 +2,11 @@
 title: "Stage TeqPlay: De laatste stappen"
 ---
 
-Ik ben de laatste weken in gegaan van mij stage bij TeqPlay, op dit moment is er een werkend prototype van de masterdatabase neergezet op de student server van het bedrijf.
+Ik ben de laatste weken in gegaan van mijn stage bij TeqPlay, op dit moment is er een werkend prototype van de masterdatabase neergezet op de student server van het bedrijf. 
 
 <!--truncate-->
+
+Het prototype is beschikbaar via deze [link](http://demo.teqplay.nl/shiphappens/)
 
 ![alt](/blog/assets/live-demo-shiphappens.PNG)
 
@@ -32,7 +34,7 @@ Op dit moment draait het systeem dus op de studentserver van TeqPlay en is het b
 Achter elke categorie staat een pen tool, waardoor de gebruiker in staat is om de gegevens te bewerken. Op het moment dat de gebruiker iets aanpast wordt het schip toegevoegd aan een aparte collectie met user input data. Vervolgens wordt het schip meteen samengevoegd met de andere data, waardoor de gebruiker meteen resultaat ziet. 
 
 ### Conclusie
-Wat er dus op dit moment staat is een werkend prototype, van een masterdatabase en een Google-achtige zoekmachine die direct toegang geeft tot de data. Wat het systeem goed doet is het meteen laten zien van resultaat als een schip is aangepast. Dat de gebruiker niet eerst 5 minuten hoeft te wachten. Verbeterpunten voor het systeem op dit moment is zorgen dat elke pagina zowel als in productie als lokaal beschikbaar is. Een ander punt is het verbeteren van de performance, zorgen voor een snellere zoekmethode om in grote datasets een schip te vinden. Een methode daarvoor is het gebruik van indexen in de database, waarbij de ship id's gekoppeld zijn aan een op alfabet gesorteerde lijst. Hiermee kan het systeem sneller het juiste schip vinden. In mongoDB heet dit [compound indexing](https://docs.mongodb.com/manual/core/index-compound/#create-a-compound-index), dit is dus een ding waar ik mij de laatste weken op ga focussen. Voor mij is dit een nieuwe techniek dus zal ik mij hier eerst over moeten gaan inlezen, een klein projectje bouwen als experiment en vervolgens toepassen op het project. 
+Wat er dus op dit moment staat is een werkend prototype, van een masterdatabase en een Google-achtige zoekmachine die direct toegang geeft tot de data. Wat het systeem goed doet is het meteen laten zien van resultaat als een schip is aangepast. Dat de gebruiker niet eerst 5 minuten hoeft te wachten. Verbeterpunten voor het systeem op dit moment is zorgen dat elke pagina zowel als in productie als lokaal beschikbaar is. Een ander punt is het verbeteren van de performance, zorgen voor een snellere zoekmethode om in grote datasets een schip te vinden. Een methode daarvoor is het gebruik van indexen in de database, waarbij de schip id's gekoppeld zijn aan een op alfabet gesorteerde lijst. Hiermee kan het systeem sneller het juiste schip vinden. In mongoDB heet dit [compound indexing](https://docs.mongodb.com/manual/core/index-compound/#create-a-compound-index), dit is dus een ding waar ik mij de laatste weken op ga focussen. Voor mij is dit een nieuwe techniek dus zal ik mij hier eerst over moeten gaan inlezen, een klein projectje bouwen als experiment en vervolgens toepassen op het project. Als blijkt dat het probleem hieraan ligt. 
 
 
 ## Adviseren
@@ -48,4 +50,8 @@ Een taal waar ik wel zelf voor heb gekozen is [Typescript](https://www.typescrip
 
 ## Skills en attitude
 
-**S3)**
+**S3)** Voor deze competentie zie mijn feedback en zelfreflectie formulier ingevult door mij en de bedrijfsbegeleider.
+
+[Feedback formulier](/blog/assets/Feedbackformulier-Steven-Koerts-0904861.pdf)
+
+De conclusie van het feedbackformulier komt er bij mij voornamelijk op neer dat ik mijzelf niet te veel met andere moet vergelijken, dus niet kijken of ik beter of slechter in programmeren ben dan de ander. Het is voorral belangrijk om naar mijn eigen werk te kijken en daar het beste uittehalen. Een erg positief punt is dat ik nieuwe technieken snel op weet te pakken en er ook energie uithaal om nieuwe dingen te leren. Het blijft voormij dan nog wel lastig om vervolgens die nieuwe techniek toe te passen in de praktijk en ook de nieuwe informatie over te brengen op collaga's. Verder is het ook belangrijk om niet één oplossing te zoeken voor een probleem en ook met alternatieven te komen, als het gaat om software development is er tevens nooit één oplossing.
