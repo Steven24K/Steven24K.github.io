@@ -3,7 +3,8 @@ id: ShipHappens
 title: "Master DataBase: ShipHappens" 
 ---
 
-![ShipHappens](assets/shiphappens_cli-start.PNG)
+
+![alt](assets/shiphappens_1.PNG)
 
 ## Inleiding
 
@@ -12,6 +13,9 @@ dit project was om een master database to bouwen voor scheepsinformatie gecombin
 
 
 ## Het project ShipHappens
+
+![ShipHappens](assets/shiphappens_cli-start.PNG)
+*Console info van de backend*
 
 In de eerste week van mijn stage kreeg ik te horen wat de opdracht precies zou zijn, die het bedrijf voor ons bedacht had. Dat was dus het bouwen van éen master databron voor scheepsdata waar andere applicaties van TeqPlay in de toekomst hun informatie vandaan kunnen halen. Eerst wat achtergrond over hoe hoed it project to stand is gekomen. TeqPlay heeft een intern systeem dat continu informatie binnenhaalt en doorgeeft aan andere applicaties waaronder [RiverGuide](https://play.google.com/store/apps/details?id=nl.teqplay.riverguide). Die data komt uit verschillende bronnen, onder andere de [AIS](https://en.wikipedia.org/wiki/Automatic_identification_system) van schepen zend een hoop informatie uit, verder halen ze ook informatie uit hun eigen apps. Dit is user generated data, ingevoerd door de schipper. 
 
@@ -28,7 +32,10 @@ Een aantal eisen die het project heeft zijn:
 5. Het proces van hoe de data samengevoegd wordt moet visueel inzichtelijk worden
 6. Incorrecte data moet handmatig gewijzigd kunnen worden en vervolgens gemarkeerd worden als handmatig aangepast
 
+## Google voor schepen
+<iframe src="https://giphy.com/embed/9GJ2hd0GSmhgQ1YCYE" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
+Net als Google verzameld ShipHappens een hoop informatie, in dit geval over schepen. Een ding wat ShipHappens gemeen heeft met Google is dat het systeem zuinig omgaat met welke data aan de gebruiker openbaar gemaakt wordt. Net als bij Google is het niet mogelijk voor de eindgebruiker om door een grote collectie met informatie te zoeken. De enige manier om interactie te hebben met de data is doormiddel van het zoekveld op de homepage. Zo krijgt de gebruiker alleen maar te zien waar hij/zij naar op zoek is. 
 
 ## De Master DataBase
 
@@ -56,7 +63,37 @@ Verder kan er dus voor elke aparte bron en elke aparte eigenschap bepaald worden
 Het samenvoegen van data wordt voornamelijk gedaan door een beslistabel, waar de prioriteiten staan aangegeven. Het attribuut van een bepaalde bron dat de hoogste prioriteit heeft gaat voor op alle andere bronnen. Als die afwezig is dan geld de daarop volgende hoogste prioriteit.
 
 
-<!--Stukje over deployment student server-->
+## Werking
+
+![alt](assets/component-overview-shiphappens.png)
+
+In het bovenstaande diagram is de werking van het systeem uitgelegd. Het systeem bestaat uit een aantal componenten: Het verzamelen van data, het samenvoegen van data en het beschikbaar maken van dat. Het beschikbaar maken gebeurt door middel van de API. Verder is een aparte module voor het regelen van de connectie met de database. De master database bestaat uit meerdere collecties, elke databron wordt in een aparte collectie opgeslagen. Om vervolgens door de merge functie van het systeem in de master collectie te worden opgeslagen. Het samenvoegen gebeurd aan de hand van eerder bepaalde prioriteiten, de ene bron krijgt voorang op een andere bron. 
 
 
+## Screenshots
+
+![alt](assets/shiphappens_hompage.PNG)
+De homepage
+
+
+![alt](assets/shiphappens-search.PNG)
+Zoekresultaten in een dropdown
+
+![alt](assets/shiphappens-detailpage.PNG)
+Alle info over een schip op één pagina
+
+![alt](assets/shiphappens-edit-page.PNG)
+Het is mogelijk om een schip te bewerken
+
+![alt](assets/shiphappens-edit-in-detailpage.PNG)
+Ook is het mogelijk om schepen te bewerken vanuit de detail pagina
+
+![alt](assets/shiphappens-merge-visualisation-tool.PNG)
+Na het wijzigen is het visueel inzichtelijk hoe een schip samengesteld is
+
+![alt](assets/shiphappens-merge-prio-settings.PNG)
+Dit gebeurd aan de hand van een aantal vooraf opgestelde merge criteria
+
+![alt](assets/shiphappens-addship-form.PNG)
+De gebruiker kan ook schepen toevoegen aan de database, alle schepen zijn gemarkeerd als handmatig toegevoed
 
