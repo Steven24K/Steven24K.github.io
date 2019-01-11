@@ -2,12 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://stevenkoerts.nl//blog</id>
     <title>Steven Koerts Blog</title>
-    <updated>2018-12-17T06:00:00Z</updated>
+    <updated>2019-10-01T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="http://stevenkoerts.nl//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Steven Koerts news and events.</subtitle>
     <logo>http://stevenkoerts.nl//img/profiel.jpg</logo>
-    <rights>Copyright © 2018 Made by Steven Koerts</rights>
+    <rights>Copyright © 2019 Made by Steven Koerts</rights>
+    <entry>
+        <title type="html"><![CDATA[Stage TeqPlay: Performancetest]]></title>
+        <id>http://stevenkoerts.nl//blog/2019/10/01/Stage-TeqPlay-Performance-test.html</id>
+        <link href="http://stevenkoerts.nl//blog/2019/10/01/Stage-TeqPlay-Performance-test.html">
+        </link>
+        <updated>2019-10-01T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Zoals in deze <a href="/blog/2019/01/08/Stage-Teqplay-De-laatste-stappen#acceptatietest-shiphappens">acceptatietest</a> te lezen is bleek dat de zoekfunctie van de applicatie erg traag was. Om uit te zoeken hoe dit kwam heb ik een performancetest gedaan.</p>
+]]></summary>
+        <author>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stage TeqPlay: De laatste stappen]]></title>
+        <id>http://stevenkoerts.nl//blog/2019/01/08/Stage-Teqplay-De-laatste-stappen.html</id>
+        <link href="http://stevenkoerts.nl//blog/2019/01/08/Stage-Teqplay-De-laatste-stappen.html">
+        </link>
+        <updated>2019-01-08T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Ik ben de laatste weken in gegaan van mijn stage bij TeqPlay, op dit moment is er een werkend prototype van de masterdatabase neergezet op de student server van het bedrijf.</p>
+]]></summary>
+        <author>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stage TeqPlay: Mijn verwachtingen]]></title>
         <id>http://stevenkoerts.nl//blog/2018/12/17/Stage-TeqPlay-Mijn-verwachtingen.html</id>
@@ -36,7 +58,7 @@
         <link href="http://stevenkoerts.nl//blog/2018/10/30/Stage-TeqPlay-eerste-8-weken.html">
         </link>
         <updated>2018-10-30T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Mijn stage bij TeqPlay begon al meteen het bekend maken van de opdracht, dat werd dus de masterdatabase. Wij zijn er aan gaan werken onder de naam <a href="/docs/shiphappens">ShipHappens</a>.</p>
+        <summary type="html"><![CDATA[<p>Mijn stage bij TeqPlay begon al met het bekend maken van de opdracht, dat werd dus de masterdatabase. Ik ben er in teamverband aan gaan werken, onder de naam <a href="/docs/ShipHappens">ShipHappens</a>.</p>
 ]]></summary>
         <author>
         </author>
