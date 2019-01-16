@@ -27,7 +27,7 @@ class Welcome extends React.Component {
         <div className="row">
 
           <div className="col-lg-6 center">
-            <img width="100%" height="100%" className="rounded-circle img-fluid" src={siteConfig.headerIcon}/>
+            <img width="100%" height="100%" className="rounded img-fluid" src={siteConfig.headerIcon}/>
           </div>
        
            <div className="col-lg-6 center">
