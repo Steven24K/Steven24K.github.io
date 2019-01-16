@@ -2,18 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://stevenkoerts.nl//blog</id>
     <title>Steven Koerts Blog</title>
-    <updated>2019-10-01T06:00:00Z</updated>
+    <updated>2019-01-14T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="http://stevenkoerts.nl//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Steven Koerts news and events.</subtitle>
     <logo>http://stevenkoerts.nl//img/profiel.jpg</logo>
     <rights>Copyright © 2019 Made by Steven Koerts</rights>
     <entry>
-        <title type="html"><![CDATA[Stage TeqPlay: Performancetest]]></title>
-        <id>http://stevenkoerts.nl//blog/2019/10/01/Stage-TeqPlay-Performance-test.html</id>
-        <link href="http://stevenkoerts.nl//blog/2019/10/01/Stage-TeqPlay-Performance-test.html">
+        <title type="html"><![CDATA[Stage TeqPlay: Einde stage]]></title>
+        <id>http://stevenkoerts.nl//blog/2019/01/14/Stage-TeqPlay-Einde-stage.html</id>
+        <link href="http://stevenkoerts.nl//blog/2019/01/14/Stage-TeqPlay-Einde-stage.html">
         </link>
-        <updated>2019-10-01T06:00:00Z</updated>
+        <updated>2019-01-14T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Dit is de laatste blog post van mijn portfolio gedurende mijn stage, hier zal ik kort terugblikken op wat ik heb gedaan en ziet u nog één keer alle uitgewerkte competenties en leerdoelen achterelkaar.</p>
+]]></summary>
+        <author>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stage TeqPlay: Performancetest]]></title>
+        <id>http://stevenkoerts.nl//blog/2019/01/10/Stage-TeqPlay-Performance-test.html</id>
+        <link href="http://stevenkoerts.nl//blog/2019/01/10/Stage-TeqPlay-Performance-test.html">
+        </link>
+        <updated>2019-01-10T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Zoals in deze <a href="/blog/2019/01/08/Stage-Teqplay-De-laatste-stappen#acceptatietest-shiphappens">acceptatietest</a> te lezen is bleek dat de zoekfunctie van de applicatie erg traag was. Om uit te zoeken hoe dit kwam heb ik een performancetest gedaan.</p>
 ]]></summary>
         <author>

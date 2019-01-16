@@ -4,7 +4,7 @@
         <title>Steven Koerts Blog</title>
         <link>http://stevenkoerts.nl//blog</link>
         <description>The best place to stay up-to-date with the latest Steven Koerts news and events.</description>
-        <lastBuildDate>Tue, 01 Oct 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Jan 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -14,10 +14,18 @@
         </image>
         <copyright>Copyright © 2019 Made by Steven Koerts</copyright>
         <item>
+            <title><![CDATA[Stage TeqPlay: Einde stage]]></title>
+            <link>http://stevenkoerts.nl//blog/2019/01/14/Stage-TeqPlay-Einde-stage.html</link>
+            <guid>http://stevenkoerts.nl//blog/2019/01/14/Stage-TeqPlay-Einde-stage.html</guid>
+            <pubDate>Mon, 14 Jan 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Dit is de laatste blog post van mijn portfolio gedurende mijn stage, hier zal ik kort terugblikken op wat ik heb gedaan en ziet u nog één keer alle uitgewerkte competenties en leerdoelen achterelkaar.</p>
+]]></description>
+        </item>
+        <item>
             <title><![CDATA[Stage TeqPlay: Performancetest]]></title>
-            <link>http://stevenkoerts.nl//blog/2019/10/01/Stage-TeqPlay-Performance-test.html</link>
-            <guid>http://stevenkoerts.nl//blog/2019/10/01/Stage-TeqPlay-Performance-test.html</guid>
-            <pubDate>Tue, 01 Oct 2019 06:00:00 GMT</pubDate>
+            <link>http://stevenkoerts.nl//blog/2019/01/10/Stage-TeqPlay-Performance-test.html</link>
+            <guid>http://stevenkoerts.nl//blog/2019/01/10/Stage-TeqPlay-Performance-test.html</guid>
+            <pubDate>Thu, 10 Jan 2019 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Zoals in deze <a href="/blog/2019/01/08/Stage-Teqplay-De-laatste-stappen#acceptatietest-shiphappens">acceptatietest</a> te lezen is bleek dat de zoekfunctie van de applicatie erg traag was. Om uit te zoeken hoe dit kwam heb ik een performancetest gedaan.</p>
 ]]></description>
         </item>
