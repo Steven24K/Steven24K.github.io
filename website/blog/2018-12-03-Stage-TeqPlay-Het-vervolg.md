@@ -10,7 +10,7 @@ Naast de backend ben ik nu ook bezig met de frontend en het design van een mooie
 
 
 ## Analyseren
-**AN2, AN3)** Bij deze competenties gaat er vooral om de requirements van het systeem in kaart te brengen, wat moet het systeem kunnen en wat moeten de gebruikers kunnen doen met het systeem. Zijn er verschillende gebruikers en hebben al die gebruikers verschillende rechten? Binnen deze competentie laat ik in een use case diagram zien wat de scope is van het project. 
+**AN2, AN3)** Bij deze competenties gaat er vooral om de requirements van het systeem in kaart te brengen, wat moet het systeem kunnen en wat moeten de gebruikers kunnen doen met het systeem. Zijn er verschillende gebruikers en hebben al die gebruikers verschillende rechten? Binnen deze competentie laat ik in een use case diagram zien wat de scope is van het project. Het was overigens handiger geweest om dit aan het begin van het project te maken voordat je begint met coderen, maar dit heeft zeker tot nieuwe inzichten geleidt voor het project. Om het project een duidelijk doel te geven en anderen te laten zien hoe ik precies denk over het project. 
 ![alt](/blog/assets/usecase-shiphappens.png) *Use case*
 
 Wat te zien is in dit diagram zijn de verschillende gebruikers en systeem onderdelen die iets te maken hebben met het systeem en wat er van het systeem verwacht wordt. Een aantal eisen zijn dat het systeem nieuwe informatie moet binnenhalen in een vastgesteld tijd schema. Andere onderdelen zijn dat het systeem alle veranderingen op de database bij moet houden en als een schip handmatig wordt aangepast dat het dan in een aparte collectie wordt opgeslagen. 

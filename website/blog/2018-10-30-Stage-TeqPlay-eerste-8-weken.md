@@ -2,7 +2,7 @@
 title: "Stage TeqPlay: De eerste 8 weken"
 ---
 
-Mijn stage bij TeqPlay begon al met het bekend maken van de opdracht, dat werd dus de masterdatabase. Ik ben er in teamverband aan gaan werken, onder de naam [ShipHappens](/docs/ShipHappens). 
+Mijn stage bij TeqPlay begon met het bekend maken van de opdracht, dat werd dus de masterdatabase. Ik ben er in teamverband aan gaan werken, onder de naam [ShipHappens](/docs/ShipHappens). 
 
 <!--truncate-->
 
@@ -33,9 +33,9 @@ Later kwamen er al gauw meer databronnen bij en voordat we aan de slag gingen me
 
 
 ## Realiseren
-**R2)** Voor het project hebben we een aantal tests geschreven om de onderhoudbaarheid van de software te bevorderen. Het bedrijf heeft aangeraden om om unit tests te schrijven voor de losse componenten in het systeem. Zo kom je er ook meteen achter of een bepaalde functie te groot is, dan kun je hem opdelen in kleinere stukken. Een unit test bestaat uit een test case, de wat en waarom je gaat testen. De test is vervolgens opgebouwd uit een verwacht resultaat en een werkelijk resultaat, deze worden met elkaar vergeleken. Als ze hetzelfde zijn dan is de test succesvol, zijn er afwijkingen dan heeft de test gefaald. Verder is er ook nog de intergratie test deze is vrijwel hetzelfde als een unit test alleen is het enige verschil dat een unit test een onderdeel van het systeem test en een intergratie test, test een gedeelte dat afhankelijk is van een ander systeem onder andere via een internet verbinding. 
+**R2)** Voor het project hebben we een aantal tests geschreven om de onderhoudbaarheid van de software te bevorderen. Het bedrijf heeft aangeraden om unit tests te schrijven voor de losse componenten in het systeem. Zo kom je er ook meteen achter of een bepaalde functie te groot is, dan kun je hem opdelen in kleinere stukken. Een unit test bestaat uit een test case, de wat en waarom je gaat testen. De test is vervolgens opgebouwd uit een verwacht resultaat en een werkelijk resultaat, deze worden met elkaar vergeleken. Als ze hetzelfde zijn dan is de test succesvol, zijn er afwijkingen dan heeft de test gefaald. Verder is er ook nog de intergratie test deze is vrijwel hetzelfde als een unit test alleen is het enige verschil dat een unit test een onderdeel van het systeem test en een intergratie test, test een gedeelte dat afhankelijk is van een ander systeem onder andere via een internet verbinding. 
 
-## UNIT TEST: TRAVERSING THE MAP
+### Unit test: Traversing the map
 
 Een belangrijk onderdeel van het systeem is het verzamelen van data, zo halen we informatie uit verschillende bronnen. Eén van die bronnen is het TeqPlay platform zelf. De development omgeving bevat zo een 400.000 schepen en de productie omgeving zo een 5.000.000 schepen. Als je dit allemaal in één keer binnen zou halen dan zou dat erg veel zijn voor ons systeem. Daarom willen we de mogelijkheid om een bepaald gebied in stukken te kunnen binnenhalen. Om dit te kunnen realiseren heb ik een script geschreven die een groot gebied opdeelt in een x aantal kleine gebieden.
 ![alt](/blog/assets/traversing-the-map.PNG) Resultaat van de functie getekend in [Poly line tool](https://www.keene.edu/campus/maps/tool/?coordinates=15.0000000%2C%2055.0000000%0A15.0000000%2C%2040.0000000%0A0.0000000%2C%2040.0000000%0A0.0000000%2C%2055.0000000%0A15.0000000%2C%2055.0000000%0A15.0000000%2C%2049.0000000%0A9.0000000%2C%2049.0000000%0A9.0000000%2C%2055.0000000%0A9.0000000%2C%2055.0000000%0A9.0000000%2C%2049.0000000%0A3.0000000%2C%2049.0000000%0A3.0000000%2C%2055.0000000%0A3.0000000%2C%2055.0000000%0A3.0000000%2C%2049.0000000%0A0.0000000%2C%2049.0000000%0A0.0000000%2C%2055.0000000%0A15.0000000%2C%2049.0000000%0A15.0000000%2C%2043.0000000%0A9.0000000%2C%2043.0000000%0A9.0000000%2C%2049.0000000%0A9.0000000%2C%2049.0000000%0A9.0000000%2C%2043.0000000%0A3.0000000%2C%2043.0000000%0A3.0000000%2C%2049.0000000%0A3.0000000%2C%2049.0000000%0A3.0000000%2C%2043.0000000%0A0.0000000%2C%2043.0000000%0A0.0000000%2C%2049.0000000%0A15.0000000%2C%2043.0000000%0A15.0000000%2C%2040.0000000%0A9.0000000%2C%2040.0000000%0A9.0000000%2C%2043.0000000%0A9.0000000%2C%2043.0000000%0A9.0000000%2C%2040.0000000%0A3.0000000%2C%2040.0000000%0A3.0000000%2C%2043.0000000%0A3.0000000%2C%2043.0000000%0A3.0000000%2C%2040.0000000%0A0.0000000%2C%2040.0000000%0A0.0000000%2C%2043.0000000)
@@ -259,7 +259,7 @@ internal class TraverseMapTest {
 }
 ```
 
-## INTEGRATIE TEST: COLLECTING DATA FROM THE TEQPLAY PLATFORM
+### Integratie test: Collecting data from the TeqPlay platform
 Zoals je kunt lezen in de unit tests hierboven verzamelen we data uit het TeqPlay platform, dit is één van de eerste dingen die gebouwd is voor ons systeem. 
 Een script dat een API request maakt naar de het TeqPlay platform en zo schepen binnenhaalt, om dit te testen moet je een intergratie test gebruiken omdat het stuk code afhankelijk is van een derde partij. Als die derde partij dan iets veranderd in de API dan zie je dat meteen terug in het test resultaat.
 
