@@ -2,11 +2,11 @@
 title: "Stage TeqPlay: Einde stage"
 ---
 
-Dit is de laatste blog post van mijn portfolio gedurende mijn stage, hier zal ik kort terugblikken op wat ik heb gedaan en ziet u nog één keer alle uitgewerkte competenties en leerdoelen achterelkaar.  
+Dit is de laatste blog post van mijn portfolio. Deze blog heb ik gedurende mijn stage bijgehouden, in deze laatste post zal ik kort terugblikken op wat ik heb gedaan en ziet u nog één keer alle uitgewerkte competenties en leerdoelen achterelkaar.  
 
 <!--truncate-->
 
-Tijdens mijn stage heb om de x aantal weken een blog bijgehouden, waar mijn voortgangen en werkzaamheden staan beschreven. Met als belangrijkste wat ik geleerd heb, met welke kennis ben ik mijn stage ingegaan en met welke kennis heb ik mijn stage afgesloten? 
+Tijdens mijn stage heb om de x aantal weken een blog bijgehouden, waar mijn voortgangen en werkzaamheden staan beschreven. Met als belangrijkste, wat ik geleerd heb. Met welke kennis ben ik mijn stage ingegaan en met welke kennis heb ik mijn stage afgesloten? 
 
 Al deze competenties en leerdoelen heb ik behaald door het werken aan het [ShipHappens project](/docs/ShipHappens).
 
@@ -19,14 +19,14 @@ Voor mijn stage heb ik de volgende documenten gemaakt en bijgehouden:
 - [Feedback formulier](/blog/assets/Feedbackformulier-Steven-Koerts-0904861.pdf)
 - [Code review](/blog/assets/Code-review-1.pdf)
 
-Het stageplan heb ik voorafgaand gemaakt aan mijn stage, hierin staan mijn verwachtingen informatie over TeqPlay, de vantevoren gestelde leerdoelen, uitleg bij de competenties(o.a. hoe ik die ga aantonen). Verder heb ik een sprint logboek bijgehouden waar ik per twee weken bij heb gehouden wat ik in een bepaalde sprint gedaan heb en als laattse is er het feedback formulier van de bedrijfsbegeleider. 
+Het stageplan heb ik voorafgaand gemaakt aan mijn stage, hierin staan mijn verwachtingen informatie over TeqPlay, de vantevoren gestelde leerdoelen, uitleg bij de competenties(o.a. hoe ik die ga aantonen). Verder heb ik een sprint logboek bijgehouden waar ik per twee weken bij heb gehouden wat ik in een bepaalde sprint gedaan heb, verder is er ook nog een code review van de bedrijfsbegeleider en als laatste is er het feedback formulier van de bedrijfsbegeleider. 
 
 ## Leerdoelen
-Aan het begin van stage heb ik twee leerdoelen gesteld voor mezelf. Wat ik graag nog wou leren tijdens mijn stage. 
+Aan het begin van mijn stage heb ik twee leerdoelen gesteld aan mezelf. Wat ik graag nog wou leren tijdens mijn stage. 
 
 ### Leerdoel 1
 
-Leerdoel 1 heb ik gedurende het project wat bijgesteld, het project ShipHappens ging voornamelijk over big data. Een onderwerp waar ik zelf in de toekomst ook nog meer over wil leren. De vraag die ik mezelf bij het project heb gesteld is: "Waar haalt TeqPlay al zijn data vandaan en hoe weet je of een bron betrouwbaar is?". Het probleem dat ons project beschrijft is dat het bedrijf informatie uit veel verschillende bronnen haalt en het bedrijf zou graag één grote databron willen hebben waar alle verschillende bronnen samengevoegd zijn. Dus kortom wat ik hier wou leren is hoe je grote hoeveelheid data analyseert en de context van de databron weet te achterhalen, welke data is relevant en wat gebruiken we niet. 
+Leerdoel 1 heb ik gedurende het project wat bijgesteld, het project ShipHappens ging voornamelijk over big data. Eerst wou ik meer te weten komen over machinelearning, maar het bleek in het project al ingewikkeld genoeg om een goede kwaliteit dataset op te bouwen. Een onderwerp waar ik zelf in de toekomst ook nog meer over wil leren. De vraag die ik mezelf bij het project heb gesteld is: "Waar haalt TeqPlay al zijn data vandaan en hoe weet je of een bron betrouwbaar is?". Het probleem dat ons project beschrijft is dat het bedrijf informatie uit veel verschillende bronnen haalt en het bedrijf zou graag één grote databron willen hebben waar alle verschillende bronnen samengevoegd zijn. Dus kortom wat ik hier wou leren is hoe je grote hoeveelheid data analyseert en de context van de databron weet te achterhalen, welke data is relevant en wat gebruiken we niet. 
 
 Dit leerdoel heb ik behaald door het onderzoeken van verschillende bronnen, om eerst de bron te analyseren en vervolgens aan de database toe te voegen. 
 Zo ben ik in de eerste weken aan de slag gegaan met het kijken naar hoe de dataset van TeqPlay eruit zag, wat ze in hun eigen systeem hadden staan. Hierbij heb ik dan ook een diagram gemaakt om te laten zien hoe een schip eruit ziet. 
@@ -73,10 +73,10 @@ Het belangrijkste wat ik hiervan heb geleerd is het belang van een goede voorber
 
 ### Leerdoel 2
 
-Leerdoel 2 ging over software deployment, hoe zet je een systeem online en dat het ook nog onderhoudtbaar is. Ook gaat het er hierbij om netjes te programmeren, zorg dat er voldoende comments in de code staan. Gemaakte diagrammen, API documentatie, build scripts en README files. Dit alles heeft te maken met het maken van onderhoudtbare software en dus ook met software deployment.
+Leerdoel 2 ging over software deployment, hoe zet je een systeem online en dat het ook nog onderhoudtbaar is. Ook gaat het er hierbij om netjes te programmeren, zorg dat er voldoende comments in de code staan. Gemaakte diagrammen, API documentatie, build scripts en README files. Dit alles heeft te maken met het maken van onderhoudbare software en dus ook met software deployment.
 
-Dit leerdoel heb ik behaald door zelf uit te zoeken hoe je een systeem op een server zet en daarbij ook de nodige stappen te noteren. Uiteindelijk stelt het online zetten van een software systeem niet zo veel voor, het is een kwestie van een serie commando's op de juiste volgorde achter elkaar uitvoeren op een server. Ik ben hierdoor wel anders naar software systemen gaan kijken, hierdoor heb ik nu ingezien hoe belangrijk het is om goed onderscheidt te maken tussen een development- en een productieomgeving. Dit vooral met het oog op database wachtwoorden die verschillen tussen de omgevingen.
-Hieronder zijn de stappen die nodig zijn voor de deployment van het project, in eerste instantie had ik niet opgeschreven waardoor ik binnen de kortste keren vergeten was hoe het ook alweer moest. Hiervan heb ik dus geleerd dat het belangrijk is om dit soort handelingen meteen op te schrijven. 
+Dit leerdoel heb ik behaald door zelf uit te zoeken hoe je een systeem op een server zet en daarbij ook de nodige stappen te noteren. Uiteindelijk stelt het online zetten van een software systeem niet zo veel voor, het is een kwestie van een serie commando's op de juiste volgorde achter elkaar uittevoeren op een server. Ik ben hierdoor wel anders naar software systemen gaan kijken, hierdoor heb ik nu ingezien hoe belangrijk het is om goed onderscheidt te maken tussen een development- en een productieomgeving. Dit vooral met het oog op database wachtwoorden die verschillen tussen de omgevingen.
+Hieronder zijn de stappen die nodig zijn voor de deployment van het project, in eerste instantie had ik niet opgeschreven waardoor ik binnen de kortste keren vergeten was hoe het ook alweer moest. Hiervan heb ik dus geleerd dat het belangrijk is om dit soort handelingen meteen op te schrijven. Dus ook de documentatie goed bij te houden. 
 
 Zie hieronder de stappen die je moet maken om de software online te zetten of te updaten:
 ![alt](/blog/assets/readme-shiphappens-deployment-steps.PNG)
@@ -87,6 +87,14 @@ Een ander belangrijk onderdeel wat bij het leerdoel hoort is het bijhouden van d
 
 Kortom, het belangrijkste wat ik hierbij geleerd heb is dat documentatie iets is wat niet pas aan het eind van een project komt. Als je het gedurende het project bijhoudt scheelt dat een hoop werk voor later, plus dat je dan soms vergeet hoe iets precies werkt wat je gebouwd hebt. Ook heb ik ingezien dat documentatie niet iets is dat één keer wordt geschreven, maar constant veranderd. Door o.a. gebruik te maken van automatische documentatie tools zoals [Springfox](https://springfox.github.io/springfox/docs/current/), zorg je ervoor dat als er veranderingen in de code plaatsvinden dat de documentatie ook meteen wordt geüpdatet. Want ook in de praktijk zie je vaak dat software veranderd en de documentatie niet wordt bijgewerkt, of wordt uitgesteld naar een later moment.
 
+### Reflectie
+
+In dit [document](/blog/assets/Reflectie-leerdoelen-Steven-Koerts-0904861.pdf) staat de reflectie op mijn leerdoelen, door mij en mijn bedrijfsbegeleider. 
+
+Ik ben het eens met de reflectie van de bedrijfsbegeleider, aan het begin van mijn stage had ik als leerdoel om meer te leren over machinelearning. Dat leerdoel heb ik later bijgesteld want het bleek al lastig genoeg om een goede kwaliteit dataset te creëren. Dit project zou ik in het vervolg anders aanpakken door langer bij de analyse stap stil te blijven staan en eerst goed erover na te denken wat die data nu precies betekend en hoe relevant het is.
+
+Verder weet ik nu dat deployment meer ingoudt dan software op een server neerzetten, ik heb het nut ervan ingezien om het systeem eerst goed te testen voordat ik aan iets nieuws begin of een live deployment doe. Daarom is het ook belangrijk om de documentatie goed bij te houden en meteen een unit test bij een nieuwe functie te schrijven. 
+
 
 ## Persoonlijke groei
 
@@ -96,7 +104,7 @@ Verder op het gebied van het verzamelen van data. Hier neem ik vooral mee wat gr
 
 Als laatste ga ik in op de belangrijkste feedback die ik heb gekregen binnen het bedrijf, wat ik heb gemerkt is dat ik het leuk vind om met nieuwe techniek bezig te zijn en ermee te experimenteren. Vaak zorgt dit dan ook dat ik in een tunnelvissie beland dat dit de techniek is waarmee ik het project ga doen. Een belangrijke feedback is om ook naar andere oplossingen te kijken en dus met twee, drie of meer oplossingen te komen voor een probleem. Er is overigens nooit één oplosing voor een probleem. Verder heb ik gezien hoe belangrijk het is om al je nieuwe bevindingen die je doet door te geven aan andere collega's en teamgenoten. Dit om te verkomen dat er dubbel werk wordt verricht en de ander ook snapt waar jij mee bezig was. Tenslotte ben ik er zeker op vooruit gegaan wat programmeer niveau betreft, ik kijk nu heel anders aan hoe je een webapplicatie kunt opstellen met React. Ook het bouwen van een REST-full API service was nieuw voor mij en is zeker iets wat ik in toekomstige projecten ga toepassen. Mijn stage was ook een mooie uitdaging omdat ik vooral met de programmeertaal Kotlin hebt gewerkt, een dialect op Java. Daarvoor had ik nog nooit iets gedaan met Java of Kotlin. 
 
-Het belangrijkste wat ik uit mijn stage haal is dat er dus niet een vaste formule is om aan een project te werken, iedereen werkt op zijn eigen manier, met eigen voorkeuren voor talen, tools en frameworks. Zo ontwikkel je gedurende een stage/werk periode een bepaalde manier van werken die bij jezelf past en maakt het niet uit in welke taal je iets programmeert of hoe je ergens aan werkt. Het gaat erom dat je samen aan een project werkt die voor iedereen werkt en soms moet je daarvoor je eigen mening en voorkeur bijstellen. Een manier die voor mij prettig werkt is om zelf eerst informatie op te zoeken over bepaalde technieken en vervolgens op vaste momenten laten zien wat ik heb gevonden en wat je ermee kan. Dit is absoluut de manier van werken die ik voor elke opdracht zou toepassen, dit is iets dat met meer ervaring waarschijnlijk makkelijker zou worden. Om in de toekomst meer kennis te hebben hoe je een project kan opzetten.
+Het belangrijkste wat ik uit mijn stage haal is dat er dus niet een vaste formule is om aan een project te werken, iedereen werkt op zijn eigen manier, met eigen voorkeuren voor talen, tools en frameworks. Zo ontwikkel je gedurende een stage/werk periode een bepaalde manier van werken die bij jezelf past en maakt het niet uit in welke taal je iets programmeert of hoe je ergens aan werkt. Het gaat erom dat je samen aan een project werkt die voor iedereen werkt en soms moet je daarvoor je eigen mening en voorkeur bijstellen. Een manier die voor mij prettig werkt is om zelf eerst informatie op te zoeken over bepaalde technieken en vervolgens op vaste momenten te laten zien wat ik heb gevonden en wat je ermee kan. Dit is niet de manier van werken die ik voor elke opdracht zou toepassen, dit is iets dat met meer ervaring waarschijnlijk makkelijker zou worden. Om in de toekomst meer kennis te hebben hoe je een project kan opzetten.
 
 
 ## Competenties
