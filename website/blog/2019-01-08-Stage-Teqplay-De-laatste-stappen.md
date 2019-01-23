@@ -53,5 +53,6 @@ Een taal waar ik wel zelf voor heb gekozen is [Typescript](https://www.typescrip
 **S3)** Voor deze competentie zie mijn feedback en zelfreflectie formulier ingevult door mij en de bedrijfsbegeleider.
 
 [Feedback formulier](/blog/assets/Feedbackformulier-Steven-Koerts-0904861.pdf)
+Het feedbackformulier is gezamenlijk gemaakt door alle studenten van TeqPlay, [Catalina Andreitacarstoiu](https://catalinaandreitacarstoiu.github.io/), [Joost Zonneveld](http://jozonneveld.nl/) en [Maurice van Veen](http://teqplay.derdejaarsstage.mauricevanveen.com/)
 
 De conclusie van het feedbackformulier komt er bij mij voornamelijk op neer dat ik mijzelf niet te veel met andere moet vergelijken, dus niet kijken of ik beter of slechter in programmeren ben dan de ander. Het is voorral belangrijk om naar mijn eigen werk te kijken en daar het beste uittehalen. Een erg positief punt is dat ik nieuwe technieken snel op weet te pakken en er ook energie uithaal om nieuwe dingen te leren. Het blijft voormij dan nog wel lastig om vervolgens die nieuwe techniek toe te passen in de praktijk en ook de nieuwe informatie over te brengen op collaga's. Verder is het ook belangrijk om niet één oplossing te zoeken voor een probleem en ook met alternatieven te komen, als het gaat om software development is er tevens nooit één oplossing.
