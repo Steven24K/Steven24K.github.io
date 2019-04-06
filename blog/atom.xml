@@ -2,94 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://stevenkoerts.nl//blog</id>
     <title>Steven Koerts Blog</title>
-    <updated>2019-01-14T06:00:00Z</updated>
+    <updated>2018-06-26T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="http://stevenkoerts.nl//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Steven Koerts news and events.</subtitle>
     <logo>http://stevenkoerts.nl//img/profiel.jpg</logo>
     <rights>Copyright © 2019 Made by Steven Koerts</rights>
-    <entry>
-        <title type="html"><![CDATA[Stage TeqPlay: Einde stage]]></title>
-        <id>http://stevenkoerts.nl//blog/2019/01/14/Stage-TeqPlay-Einde-stage.html</id>
-        <link href="http://stevenkoerts.nl//blog/2019/01/14/Stage-TeqPlay-Einde-stage.html">
-        </link>
-        <updated>2019-01-14T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Dit is de laatste blog post van mijn portfolio. Deze blog heb ik gedurende mijn stage bijgehouden, in deze laatste post zal ik kort terugblikken op wat ik heb gedaan en ziet u nog één keer alle uitgewerkte competenties en leerdoelen achterelkaar.</p>
-]]></summary>
-        <author>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stage TeqPlay: Performancetest]]></title>
-        <id>http://stevenkoerts.nl//blog/2019/01/10/Stage-TeqPlay-Performance-test.html</id>
-        <link href="http://stevenkoerts.nl//blog/2019/01/10/Stage-TeqPlay-Performance-test.html">
-        </link>
-        <updated>2019-01-10T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Zoals in deze <a href="/blog/2019/01/08/Stage-Teqplay-De-laatste-stappen#acceptatietest-shiphappens">acceptatietest</a> te lezen is bleek dat de zoekfunctie van de applicatie erg traag was. Om uit te zoeken hoe dit kwam heb ik een performancetest gedaan.</p>
-]]></summary>
-        <author>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stage TeqPlay: De laatste stappen]]></title>
-        <id>http://stevenkoerts.nl//blog/2019/01/08/Stage-Teqplay-De-laatste-stappen.html</id>
-        <link href="http://stevenkoerts.nl//blog/2019/01/08/Stage-Teqplay-De-laatste-stappen.html">
-        </link>
-        <updated>2019-01-08T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Ik ben de laatste weken in gegaan van mijn stage bij TeqPlay, op dit moment is er een werkend prototype van de masterdatabase neergezet op de student server van het bedrijf.</p>
-]]></summary>
-        <author>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stage TeqPlay: Mijn verwachtingen]]></title>
-        <id>http://stevenkoerts.nl//blog/2018/12/17/Stage-TeqPlay-Mijn-verwachtingen.html</id>
-        <link href="http://stevenkoerts.nl//blog/2018/12/17/Stage-TeqPlay-Mijn-verwachtingen.html">
-        </link>
-        <updated>2018-12-17T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Ik ben nu een aantal weken bezig met mijn stage bij TeqPlay, ben zelfs al over de helft van de stage periode. Dus dit leek mij een mooi moment om terug te blikken op het begin, mijn verwachtingen die ik had over het bedrijf en hoe deze verwachtingen in de praktijk zijn uitgevallen.</p>
-]]></summary>
-        <author>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stage Teqplay: Het vervolg]]></title>
-        <id>http://stevenkoerts.nl//blog/2018/12/03/Stage-TeqPlay-Het-vervolg.html</id>
-        <link href="http://stevenkoerts.nl//blog/2018/12/03/Stage-TeqPlay-Het-vervolg.html">
-        </link>
-        <updated>2018-12-03T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Vanaf dit moment ben ik 13 weken bezig met mijn stage, we hebben al flink wat geprogrammeerd en een mooi product neergezet.</p>
-]]></summary>
-        <author>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stage TeqPlay: De eerste 8 weken]]></title>
-        <id>http://stevenkoerts.nl//blog/2018/10/30/Stage-TeqPlay-eerste-8-weken.html</id>
-        <link href="http://stevenkoerts.nl//blog/2018/10/30/Stage-TeqPlay-eerste-8-weken.html">
-        </link>
-        <updated>2018-10-30T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Mijn stage bij TeqPlay begon met het bekend maken van de opdracht, dat werd dus de masterdatabase. Ik ben er in teamverband aan gaan werken, onder de naam <a href="/docs/ShipHappens">ShipHappens</a>.</p>
-]]></summary>
-        <author>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Voorbereiding op stage bij TeqPlay]]></title>
-        <id>http://stevenkoerts.nl//blog/2018/10/29/Plan-van-aanpak-stage-Teqplay.html</id>
-        <link href="http://stevenkoerts.nl//blog/2018/10/29/Plan-van-aanpak-stage-Teqplay.html">
-        </link>
-        <updated>2018-10-29T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<h2><a class="anchor" aria-hidden="true" id="stage-documenten"></a><a href="#stage-documenten" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stage documenten</h2>
-<ol>
-<li><a href="/blog/assets/Stageplan-1-Teqplay-Steven-Koerts-0904861.pdf">Stage plan V1 (pdf)</a></li>
-<li><a href="/blog/assets/Stageplan-2-Teqplay-Steven-Koerts-0904861.pdf">Stage plan V2 (pdf)</a></li>
-<li><a href="/blog/assets/Stageplan-3-Teqplay-Steven-Koerts-0904861.pdf">Stage plan V3 (pdf)</a></li>
-</ol>
-]]></summary>
-        <author>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[GitHub als content management systeem]]></title>
         <id>http://stevenkoerts.nl//blog/2018/06/26/GitHub-als-CMS.html</id>
