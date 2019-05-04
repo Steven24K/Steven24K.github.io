@@ -1,0 +1,73 @@
+body { margin:0; }
+
+.container {
+    /* border: 1px solid red; */
+    min-height: 500px;
+    margin: 2% 4% 2% 4%;
+}
+
+.under-line {
+    border-bottom: 1px solid rgb(21, 107, 235); 
+}
+
+.line {
+    border-bottom: 2px solid rgb(65, 65, 201);
+    padding-top: 30px;
+    margin-bottom: 30px; 
+}
+
+.big-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.crop {
+    width: 60%;  
+    min-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card {
+    padding: 15px 60px;
+    /* border: 1px solid black; */
+    box-shadow: 12px 12px 12px 4px rgba(114, 107, 107, 0.753);
+    margin-top:5%;
+    margin-bottom: 5%;
+    line-height: 180%;
+    min-height: 350px;
+}
+
+
+
+.posts li {
+    font-size: 180%;
+    line-height: 50px;
+}
+
+.posts a {
+    text-decoration: none;
+    color: rgb(53, 103, 168)/*This is same link color as google*/
+}
+
+.posts a:hover {
+    color: rgb(102, 0, 153); /*The same color as google when clicked on a link*/
+}
+
+
+
+.contact {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    overflow: visible;
+    text-overflow: clip;
+    padding-top: 10%; 
+    padding-bottom: 10%;
+    line-height: 150%;
+  }
+

@@ -1,0 +1,14 @@
+.footer {
+    text-align: center;
+    color: white;
+    height: 35px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:  rgb(4, 13, 92);
+}
+
+.footer p {
+    font-style: italic;
+    bottom: 3px;
+}
