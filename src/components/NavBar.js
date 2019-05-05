@@ -29,7 +29,7 @@ class NavBar extends React.Component {
       </div>
 
       <div className="nav-btn">
-        <label for="nav-check"><FontAwesomeIcon size="3em" icon="bars" /></label>
+        <label htmlFor="nav-check"><FontAwesomeIcon icon="bars" /></label>
       </div>
 
       <div className="nav-links">

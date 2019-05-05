@@ -69,8 +69,8 @@ module.exports = {
         name: `wwwstevenkoertsnl`,
         short_name: `stevenkoerts`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#040d5c`,
+        theme_color: `#040d5c`,
         display: `minimal-ui`,
         icon: `static/images/profiel.jpg`, // This path is relative to the root of the site.
       },
