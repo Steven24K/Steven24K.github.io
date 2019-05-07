@@ -27,7 +27,7 @@ class Contact extends React.Component {
                         <h1 className="under-line">Contact</h1>
 
 
-                        <a className="btn btn-xlg btn-turquise" href={`mailto: ${this.props.data.site.siteMetadata.email}`}><FontAwesomeIcon icon="paper-plane" />Mail me!</a>
+                        <a className="btn btn-xlg btn-purple btn-fullscreen" href={`mailto: ${this.props.data.site.siteMetadata.email}`}><FontAwesomeIcon icon="paper-plane" />Mail me!</a>
 
 
                         <h3>Stuur me een mail voor:</h3>

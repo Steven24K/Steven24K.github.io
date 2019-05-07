@@ -40,11 +40,18 @@ body { margin:0; }
     min-height: 350px;
 }
 
-
+/* .posts {
+    border: 1px solid green;
+} */
+.posts ul {
+    /* border: 1px solid red;   */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+}
 
 .posts li {
-    font-size: 180%;
-    line-height: 50px;
+    font-size: 105%;
 }
 
 .posts a {
@@ -69,3 +76,8 @@ body { margin:0; }
     line-height: 150%;
   }
 
+iframe {
+    width: 100%;
+    max-width: 650px;
+    height: 350px;
+}

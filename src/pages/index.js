@@ -31,7 +31,7 @@ class Index extends React.Component {
             
             <br></br>
 
-           <a target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
+           <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
 
             <div className="line"></div>
 
@@ -59,7 +59,7 @@ class Index extends React.Component {
 
             Ook speel ik toneel, 23 t/m 29 mei sta ik in het Passage theater in Schiedam met <b>Vreemden in een lift</b>.
            <br />
-            <a target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-orange" href="http://knapschiedam.nl">Kijk hier voor kaarten en meer informatie</a>
+            <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-orange" href="http://knapschiedam.nl">Kijk hier voor kaarten en meer informatie</a>
 
 
           </div>
