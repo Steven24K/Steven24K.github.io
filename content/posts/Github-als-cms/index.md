@@ -4,7 +4,6 @@ date: "2019-04-30"
 category: "blog"
 ---
 
-# GitHub als content management systeem
 
 
 Deze website wordt gehost vanuit een public repository, via GitHub pages. Onder het motto van low budget web development, aangezien ik gebruik maak van een gratis GitHub account. [GitHub pages](https://pages.github.com/) stelt de mogelijkheid om GitHub repositories te veranderen in statische websites.

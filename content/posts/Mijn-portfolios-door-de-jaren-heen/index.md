@@ -4,7 +4,6 @@ date: "2019-05-07"
 category: "blog"
 ---
 
-# Mijn portfolio's door de jaren heen
 
 Hoewel ik nog niet zo lang geleden aan mijn opleiding informatica begon zijn mijn portfolio websites wel flink wat veranderd, qua design en qua intenties die ik met website wou bereiken. Hier laat ik in chronologische volgorde zien hoe mijn portfolio zich in de loop van mijn studie heeft ontwikkeld. Je kunt ook de verschillende designs terug zien op [The Way-Back-Machine](https://web.archive.org/web/20180701000000*/stevenkoerts.nl) van [web.archive.org](https://web.archive.org/). Een website die van heel veel websites een screenshot heeft van verschillende jaren, leuk voor als je bijvoorbeeld wilt weten hoe YouTube eruit zag op 23 april 2005. 
 
@@ -45,9 +44,9 @@ Docusaurus is ook geschikt als portfolio, niet alleen voor Facebooks open source
 
 ### Mijn site anno nu
 
-Bleek een volledige React based static site generator de ideale oplossing, ik ben benieuwd hoe mijn website zich verder ontwikkeld. 
+Bleek een volledige React based static site generator de ideale oplossing (Gatsby), ik ben benieuwd hoe mijn website zich verder ontwikkeld. 
 
 En hiervoor gewoon een `iframe`, voor altijd de laatste versie.
-<iframe src="http://stevenkoerts.nl"></iframe>
+<iframe src="https://stevenkoerts.nl"></iframe>
 
 *#MadeWithGatsby*

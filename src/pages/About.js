@@ -21,7 +21,7 @@ class About extends React.Component {
 
                         <h1 className="under-line">Over mij</h1>
 
-                        <a target="_blank" rel="noopener noreferrer" class="btn btn-md btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
+                        <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
 
                         <br />
 

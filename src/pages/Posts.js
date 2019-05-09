@@ -37,27 +37,19 @@ class Posts extends React.Component {
                 <SEO title="Posts" />
                 <div className="container">
 
-                    <div className="crop">
+                    <div className="posts">
 
-                        <div className="card">
+                        <h1 className="under-line">Posts</h1>
 
-                            <div className="posts">
-                                <h1 className="under-line">Posts</h1>
-
-                                {data.allMarkdownRemark.totalCount === 0 ?
-                                    (<div>Er zijn nog posts, meer content is comming soon</div>) :
-                                    (
-                                        <ul>
-                                            {data.allMarkdownRemark.edges.map(({ node }) => (
-                                                <li key={node.id}><Link to={node.fields.slug}>{node.frontmatter.title}</Link></li>
-                                            ))}
-                                        </ul>
-                                    )}
-
-
-                            </div>
-
-                        </div>
+                        {data.allMarkdownRemark.totalCount === 0 ?
+                            (<div>Er zijn nog posts, meer content is comming soon</div>) :
+                            (
+                                <ul>
+                                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                                        <li key={node.id}><Link to={node.fields.slug}>{node.frontmatter.title}</Link></li>
+                                    ))}
+                                </ul>
+                            )}
 
                     </div>
 

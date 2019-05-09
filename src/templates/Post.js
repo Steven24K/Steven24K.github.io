@@ -14,12 +14,18 @@ class Post extends React.Component {
             <SEO title="blog-post" />
 
             <div className="container">
-                <div className="crop">
-                    <div className="card">
-                        <div className="blog-post" dangerouslySetInnerHTML={{ __html: this.props.data.markdownRemark.html }}>
-                        </div>
+
+                <div className="blog-post">
+                    
+                    <h1>{this.props.data.markdownRemark.frontmatter.title}</h1>
+
+                    <div dangerouslySetInnerHTML={{ __html: this.props.data.markdownRemark.html }}>
                     </div>
+
+                    <div><i>Datum: {this.props.data.markdownRemark.frontmatter.date}</i></div>
+
                 </div>
+
             </div>
 
         </Layout>
