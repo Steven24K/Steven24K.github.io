@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
+
 class Index extends React.Component {
   constructor(props) {
     super(props)
@@ -11,62 +12,73 @@ class Index extends React.Component {
 
   render() {
     return <Layout>
+
       <SEO title="Home" keywords={[`Steven Koerts`, `software developer`, `webdeveloper`, `portfolio`, `blog`]} />
 
 
-      <div className="big-image" style={{ backgroundImage: `url("./images/profiel.jpg")` }}>
+      <div className="big-image">
 
       </div>
 
       <div className="container">
 
-        <div className="crop">
+        <div className="card">
 
-          <div className="card">
+          <div className='image-bar'>
+            <img alt='' src='./images/home-4.jpg' />
+            <img alt='' src='./images/home-1.jpg' />
+            <img alt='' src='./images/home-2.jpg' />
+            <img alt='' src='./images/home-3.jpg' />
+          </div>
 
-            <h1>Wat doe ik nu?</h1>
+          <div className="line"></div>
 
-            Op dit moment studeer ik informatica aan de Hogeschool Rotterdam, ik zit in het 3ejaar en volg een minor
-            in <a target="_blank" rel="noopener noreferrer" href="https://github.com/hogeschool/Software-Engineering-Minor">Software Engineering</a> in Typescript.
-            
-            <br></br>
+          <div className='skills-bar'>
 
-           <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
+            <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
 
-            <div className="line"></div>
+            <div className='skill-items'>
+              <h1>Software Engineer</h1>
 
-            <h2>Programmeertalen &amp; Tools: </h2>
-   
-            <ul>
-              <li>C#/.NET</li>
-              <li>Python</li>
-              <li>SQL</li>
-              <li>PHP</li>
-              <li>Typescript</li>
-              <li>No-SQL(MongoDB/Neo4J)</li>
-              <li>PostgreSQL/PHPMyAdmin/MySQL</li>
-              <li>React</li>
-              <li>Gatsby (Daar maakt deze site gebruik van)</li>
-              <li>Bootstrap</li>
-              <li>Node.js</li>
-              <li>HTML/CSS/Javascript</li>
-              <li>Java</li>
-              <li>Kotlin</li>
-              <li>De statistiektaal R</li>
-            </ul>
+              <h1>Webdeveloper</h1>
 
-            <div className="line"></div>
+              <h1>Acteur</h1>
+            </div>
 
-            Ook speel ik toneel, 23 t/m 29 mei sta ik in het Passage theater in Schiedam met <b>Vreemden in een lift</b>.
-           <br />
-            <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-orange" href="http://knapschiedam.nl">Kijk hier voor kaarten en meer informatie</a>
+          </div>
 
+
+          <div className='image-bar'>
+            <img alt='' src='./images/home-5.jpg' />
+            <img alt='' src='./images/home-6.jpg' />
+            <img alt='' src='./images/home-7.jpg' />
+            <img alt='' src='./images/home-8.jpg' />
+          </div>
+
+          <div className="line"></div>
+
+          <div className='skills-bar'>
+
+            <div className='skill-items'>
+              <h2>C#/.NET</h2>
+
+              <h2>React</h2>
+
+              <h2>Typescript/Javascript</h2>
+
+              <h2>(no-)SQL</h2>
+
+              <h2>PHP</h2>
+
+            </div>
 
           </div>
 
         </div>
 
       </div>
+
+
 
     </Layout>
   }

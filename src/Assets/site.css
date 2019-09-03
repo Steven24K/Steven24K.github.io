@@ -16,12 +16,47 @@ body { margin:0; }
     margin-bottom: 30px; 
 }
 
+@media only screen and (max-width: 750px) {
+    .big-image {
+        background-image: url("/images/profiel.jpg"); 
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .big-image {
+        background-image: url("/images/juggling-cover-BIG.jpg"); 
+    }
+}
+
 .big-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
+}
+
+.image-bar {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 40px;
+    margin:0px;
+}
+
+.image-bar img {
+    height: 100px;
+    text-align: center;
+    width: auto;
+    padding: 0px;
+}
+
+.skills-bar {
+    display: grid;
+    
+}
+
+.skill-items {
+    text-align: center;
 }
 
 .crop {
