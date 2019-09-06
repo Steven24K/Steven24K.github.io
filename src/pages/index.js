@@ -26,8 +26,8 @@ class Index extends React.Component {
 
           <div className='image-bar'>
             <img alt='' src='./images/home-4.jpg' />
-            <img alt='' src='./images/home-1.jpg' />
-            <img alt='' src='./images/home-2.jpg' />
+            <img alt='' src='./images/home-1.JPG' />
+            <img alt='' src='./images/home-2.JPG' />
             <img alt='' src='./images/home-3.jpg' />
           </div>
 
