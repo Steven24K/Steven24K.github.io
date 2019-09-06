@@ -10,7 +10,7 @@ module.exports = {
     youtube: "https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured",
     facebook: "https://www.facebook.com/24ksteven",
     instructables: "https://www.instructables.com/member/stevenk102/",
-    curriculum: "./documents/Curriculum_Vitea_Steven_Koerts.pdf",
+    curriculum: "./documents/Curriculum_Vitae_Steven_Koerts.pdf",
     profileImage: "./images/profiel.jpg",
   },
   plugins: [
