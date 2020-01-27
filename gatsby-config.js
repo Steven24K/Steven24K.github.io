@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Steven Koerts`,
-    description: `My personal website and portfolio, here I show and tell what I am up to at the moment.`,
+    description: `Mijn eigen website`,
     author: `Steven Koerts`,
     email: "s.koerts2@gmail.com",
     github: "https://github.com/Steven24K",
@@ -29,7 +29,7 @@ module.exports = {
         name: 'posts',
       },
     },
-    `gatsby-transformer-sharp`,
+    //`gatsby-transformer-sharp`, error cant find python path
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
