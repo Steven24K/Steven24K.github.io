@@ -1,6 +1,6 @@
 ---
 title: "Vreemden in een lift"
-date: "2019-24-05"
+date: "2019-05-24"
 category: theatre
 ---
 

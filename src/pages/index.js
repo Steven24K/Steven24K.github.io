@@ -20,16 +20,49 @@ class Index extends React.Component {
 
       </div>
 
+      <div className='image-bar'>
+        <div className='image-container'><img className='img-responsive' alt='' src='./images/home-4.jpg' /></div>
+        <div className='image-container'><img className='img-responsive' alt='' src='./images/home-1.JPG' /></div>
+        <div className='image-container'><img className='img-responsive' alt='' src='./images/home-2.JPG' /></div>
+        <div className='image-container'><img className='img-responsive' alt='' src='./images/home-3.jpg' /></div>
+      </div>
+
+
       <div className="container">
+
 
         <div className="card">
 
-          <div className='image-bar'>
-            <img className='img-responsive' alt='' src='./images/home-4.jpg' />
-            <img className='img-responsive' alt='' src='./images/home-1.JPG' />
-            <img className='img-responsive' alt='' src='./images/home-2.JPG' />
-            <img className='img-responsive' alt='' src='./images/home-3.jpg' />
-          </div>
+          <h2>Binnenkort te zien op locatie: </h2>
+
+          <p>
+            <div className='row'>
+              <div className='col-6'>
+                <h3>-Eenakterfestival 2020</h3>
+
+                <img alt='' className='img-responsive' src='./images/EAF2020-Flyer-Voorkant-A55mm-CMYK-voor-FB-1104x1536.jpg' />
+
+              </div>
+
+              <div className='col-6'>
+
+                <h3>-Risjaar Modderfokker den Derde</h3>
+
+                <p>
+                  Naar Shakespeares Richard III in een bewerking van Tom Lanoye, speelt 26 t/m 31 mei 2020 in de   <a rel="noopener noreferrer" target="_blank" href='https://sodafabriek.nl/'>Sodafabriek</a>. 
+                </p>
+
+                <img alt='' className='img-responsive' src='./images/IMG-20200220-WA0000.jpg' />
+              </div>
+            </div>
+
+            <div className='row'>
+              <div style={{textAlign: 'center'}} className='col-12'>
+                <a rel="noopener noreferrer" target="_blank" href='https://knapschiedam.nl/shop' className='btn btn-md btn-orange'>Koop hier uw kaarten</a>
+              </div>
+            </div>
+
+          </p>
 
           <div className="line"></div>
 
@@ -48,12 +81,7 @@ class Index extends React.Component {
           </div>
 
 
-          <div className='image-bar'>
-            <img className='img-responsive' alt='' src='./images/home-5.jpg' />
-            <img className='img-responsive' alt='' src='./images/home-6.jpg' />
-            <img className='img-responsive' alt='' src='./images/home-7.jpg' />
-            <img className='img-responsive' alt='' src='./images/home-8.jpg' />
-          </div>
+
 
           <div className="line"></div>
 
@@ -74,6 +102,13 @@ class Index extends React.Component {
 
           </div>
 
+        </div>
+
+        <div className='image-bar'>
+          <div className='image-container'><img className='img-responsive' alt='' src='./images/home-5.jpg' /></div>
+          <div className='image-container'><img className='img-responsive' alt='' src='./images/home-6.jpg' /></div>
+          <div className='image-container'><img className='img-responsive' alt='' src='./images/home-7.jpg' /></div>
+          <div className='image-container'><img className='img-responsive' alt='' src='./images/home-8.jpg' /></div>
         </div>
 
       </div>
