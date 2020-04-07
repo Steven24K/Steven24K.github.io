@@ -16,4 +16,4 @@ Het is leuk om te zien hoe dit project zich in anderhalf jaar tijd heeft ontwikk
 
 
 ### Live voorbeeld
-<iframe src="http://knapschiedam.nl/shop"></iframe>
+<iframe src="https://knapschiedam.nl/shop"></iframe>
