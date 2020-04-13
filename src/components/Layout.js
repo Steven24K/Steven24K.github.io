@@ -36,6 +36,7 @@ class Layout extends React.Component {
           <NavBar siteTitle={data.site.siteMetadata.title}>
             <Link to="/About">Over mij</Link>
             <Link to="/Posts">Posts</Link>
+            <Link to="/Playground">Code Playground</Link>
             <Link to="/Contact">Contact</Link>
           </NavBar>
 
