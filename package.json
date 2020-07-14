@@ -10,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "ace-builds": "^1.4.9",
+    "core-js": "^2.6.11",
     "gatsby": "^2.3.32",
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-manifest": "^2.0.29",
@@ -50,6 +51,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -b master -d public",
+    "deploy-now": "gh-pages -b master -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

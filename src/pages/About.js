@@ -32,7 +32,7 @@ class About extends React.Component {
 
                             <br /><br />
 
-                            Op dit moment studeer ik informatica aan de Hogeschool Rotterdam, ik zit in het 4e jaar en ben bezig met mijn afstudeerstage bij Hoppinger. 
+                            Op dit moment ben ik afgestudeerd aan mijn opleiding informatica van de Hogeschool Rotterdam en ben ik software developer bij Hoppinger. 
 
                             <br /><br />
 
