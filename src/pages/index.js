@@ -45,6 +45,20 @@ class Index extends React.Component {
 
           <div className="line"></div>
 
+          <div className="row">
+
+            <div className="col-12">
+
+              <h3>Check hier mijn spokenword platform</h3>
+
+              <h4>De QWERTY web - Een ode aan letters</h4>
+
+              <a href="https://stevenkoerts.nl/OdeAanLetters" className="btn btn-md btn-green">OdeAanLetters</a>
+
+            </div>
+
+          </div>
+
 
           <div className='row'>
 
