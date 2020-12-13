@@ -35,7 +35,6 @@ class SocialBar extends React.Component {
                 instagram
                 youtube
                 facebook
-                instructables
                 curriculum
                 profileImage
             }
@@ -49,7 +48,6 @@ class SocialBar extends React.Component {
                 <a href={data.site.siteMetadata.facebook} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "facebook"]} /></a>
                 <a href={data.site.siteMetadata.instagram} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "instagram"]} /></a>
                 <a href={data.site.siteMetadata.youtube} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "youtube"]} /></a>
-                <a href={data.site.siteMetadata.instructables} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fas", "tools"]} /></a>
                 <a href={`mailto: ${data.site.siteMetadata.email}`} rel="noopener noreferrer"><FontAwesomeIcon icon={["fas", "at"]} /></a>
             </div>)}
         />

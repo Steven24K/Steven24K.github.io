@@ -33,9 +33,9 @@ class Contact extends React.Component {
                         <h3>Stuur me een mail voor:</h3>
 
                         <ul>
-                            <li>Gedetaileerde CV opvragen</li>
-                            <li>Stage plekken/opdrachten</li>
-                            <li>Werk opdrachten</li>
+                            <li>CV opvragen</li>
+                            <li>Freelance opdrachten</li>
+                            <li>Website beheer (WordPress)</li>
                             <li>(ICT) Bijbaantjes</li>
                             <li>Mij beter leren kennen</li>
                             <li>Figuratie opdrachten, acteerklussen en filmrollen altijd welkom</li>

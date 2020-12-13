@@ -33,21 +33,11 @@ class Index extends React.Component {
 
         <div className="card">
 
-          <div className='row'>
-
-            <div className='col-12'>
-
-              <a target="_blank" rel="noopener noreferrer" className="btn btn-md btn-green" href={this.props.data.site.siteMetadata.curriculum}>Download mijn Curriculum</a>
-
-            </div>
-
-          </div>
-
           <div className="line"></div>
 
           <div className="row">
 
-            <div className="col-12">
+            <div className="col-6">
 
               <h3>Check hier mijn spokenword platform</h3>
 
@@ -57,30 +47,18 @@ class Index extends React.Component {
 
             </div>
 
-          </div>
-
-
-          <div className='row'>
-
-            <div className='col-12'>
-
-              <h2>Binnenkort te zien op locatie </h2>
-
-              <h3>Risjaar Modderfokker den Derde</h3>
-
-              <a rel="noopener noreferrer" target="_blank" href='https://knapschiedam.nl/shop' className='btn btn-md btn-orange'>Koop hier uw kaarten</a>
+            <div className="col-6">
+              <h3>De Poetry Factory</h3>
 
               <p>
-                Naar Shakespeares Richard III in een bewerking van Tom Lanoye, speelt binnenkort in de   <a rel="noopener noreferrer" target="_blank" href='https://sodafabriek.nl/'>Sodafabriek</a>.
-                </p>
+                Een platform voor woordkunstenaars om hun geschreven werk naar een publiek te brengen. 
+                <b>Van papier naar podium</b>
+              </p>
 
-              <img alt='' className='img-responsive' src='./images/IMG-20200220-WA0000.jpg' />
+              <a href="http://poetryfactory.nl/" className="btn btn-md btn-orange">Poetry Factory</a>
             </div>
 
-
-
           </div>
-
 
 
           <div className="line"></div>
@@ -116,6 +94,8 @@ class Index extends React.Component {
               <h2>(no-)SQL</h2>
 
               <h2>PHP</h2>
+
+              <h2>WordPress</h2>
 
             </div>
 
