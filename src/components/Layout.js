@@ -11,6 +11,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import NavBar from "./NavBar";
 import "../Assets/site.css"
 import "../Assets/button.css"
+import "../Assets/bootstrap.min.css"
 import Footer from "./Footer";
 import SocialBar from "./SocialBar";
 
@@ -36,7 +37,6 @@ class Layout extends React.Component {
           <NavBar siteTitle={data.site.siteMetadata.title}>
             <Link to="/About">Over mij</Link>
             <Link to="/Posts">Posts</Link>
-            {/* <Link to="/Playground">Code Playground</Link> */}
             <Link to="/Contact">Contact</Link>
           </NavBar>
 

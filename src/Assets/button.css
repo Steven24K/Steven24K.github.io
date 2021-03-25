@@ -1,4 +1,4 @@
-.btn {
+.my-btn {
     border: none;
     transition-duration: 0.4s;
     padding: 10px 50px;
@@ -11,76 +11,76 @@
     
 }
 
-.btn:hover {
+.my-btn:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.btn-green {
+.my-btn-green {
     background-color: rgb(76, 175, 80);
     color: white;
 }
 
-.btn-green:hover {
+.my-btn-green:hover {
     background-color: rgb(159, 226, 162);
 }
 
-.btn-red {
+.my-btn-red {
     background-color: rgb(170, 67, 67);
     color: white;
 }
 
-.btn-red:hover {
+.my-btn-red:hover {
     background-color: rgb(236, 162, 162);
 }
 
-.btn-blue {
+.my-btn-blue {
     background-color: rgb(76, 83, 175);
     color: white;
 }
 
-.btn-blue:hover {
+.my-btn-blue:hover {
     background-color: rgb(148, 154, 240);
 }
 
-.btn-yellow {
+.my-btn-yellow {
     background-color: rgb(197, 228, 21);
     color: white;
 }
 
-.btn-yellow:hover {
+.my-btn-yellow:hover {
     background-color: rgb(220, 235, 137);
 }
 
-.btn-orange {
+.my-btn-orange {
     background-color: rgb(224, 134, 30);
     color: white;
 }
 
-.btn-orange:hover {
+.my-btn-orange:hover {
     background-color: rgb(224, 177, 123);
 }
 
-.btn-purple {
+.my-btn-purple {
     background-color: rgb(130, 76, 175);
     color: white;
 }
 
-.btn-purple:hover {
+.my-btn-purple:hover {
     background-color: rgb(196, 150, 233);
 }
 
-.btn-sm { font-size: 15px }
-.btn-md { font-size: 20px }
-.btn-lg { font-size: 25px }
-.btn-xlg { font-size: 35px }
+.my-btn-sm { font-size: 15px }
+.my-btn-md { font-size: 20px }
+.my-btn-lg { font-size: 25px }
+.my-btn-xlg { font-size: 35px }
 
 
-.btn-rounded { border-radius: 12px;}
-.btn-circle { 
+.my-btn-rounded { border-radius: 12px;}
+.my-btn-circle { 
     border-radius: 50%;
     padding: 14px 23px 18px 25px;
 }
 
-.btn-fullscreen { width: 100%;}
-.btn-half {width: 50%;}
+.my-btn-fullscreen { width: 100%;}
+.my-btn-half {width: 50%;}
 

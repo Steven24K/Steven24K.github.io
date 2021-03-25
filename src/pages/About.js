@@ -73,7 +73,7 @@ query {
                 instagram
                 youtube
                 facebook
-                instructables
+                twitter
                 curriculum
                 profileImage
             }

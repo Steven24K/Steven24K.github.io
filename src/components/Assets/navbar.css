@@ -86,7 +86,7 @@
       position: absolute;
       display: block;
       width: 100%;
-      background-color: rgb(41, 55, 177);
+      background-color: rgba(10, 23, 139, 0.849);
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
