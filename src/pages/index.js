@@ -28,7 +28,7 @@ class Index extends React.Component {
         if (s.technolgies === 'loading') return ({ ...s, technolgies: [s.tech_stack[0]], tech_stack: s.tech_stack.slice(1) })
         return ({ ...s, technolgies: s.technolgies.concat([s.tech_stack[0]]), tech_stack: s.tech_stack.slice(1) })
       })
-    }, 4000)
+    }, 3000)
 
     if (this.state.tech_stack.length === 0) {
       clearInterval(interval)
