@@ -11,7 +11,14 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import NavBar from "./NavBar";
 import "../Assets/site.css"
 import "../Assets/button.css"
+import "../Assets/bootstrap.rtl.min.css"
 import "../Assets/bootstrap.min.css"
+import "../Assets/bootstrap-utilities.min.css"
+import "../Assets/bootstrap-utilities.rtl.min.css"
+import "../Assets/bootstrap-reboot.rtl.min.css"
+import "../Assets/bootstrap-reboot.min.css"
+import "../Assets/bootstrap-grid.rtl.min.css"
+import "../Assets/bootstrap-grid.min.css"
 import Footer from "./Footer";
 import SocialBar from "./SocialBar";
 

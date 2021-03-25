@@ -10,12 +10,12 @@ class Index extends React.Component {
       technolgies: 'loading',
       tech_stack: [
         { tech: "C#/.NET", descr: "I use it mainly as a backend for enterprise websites.", skill: 8 },
-        { tech: "React", descr: "My favorite frontend framework, pay attention to the state management", skill: 9 },
+        { tech: "React", descr: "My favorite frontend framework, good state management is something I strive for", skill: 9 },
         { tech: "Typescript/Javascript", descr: "Type safety is very important to me.", skill: 9 },
         { tech: "(no)SQL", descr: "SQL is still the most common database language, I prefer LINQ queries over SQL queries.", skill: 7 },
-        { tech: "PHP", descr: "Seems you don't have choice when you building a site on a budget with shared webhosting", skill: 7 },
+        { tech: "PHP", descr: "Seems you don't have a choice when you're building a site on a budget on shared webhosting", skill: 7 },
         { tech: "WordPress", descr: "I can recommend this CMS to all entrepeneurs, love the Gutenberg editor", skill: 7 },
-        { tech: "CSS", descr: "Not my favorite language, but applications needs to look nice. Rather stick to bootstrap", skill: 5.5 }
+        { tech: "CSS", descr: "Not my favorite language, but applications need to look nice. Rather stick to bootstrap", skill: 5.5 }
       ]
     }
   }
@@ -23,14 +23,14 @@ class Index extends React.Component {
   componentDidMount() {
     let interval = setInterval(() => {
       this.setState(s => {
-        if (s.tech_stack == 'empty') return s
-        if (s.tech_stack.length == 0) return ({ ...s, tech_stack: 'empty' })
-        if (s.technolgies == 'loading') return ({ ...s, technolgies: [s.tech_stack[0]], tech_stack: s.tech_stack.slice(1) })
+        if (s.tech_stack === 'empty') return s
+        if (s.tech_stack.length === 0) return ({ ...s, tech_stack: 'empty' })
+        if (s.technolgies === 'loading') return ({ ...s, technolgies: [s.tech_stack[0]], tech_stack: s.tech_stack.slice(1) })
         return ({ ...s, technolgies: s.technolgies.concat([s.tech_stack[0]]), tech_stack: s.tech_stack.slice(1) })
       })
-    }, 5000)
+    }, 4000)
 
-    if (this.state.tech_stack.length == 0) {
+    if (this.state.tech_stack.length === 0) {
       clearInterval(interval)
     }
   }
@@ -84,7 +84,7 @@ class Index extends React.Component {
             <div className="card">
               <h2 className="center">Ik gebruik onderstaande tech stack:</h2>
 
-              {this.state.technolgies == 'loading' ?
+              {this.state.technolgies === 'loading' ?
                 <div>
                   Loading tech stack...
                   <div className="spinner-border" role="status">
@@ -102,7 +102,7 @@ class Index extends React.Component {
                       <span class="badge bg-primary rounded-pill">{v.skill}/10</span>
                     </li>)}
                   </ol>
-                  {this.state.tech_stack != 'empty' ? <div>
+                  {this.state.tech_stack !== 'empty' ? <div>
                     Getting the next one...
                   <div className="spinner-border" role="status">
                       <span className="visually-hidden">Loading...</span>
