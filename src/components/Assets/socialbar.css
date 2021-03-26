@@ -8,6 +8,7 @@
     z-index: 1;
     overflow: hidden;
     display: block;
+    margin-left: 20px;
 }
 
 .social-bar a {
@@ -26,7 +27,7 @@
 
 @media screen and (max-width: 750px) {
     .social-bar {
-        left: 0;
+        right: 0;
     }
 }
 

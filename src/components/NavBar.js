@@ -1,13 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import "../components/Assets/navbar.css"
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faBars)
-library.add(faChevronCircleUp)
-
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -21,22 +14,27 @@ class NavBar extends React.Component {
   }
 
   render() {
-    return <div className="nav">
-      <input type="checkbox" id="nav-check" />
-
-      <div className="nav-header">
-        <div className="nav-title"><Link to="/">{this.props.siteTitle}</Link></div>
+    return <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#040d5c'}}>
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand" href="#">{this.props.siteTitle}</Link>
+        <button onClick={this.toggleNavBar} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className={`collapse navbar-collapse ${this.state.showMenu ? 'show' : ''}`} id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/About" className="nav-link" aria-current="page" href="#">Bio</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Posts" className="nav-link" href="#">What's new?</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Contact" className="nav-link" href="#">Contact</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div className="nav-btn">
-        <label htmlFor="nav-check"><FontAwesomeIcon icon="bars" /></label>
-      </div>
-
-      <div className="nav-links">
-        {this.props.children}
-      </div>
-
-    </div>
+    </nav>
   }
 }
 

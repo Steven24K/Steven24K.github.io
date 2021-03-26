@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import NavBar from "./NavBar";
 import "../Assets/site.css"
 import "../Assets/button.css"
@@ -41,12 +41,7 @@ class Layout extends React.Component {
     `}
       render={data => (
         <div>
-          <NavBar siteTitle={data.site.siteMetadata.title}>
-            <Link to="/About">Over mij</Link>
-            <Link to="/Posts">Posts</Link>
-            <Link to="/Contact">Contact</Link>
-          </NavBar>
-
+          <NavBar siteTitle={data.site.siteMetadata.title}/>
 
           <main>
             {this.props.children}
