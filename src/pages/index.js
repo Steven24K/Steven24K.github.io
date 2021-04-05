@@ -36,6 +36,10 @@ class Index extends React.Component {
   }
 
   render() {
+    let items_loaded = this.state.technolgies != 'loading' ? this.state.technolgies.length : 0
+    let total = (this.state.tech_stack.length + items_loaded)
+    let progress = Math.floor((items_loaded / total) * 100)
+
     return <Layout>
 
       <SEO title="Home" keywords={[`Steven Koerts`, `software developer`, `webdeveloper`, `portfolio`, `blog`]} />
@@ -84,6 +88,12 @@ class Index extends React.Component {
             <div className="card">
               <h2 className="center">Ik gebruik onderstaande tech stack:</h2>
 
+              <div>
+                {this.state.tech_stack !== 'empty' ? <div className="progress">
+                  <div className="progress-bar" role="progressbar" style={{ width: `${progress}%` }} aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100">{progress}%</div>
+                </div> : null}
+              </div>
+
               {this.state.technolgies === 'loading' ?
                 <div>
                   Loading tech stack...
@@ -103,7 +113,7 @@ class Index extends React.Component {
                     </li>)}
                   </ol>
                   {this.state.tech_stack !== 'empty' ? <div>
-                    Getting the next one...
+                    Getting the next one ({items_loaded}/{total})...
                   <div className="spinner-border" role="status">
                       <span className="visually-hidden">Loading...</span>
                     </div>
@@ -136,8 +146,8 @@ class Index extends React.Component {
           </div>
           <div className="col-lg-6 col-sm-12">
             <div className="card">
-            <img className='img-responsive' alt='' src='./images/StevenKoerts2.JPG' />
-            <i>Photoshoot @Hoppinger</i>
+              <img className='img-responsive' alt='' src='./images/StevenKoerts2.JPG' />
+              <i>Photoshoot @Hoppinger</i>
             </div>
           </div>
         </div>
