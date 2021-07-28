@@ -22,7 +22,7 @@ const Auth = () => {
 
     return <Layout>
         <div className="container">
-            {infoText != "" && <div class="alert alert-primary" role="alert">
+            {infoText !== "" && <div class="alert alert-primary" role="alert">
                 {infoText}
             </div>}
             <h1>Your auth key: </h1>
