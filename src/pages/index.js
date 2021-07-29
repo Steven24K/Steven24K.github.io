@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { Map } from 'immutable'
-import { Call, CallIf, Repeat, Seq, Timer, Wait, Print, Done} from '../utils/stateMachine'
+import { Call, CallIf, Repeat, Seq, Timer, Wait, Print, Done } from '../utils/stateMachine'
 
 class Index extends React.Component {
   constructor(props) {
@@ -14,36 +14,63 @@ class Index extends React.Component {
     }
   }
 
-  moveNext = () => this.setState(s => ({...s, program_counter: s.program_counter + 1})) 
+  newLine = () => Call(() => this.setState(s => ({ ...s, program_counter: s.program_counter + 1 })))
 
-  addToList = (v) => this.setState(s => {
+  addToList = (v) => Call(() => this.setState(s => {
     let new_list = []
     if (s.code_story.has(this.state.program_counter) && Array.isArray(s.code_story.get(this.state.program_counter))) {
       new_list = s.code_story.get(s.program_counter)
-    } 
-    return ({...s, code_story: s.code_story.set(this.state.program_counter, new_list.concat(v))})
-  })
+    }
+    return ({ ...s, code_story: s.code_story.set(this.state.program_counter, new_list.concat(v)) })
+  }))
 
-  setValue = (v) => this.setState(s => ({...s, code_story: s.code_story.set(this.state.program_counter, v)}))
+  print = (v) => Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(this.state.program_counter, v) })))
 
-  resetState = () => this.setState({program_counter: 0, code_story: Map()})
+  appendValue = (v) => Call(() => this.setState(s => {
+    let current = ""
+    if (s.code_story.has(s.program_counter)) {
+      current = s.code_story.get(s.program_counter)
+    }
+    return ({ ...s, code_story: s.code_story.set(s.program_counter, current + v) })
+  }))
 
-  codingMyStory () {
-    let program = Repeat(
-      Seq(Call(() => this.setValue("Hello")), Seq(Timer(1000), Seq(Call(() => this.moveNext()), Seq(Call(() => this.setValue("World")), Seq(Timer(1000), Call(() => this.resetState()))))))
-    )
-  
-  let interval = setInterval(() => {
+  resetState = () => Call(() => this.setState({ program_counter: 0, code_story: Map() }))
+
+  writeLine = (sentence, timeout = 100, accellerate = false) => sentence.split("").reduce((xs, x, i) => {
+    return Seq(xs, Seq(Timer(timeout / (accellerate ? i + 1 : 1)), this.appendValue(x)))
+  }, Done(""))
+
+  writeLines = (phrases, timeout = 100, accellerate = false) => phrases.map(phrase => this.writeLine(phrase, timeout, accellerate)).reduce((xs, x) => Seq(xs, Seq(this.newLine(), x)), Done(""))
+
+  code_my_story() {
+
+    let program = [
+      this.writeLines([
+        "This is how I started my coding journey",
+        "It all started with..."
+      ], 200, true), 
+      this.print("<code>print('Hello World')</code>"), 
+      this.writeLines([
+        "Yeah how could be different?",
+        "Everyone starts like that.",
+        "Right?"
+      ], 200, true), 
+      this.writeLine("Have more questions about me?"), 
+      this.writeLine("Feel free to ask me any question!"), 
+      this.print("Mail me <a href='mailto:s.koerts2@gmail.com'>here</a>")
+    ].reduce((xs, x) => Seq(xs, Seq(Seq(Timer(1000), this.newLine()), x)) , Done(""))
+
+
+    let interval = setInterval(() => {
       program.update();
       if (!program.busy) {
-          clearInterval(interval);
+        clearInterval(interval);
       }
-  }, 100)
+    }, 10)
   }
 
   componentDidMount() {
-    console.log('Mounted')
-    this.codingMyStory()
+    this.code_my_story()
   }
 
   render() {
@@ -88,7 +115,7 @@ class Index extends React.Component {
                     {value.map((item, index1) => <li key={index1}>{item}</li>)}
                   </ul>
                 }
-                return <p  key={index0} dangerouslySetInnerHTML={{__html: value}}/>
+                return <p key={index0} dangerouslySetInnerHTML={{ __html: value }} />
               })}
             </div>
 
