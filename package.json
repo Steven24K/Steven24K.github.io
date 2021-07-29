@@ -34,7 +34,8 @@
     "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "typescript": "^4.3.5"
   },
   "keywords": [
     "gatsby",
@@ -51,7 +52,9 @@
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -b master -d public",
     "deploy-now": "gh-pages -b master -d public",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"", 
+    "tsc": "tsc", 
+    "tsc-w": "tsc -w"
   },
   "repository": {
     "type": "git",

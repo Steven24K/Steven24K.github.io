@@ -1,4 +1,7 @@
-export const Seq = (sm1, sm2) => ({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CallIf = exports.Call = exports.Repeat = exports.Wait = exports.Timer = exports.Done = exports.Print = exports.Seq = void 0;
+const Seq = (sm1, sm2) => ({
     sm1: sm1,
     sm2: sm2,
     current: sm1,
@@ -22,8 +25,8 @@ export const Seq = (sm1, sm2) => ({
         this.busy = true;
     },
 });
-
-export const Print = (msg) => ({
+exports.Seq = Seq;
+const Print = (msg) => ({
     message: msg,
     busy: true,
     update: function () {
@@ -34,8 +37,8 @@ export const Print = (msg) => ({
         this.busy = true;
     }
 });
-
-export const Done = (msg) => ({
+exports.Print = Print;
+const Done = () => ({
     busy: true,
     update: function () {
         this.busy = false;
@@ -44,7 +47,8 @@ export const Done = (msg) => ({
         this.busy = true;
     }
 });
-export const Timer = (time) => ({
+exports.Done = Done;
+const Timer = (time) => ({
     time: time,
     busy: true,
     update: function () {
@@ -56,8 +60,8 @@ export const Timer = (time) => ({
         this.busy = true;
     }
 });
-
-export const Wait = (p) => ({
+exports.Timer = Timer;
+const Wait = (p) => ({
     predicate: p,
     busy: true,
     update: function () {
@@ -69,7 +73,8 @@ export const Wait = (p) => ({
         this.busy = true;
     }
 });
-export const Repeat = (action) => ({
+exports.Wait = Wait;
+const Repeat = (action) => ({
     action: action,
     busy: true,
     update: function () {
@@ -82,8 +87,8 @@ export const Repeat = (action) => ({
         action.reset();
     }
 });
-
-export const Call = (action) => ({
+exports.Repeat = Repeat;
+const Call = (action) => ({
     action: action,
     busy: true,
     update: function () {
@@ -94,8 +99,8 @@ export const Call = (action) => ({
         this.busy = true;
     }
 });
-
-export const CallIf = (guard, action) => ({
+exports.Call = Call;
+const CallIf = (guard, action) => ({
     guard: guard,
     action: action,
     busy: true,
@@ -109,6 +114,4 @@ export const CallIf = (guard, action) => ({
         this.busy = true;
     }
 });
-
-
-
+exports.CallIf = CallIf;
