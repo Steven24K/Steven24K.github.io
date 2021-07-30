@@ -105,17 +105,21 @@ body {
 .posts h1 {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     min-width: 300px;
 }
 
-.posts ul {
-    text-align: center;
-    list-style-position: inside;
+.post-grid {
+ margin-left: auto;
+ margin-right: auto;
+ /* border: 1px solid red; */
 }
 
-.posts li {
-    font-size: 105%;
+.post-item {
+    display: inline-block;
+    font-size: large;
+    padding-left: 5px;
+    writing-mode: sideways-lr;
+    /* border: 1px solid green; */
 }
 
 .posts a {
@@ -131,12 +135,15 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
     min-width: 350px;
     padding: 0px 0px 100px 50px;
 }
 
-
+.blog-content {
+    padding-top: 20px;
+    font-size: larger;
+}
 
 .contact {
     display: block;
@@ -200,3 +207,4 @@ iframe {
 .code li:not(:last-child) {
     border-bottom: 1px solid rgba(216, 215, 206, 0.685);
 }
+

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 class Post extends React.Component {
     constructor(props) {
@@ -11,18 +11,21 @@ class Post extends React.Component {
 
     render() {
         return <Layout>
-            <SEO title="blog-post" />
+            <SEO title={this.props.data.markdownRemark.frontmatter.title} />
 
             <div className="container">
 
                 <div className="blog-post">
                     
+                    <div className="under-line">
                     <h1>{this.props.data.markdownRemark.frontmatter.title}</h1>
-
-                    <div dangerouslySetInnerHTML={{ __html: this.props.data.markdownRemark.html }}>
+                    <div><i>Geplaatst op: {this.props.data.markdownRemark.frontmatter.date}</i></div>
+                    <Link className="btn btn-link" to="/Posts">Terug naar overzicht</Link>
                     </div>
 
-                    <div><i>Datum: {this.props.data.markdownRemark.frontmatter.date}</i></div>
+                    <div className="blog-content" dangerouslySetInnerHTML={{ __html: this.props.data.markdownRemark.html }}>
+                    </div>
+
 
                 </div>
 

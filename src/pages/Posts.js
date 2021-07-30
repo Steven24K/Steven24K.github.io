@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
+import { getRandomArbitrary } from "../utils/utils";
 
 class Posts extends React.Component {
     constructor(props) {
@@ -44,9 +45,13 @@ class Posts extends React.Component {
                         {data.allMarkdownRemark.totalCount === 0 ?
                             (<div>Er zijn nog posts, meer content is comming soon</div>) :
                             (
-                                <ul>
+                                <ul className="post-grid">
                                     {data.allMarkdownRemark.edges.map(({ node }) => (
-                                        <li key={node.id}><Link to={node.fields.slug}>{node.frontmatter.title}</Link></li>
+                                        <li style={{
+                                            fontSize: getRandomArbitrary(20, 70)
+                                        }} className="post-item under-line" key={node.id}>
+                                            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                                        </li>
                                     ))}
                                 </ul>
                             )}
