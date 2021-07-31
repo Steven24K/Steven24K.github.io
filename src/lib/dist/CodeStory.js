@@ -22,6 +22,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const immutable_1 = require("immutable");
 const React = __importStar(require("react"));
 const statemachine_1 = require("./statemachine");
+const utils_1 = require("./utils");
+let interval;
 class CodeStory extends React.Component {
     constructor(props) {
         super(props);
@@ -41,6 +43,18 @@ class CodeStory extends React.Component {
         this.writeLines = (phrases, timeout = 100, accellerate = false) => phrases.map(phrase => this.writeLine(phrase, timeout, accellerate)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(this.newLine(), x)), statemachine_1.Done());
         this.writeHtml = (tag, innerText, timeout = 100, accellerate = false) => statemachine_1.Seq(this.appendValue(`<${tag}>`), statemachine_1.Seq(this.writeLine(innerText, timeout, accellerate), this.appendValue(`</${tag}>`)));
         this.mkList = (list_type, ...items) => statemachine_1.Seq(this.appendValue(`<${list_type}>`), statemachine_1.Seq(items.map(item => this.writeHtml('li', item, 100, true)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Timer(200), x)), statemachine_1.Done()), this.appendValue(`</${list_type}>`)));
+        this.growingSquare = (start_size, max_size) => {
+            if (start_size >= max_size) {
+                return statemachine_1.Done();
+            }
+            return statemachine_1.Seq(this.print(utils_1.drawSquare(start_size).f('*')), statemachine_1.Seq(statemachine_1.Timer(400), this.growingSquare(start_size + 1, max_size)));
+        };
+        this.flickeringSquare = (size, counter) => {
+            if (counter <= 0) {
+                return statemachine_1.Done();
+            }
+            return statemachine_1.Seq(this.print(utils_1.drawSquare(size).f("*")), statemachine_1.Seq(statemachine_1.Seq(statemachine_1.Timer(400), this.print(utils_1.drawHollowSquare(size, '*'))), statemachine_1.Seq(statemachine_1.Timer(400), this.flickeringSquare(size, counter - 1))));
+        };
         this.state = {
             program_counter: 0,
             code_story: immutable_1.Map(),
@@ -52,6 +66,11 @@ class CodeStory extends React.Component {
         this.setState(s => ({ ...s, isRunning: true }));
         let program = [
             this.clear(),
+            this.writeLine(utils_1.drawCircle(30, '#'), 100, true),
+            this.growingSquare(1, 10),
+            this.clear(),
+            this.flickeringSquare(10, 5),
+            this.clear(),
             this.writeLines([
                 "This is how I started my coding journey",
                 "It all started with..."
@@ -60,14 +79,23 @@ class CodeStory extends React.Component {
             this.writeLines([
                 "Yeah how could be different?",
                 "Everyone starts like that.",
-                "Right?"
+                "Right?",
+                "I also learned other things",
+                "Like drawing lines",
             ], 200, true),
+            this.clear(),
+            this.writeLine(utils_1.drawLine(10).f('*')),
+            this.clear(),
+            this.writeLines([
+                "Or repeat that to make a square: ",
+                utils_1.drawSquare(10).f("*"),
+            ], 100, true),
             this.mkList('ol', "Item 1", "Item 2", "Item 3"),
             this.writeLine("Have more questions about me?"),
             this.writeLine("Feel free to ask me any question!"),
             this.print("Mail me <a href='mailto:s.koerts2@gmail.com'>here</a>"),
         ].reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Seq(statemachine_1.Timer(1000), this.newLine()), x)), statemachine_1.Done());
-        let interval = setInterval(() => {
+        interval = setInterval(() => {
             program.update();
             if (!program.busy) {
                 clearInterval(interval);
@@ -77,6 +105,9 @@ class CodeStory extends React.Component {
     }
     componentDidMount() {
         this.code_my_story();
+    }
+    componentWillUnmount() {
+        clearInterval(interval);
     }
     render() {
         return React.createElement(React.Fragment, null,

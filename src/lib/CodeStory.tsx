@@ -1,7 +1,7 @@
 import { Map } from 'immutable'
 import * as React from 'react'
 import { Call, Seq, Done, Timer, StateMachine, } from './statemachine'
-import { HtmlTag } from './utils'
+import { drawCircle, drawHollowSquare, drawLine, drawSquare, HtmlTag } from './utils'
 
 
 interface CodeStoryState {
@@ -14,6 +14,7 @@ interface CodeStoryProps {
 
 }
 
+let interval: any
 export default class CodeStory extends React.Component<CodeStoryProps, CodeStoryState> {
     constructor(props: CodeStoryProps) {
         super(props)
@@ -53,11 +54,31 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         Seq(items.map(item => this.writeHtml('li', item, 100, true)).reduce((xs, x) => Seq(xs, Seq(Timer(200), x)), Done()),
             this.appendValue(`</${list_type}>`)))
 
+    growingSquare = (start_size: number, max_size: number): StateMachine => {
+        if (start_size >= max_size) {
+            return Done()
+        }
+        return Seq(this.print(drawSquare(start_size).f('*')), Seq(Timer(400), this.growingSquare(start_size + 1, max_size)))
+    }
+
+    flickeringSquare = (size: number, counter: number): StateMachine => {
+        if (counter <= 0) {
+            return Done()
+        }
+        return Seq(this.print(drawSquare(size).f("*")), Seq(Seq(Timer(400), this.print(drawHollowSquare(size, '*'))), Seq(Timer(400), this.flickeringSquare(size, counter - 1))))
+    }
+
     code_my_story() {
         this.setState(s => ({ ...s, isRunning: true }))
 
         let program: StateMachine = [
             this.clear(),
+            this.writeLine(drawCircle(30, '#'), 100, true),
+            this.growingSquare(1, 10),
+            this.clear(),
+            this.flickeringSquare(10, 5),
+            this.clear(), 
+
             this.writeLines([
                 "This is how I started my coding journey",
                 "It all started with..."
@@ -66,16 +87,27 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             this.writeLines([
                 "Yeah how could be different?",
                 "Everyone starts like that.",
-                "Right?"
+                "Right?",
+                "I also learned other things",
+                "Like drawing lines",
             ], 200, true),
+            this.clear(),
+            this.writeLine(drawLine(10).f('*')),
+            this.clear(),
+            this.writeLines([
+                "Or repeat that to make a square: ",
+                drawSquare(10).f("*"),
+            ], 100, true),
+
+
             this.mkList('ol', "Item 1", "Item 2", "Item 3"),
             this.writeLine("Have more questions about me?"),
             this.writeLine("Feel free to ask me any question!"),
             this.print("Mail me <a href='mailto:s.koerts2@gmail.com'>here</a>"),
         ].reduce((xs, x) => Seq(xs, Seq(Seq(Timer(1000), this.newLine()), x)), Done())
 
- 
-        let interval = setInterval(() => {
+
+        interval = setInterval(() => {
             program.update();
             if (!program.busy) {
                 clearInterval(interval);
@@ -86,6 +118,10 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
     componentDidMount() {
         this.code_my_story()
+    }
+
+    componentWillUnmount() {
+        clearInterval(interval)
     }
 
     render() {

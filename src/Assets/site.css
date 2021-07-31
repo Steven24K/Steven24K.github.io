@@ -198,6 +198,7 @@ iframe {
     min-height: 400px;
     max-height: 800px;
     overflow-y: scroll;
+    white-space:pre;
 }
 
 .code p{

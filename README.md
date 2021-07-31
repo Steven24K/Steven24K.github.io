@@ -11,6 +11,14 @@ This site is being hosted from the master branch to GitHub pages and the content
 
 The pages are represented as React components and the content is managed through markdown files. 
 
+## Typescript support 
+
+in the lib folder there are Typescript files, wich can be compiled using the commands below. The compiled Javascript code can be found in lib/dist and that code can be 
+used in the whole application. 
+
+`yarn tsc` or `yarn tsc-w` to compile in watch mode. 
+
+
 ## Commands 
 
 `yarn build` Make production build 
