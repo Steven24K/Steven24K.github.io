@@ -2,7 +2,9 @@ import { Func } from "./func"
 
 export type HtmlTag = 'a' | 'p' | 'code' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div' | 'li' | 'b' | 'i'
 
+export type BootstrapButtonStyle =  'success' | 'primary' | 'danger' | 'warning' | 'link'
 
+export type InputType = 'string' | 'number' | 'button'
 
 export let drawLine = (n: number): Func<string, string> => Func(char => {
     if (n <= 0) {
