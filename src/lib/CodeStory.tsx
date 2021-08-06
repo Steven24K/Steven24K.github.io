@@ -36,6 +36,8 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         this.state = zeroCodeStoryState()
 
         this.code_my_story = this.code_my_story.bind(this)
+        this.getVar = this.getVar.bind(this)
+        // TODO: bind all functions
     }
 
     newLine = (): StateMachine => Call(() => this.setState(s => ({ ...s, program_counter: s.program_counter + 1 })))
@@ -44,6 +46,9 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
     print = (v: string): StateMachine => Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(this.state.program_counter, mkText(v)) })))
 
     askInput = (input_name: string, type: InputType): StateMachine => Seq(Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(this.state.program_counter, mkInput(input_name, type)) }))), Wait(() => this.state.user_input.has(input_name)))
+
+    getVar = (name: string): (string | number | boolean) => this.state.user_input.has(name) ? this.state.user_input.get(name)! : false
+
 
     appendText = (v: string): StateMachine => Call(() => this.setState(s => {
         let newText = mkText(v)
@@ -56,7 +61,7 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         return ({ ...s, code_story: s.code_story.set(s.program_counter, newText) })
     }))
 
-    clear = (): StateMachine => Call(() => this.setState(zeroCodeStoryState()))
+    clear = (): StateMachine => Call(() => this.setState(s => ({ ...s, program_counter: 0, code_story: Map<number, CodeStack>() })))
 
     writeLine = (sentence: string, timeout = 100, accellerate = false): StateMachine => sentence.split("").reduce((xs, x, i) => {
         return Seq(xs, Seq(Timer(timeout / (accellerate ? i + 1 : 1)), this.appendText(x)))
@@ -111,42 +116,68 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         this.setState(s => ({ ...s, isRunning: true }))
 
         let program: StateMachine = [
+            this.askInput('hello', 'string'),
+            Timer(1000),
+            this.print(this.getVar('hello').toString()),
+
             this.clear(),
-            this.askInput('my-input', 'button'),
-            this.print("Thank you"),
-            // this.shrinkingCircle(30),
-            // this.clear(),
-            // this.writeLine(drawCircle(30, '#'), 100, true),
-            // this.growingSquare(1, 10),
-            // this.clear(),
-            // this.flickeringSquare(10, 5),
-            // this.clear(),
+            this.print("Why write your story in text?"),
+            this.print("When you can code!"),
+            this.writeLine("Press the button below to start my coding story.", 100, true),
+            this.askInput('Start the show', 'button'),
+            this.print("Allright!"),
+            this.writeLines([
+                "...",
+                "...",
+                "...",
+                "Let's get started",
+            ], 200, true),
+            this.clear(),
+            this.writeLines([
+                "I started writing my first HTML in highschool, with some CSS",
+                "What I did use for the backend?"
+            ], 100, true),
+            this.writeHtml('code', '&lt?php ?&gt;'),
+            this.writeLines([
+                "Yeah, I know...",
+                "Not my favorite language, but you got to start somewhere",
+                "And it does do the job",
+                "I also learned programming with the LEGO Mindstorms block editor",
+                "I still have the robot",
+                "Playing with LEGO never get's old."
+            ], 200, true),
+            Timer(500),
+            this.clear(),
+            this.writeLines([
+                "Later I learned drawing shapes on the command line",
+                "Like these:"
+            ], 200, true),
+            this.print(drawSquare(5).f("*")),
+            this.print("or"),
+            this.print(drawCircle(6, "*")),
+            this.print("and"),
+            this.print(drawHollowSquare(5, "*")),
+            this.writeLines([
+                "I can make any size",
+                "with any character"
+            ]),
+            Timer(500),
+            this.clear(),
+            this.print("Give me a number"),
+            this.askInput("x", 'number'),
+            this.print("Now give 1 character or symbol"),
+            this.askInput("char", 'string'),
+            this.clear(),
+            this.print(`Drawing with size: ${this.getVar('x')} and char: ${this.getVar('char')}`),
+            this.print(drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
+            this.print(drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
+            this.writeLines([
+                "Wait a second...",
+                "I can make fancy animations with these"
+            ], 200, true),
+            this.clear(),
+            // TODO: Start growing and shrinking animations
 
-            // this.writeLines([
-            //     "This is how I started my coding journey",
-            //     "It all started with..."
-            // ], 200, true),
-            // this.writeHtml('code', 'print("Hello World!!!")'),
-            // this.writeLines([
-            //     "Yeah how could be different?",
-            //     "Everyone starts like that.",
-            //     "Right?",
-            //     "I also learned other things",
-            //     "Like drawing lines",
-            // ], 200, true),
-            // this.clear(),
-            // this.writeLine(drawLine(10).f('*')),
-            // this.clear(),
-            // this.writeLines([
-            //     "Or repeat that to make a square: ",
-            //     drawSquare(10).f("*"),
-            // ], 100, true),
-
-
-            // this.mkList('ol', "Item 1", "Item 2", "Item 3"),
-            // this.writeLine("Have more questions about me?"),
-            // this.writeLine("Feel free to ask me any question!"),
-            // this.print("Mail me <a href='mailto:s.koerts2@gmail.com'>here</a>"),
         ].reduce((xs, x) => Seq(xs, Seq(Seq(Timer(700), this.newLine()), x)), Done())
 
 
@@ -169,7 +200,9 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
     render() {
         return <>
-            <h2>My story in code <button disabled={this.state.isRunning} className="btn btn-success" onClick={this.code_my_story}>Start the show!</button></h2>
+            <h2>My story in code
+                {/* <button disabled={this.state.isRunning} className="btn btn-success" onClick={this.code_my_story}>Start the show!</button> */}
+            </h2>
 
             <div className="code">
                 {this.state.code_story.toIndexedSeq().toArray().map((value, index) => {
