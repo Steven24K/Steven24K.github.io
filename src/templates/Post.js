@@ -15,7 +15,7 @@ class Post extends React.Component {
 
             <div className="container">
 
-                <div className="blog-post">
+                <div className="blog-post card">
                     
                     <div className="under-line">
                     <h1>{this.props.data.markdownRemark.frontmatter.title}</h1>

@@ -42,19 +42,22 @@ class Posts extends React.Component {
 
                         <h1 className="under-line">Posts</h1>
 
-                        {data.allMarkdownRemark.totalCount === 0 ?
-                            (<div>Er zijn nog posts, meer content is comming soon</div>) :
-                            (
-                                <ul className="post-grid">
-                                    {data.allMarkdownRemark.edges.map(({ node }) => (
-                                        <li style={{
-                                            fontSize: getRandomArbitrary(20, 70)
-                                        }} className="post-item under-line" key={node.id}>
-                                            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                        <div>
+                            {data.allMarkdownRemark.totalCount === 0 ?
+                                (<div>Er zijn nog posts, meer content is comming soon</div>) :
+                                (
+                                    <ul className="post-grid">
+                                        {data.allMarkdownRemark.edges.map(({ node }) => (
+                                            <li style={{
+                                                fontSize: getRandomArbitrary(20, 70)
+                                            }} className="post-item under-line" key={node.id}>
+                                                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                        </div>
+
 
                     </div>
 

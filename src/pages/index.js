@@ -27,7 +27,7 @@ class Index extends React.Component {
           <div className="col-md-4">
 
             <h2>Bio</h2>
-            <p>
+            <p className="card">
               to be, or not to be, thats the question Devoutly to be wish'd. to die, to sleep; If we have unearned
               luck If you pardon, we will mend
 
@@ -40,9 +40,10 @@ class Index extends React.Component {
 
               First, as I am his kinsman and his subject, A dateless bargain to engrossing death!
 
+              <img className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
+              
             </p>
 
-            <img className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
 
           </div>
 
