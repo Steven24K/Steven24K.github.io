@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.drawCircle = exports.drawHollowSquare = exports.drawTriangle_reversed = exports.drawTriangle = exports.drawSquare = exports.drawLine = void 0;
+exports.drawCircle = exports.drawHollowSquare = exports.drawTriangle_reversed = exports.drawTriangle = exports.drawSquare = exports.drawLine = exports.parseAttribute = void 0;
 const func_1 = require("./func");
+const parseAttribute = (attrs) => Object.entries(attrs).reduce((xs, x) => xs + x[0] + '=' + x[1] + ' ', '');
+exports.parseAttribute = parseAttribute;
 let drawLine = (n) => func_1.Func(char => {
     if (n <= 0) {
         return "";

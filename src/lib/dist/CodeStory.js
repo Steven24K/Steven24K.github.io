@@ -39,6 +39,7 @@ class CodeStory extends React.Component {
         this.print = (v) => statemachine_1.Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(this.state.program_counter, mkText(v)) })));
         this.askInput = (input_name, type) => statemachine_1.Seq(statemachine_1.Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(this.state.program_counter, mkInput(input_name, type)) }))), statemachine_1.Wait(() => this.state.user_input.has(input_name)));
         this.getVar = (name) => this.state.user_input.has(name) ? this.state.user_input.get(name) : false;
+        this.printLazy = (printer) => statemachine_1.Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(this.state.program_counter, mkText(printer())) })));
         this.appendText = (v) => statemachine_1.Call(() => this.setState(s => {
             let newText = mkText(v);
             if (s.code_story.has(s.program_counter)) {
@@ -54,8 +55,8 @@ class CodeStory extends React.Component {
             return statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Timer(timeout / (accellerate ? i + 1 : 1)), this.appendText(x)));
         }, statemachine_1.Done());
         this.writeLines = (phrases, timeout = 100, accellerate = false) => phrases.map(phrase => this.writeLine(phrase, timeout, accellerate)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(this.newLine(), x)), statemachine_1.Done());
-        this.writeHtml = (tag, innerText, timeout = 100, accellerate = false) => statemachine_1.Seq(this.appendText(`<${tag}>`), statemachine_1.Seq(this.writeLine(innerText, timeout, accellerate), this.appendText(`</${tag}>`)));
-        this.mkList = (list_type, ...items) => statemachine_1.Seq(this.appendText(`<${list_type}>`), statemachine_1.Seq(items.map(item => this.writeHtml('li', item, 100, true)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Timer(200), x)), statemachine_1.Done()), this.appendText(`</${list_type}>`)));
+        this.writeHtml = (tag, innerText, attr = {}, timeout = 100, accellerate = false) => statemachine_1.Seq(this.appendText(`<${tag} ${utils_1.parseAttribute(attr)} >`), statemachine_1.Seq(this.writeLine(innerText, timeout, accellerate), this.appendText(`</${tag}>`)));
+        this.mkList = (list_type, ...items) => statemachine_1.Seq(this.appendText(`<${list_type}>`), statemachine_1.Seq(items.map(item => this.writeHtml('li', item, {}, 100, true)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Timer(200), x)), statemachine_1.Done()), this.appendText(`</${list_type}>`)));
         this.growingSquare = (start_size, max_size) => {
             if (start_size >= max_size) {
                 return statemachine_1.Done();
@@ -86,17 +87,22 @@ class CodeStory extends React.Component {
             }
             return statemachine_1.Seq(this.print(utils_1.drawCircle(start_size, '*')), statemachine_1.Seq(statemachine_1.Timer(200), this.shrinkingCircle(start_size - 1)));
         };
+        this.flickeringCircle = (size, counter) => {
+            if (counter <= 0) {
+                return statemachine_1.Done();
+            }
+            return statemachine_1.Seq(this.print(utils_1.drawCircle(size, "*")), statemachine_1.Seq(statemachine_1.Timer(400), statemachine_1.Seq(this.print(utils_1.drawCircle(size, "*", true)), statemachine_1.Seq(statemachine_1.Timer(400), this.flickeringCircle(size, counter - 1)))));
+        };
         this.state = zeroCodeStoryState();
         this.code_my_story = this.code_my_story.bind(this);
+        this.printLazy = this.printLazy.bind(this);
         this.getVar = this.getVar.bind(this);
         // TODO: bind all functions
     }
     code_my_story() {
         this.setState(s => ({ ...s, isRunning: true }));
+        let interval_time = 700;
         let program = [
-            this.askInput('hello', 'string'),
-            statemachine_1.Timer(1000),
-            this.print(this.getVar('hello').toString()),
             this.clear(),
             this.print("Why write your story in text?"),
             this.print("When you can code!"),
@@ -111,15 +117,18 @@ class CodeStory extends React.Component {
             ], 200, true),
             this.clear(),
             this.writeLines([
-                "I started writing my first HTML in highschool, with some CSS",
+                "I started writing my first HTML in highschool,",
+                "with some CSS",
                 "What I did use for the backend?"
             ], 100, true),
             this.writeHtml('code', '&lt?php ?&gt;'),
             this.writeLines([
                 "Yeah, I know...",
-                "Not my favorite language, but you got to start somewhere",
+                "Not my favorite language",
+                "but you got to start somewhere",
                 "And it does do the job",
-                "I also learned programming with the LEGO Mindstorms block editor",
+                "I also learned programming with",
+                "the LEGO Mindstorms block editor",
                 "I still have the robot",
                 "Playing with LEGO never get's old."
             ], 200, true),
@@ -145,16 +154,46 @@ class CodeStory extends React.Component {
             this.print("Now give 1 character or symbol"),
             this.askInput("char", 'string'),
             this.clear(),
-            this.print(`Drawing with size: ${this.getVar('x')} and char: ${this.getVar('char')}`),
-            this.print(utils_1.drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
-            this.print(utils_1.drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
+            this.printLazy(() => `Drawing shape with size: ${this.getVar('x')} and character: ${this.getVar('char')}`),
+            this.printLazy(() => utils_1.drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
+            statemachine_1.Timer(500),
+            this.printLazy(() => utils_1.drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
             this.writeLines([
                 "Wait a second...",
-                "I can make fancy animations with these"
+                "I can make fancy animations with these shapes"
             ], 200, true),
+            statemachine_1.Timer(800),
             this.clear(),
-            // TODO: Start growing and shrinking animations
-        ].reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Seq(statemachine_1.Timer(700), this.newLine()), x)), statemachine_1.Done());
+            statemachine_1.Seq(this.growingSquare(1, 10), statemachine_1.Seq(this.flickeringSquare(10, 10), this.shrinkingSquare(10))),
+            this.clear(),
+            statemachine_1.Seq(this.growingCircle(4, 20), statemachine_1.Seq(this.flickeringCircle(20, 10), this.shrinkingCircle(20))),
+            statemachine_1.Timer(500),
+            this.clear(),
+            this.writeLines([
+                "Looks nice right?",
+                "From there I developed myself",
+                "with the following languages",
+                "and tools."
+            ], 200, true),
+            this.mkList('ul', "C#/.NET", "Typescript/Javascript", "React", "Python", "no(SQL)"),
+            this.clear(),
+            this.print("Hoped you enjoyed this story in code."),
+            this.writeLines([
+                "As more code flows",
+                "my story goes on.",
+                "Currently I work at:"
+            ]),
+            this.writeHtml('a', 'Vidda Digital', { href: 'https://viddadigital.com/', target: '_blank' }, 100, true),
+            this.writeLines([
+                "Curious about my other projects?",
+                "Or want to know how I build this site?",
+                "Check out my GitHub",
+            ]),
+            this.writeHtml('a', 'GitHub', { href: 'https://github.com/Steven24K', target: '_blank' }, 150, true),
+            this.print('<h3>Have any questions?</h3>'),
+            this.print("<b>Feel free to sent me an email</b>"),
+            this.writeHtml('a', 'Mail me', { href: 'mailto:s.koerts2@gmail.com' }, 100, true),
+        ].reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Seq(statemachine_1.Timer(interval_time), this.newLine()), x)), statemachine_1.Done());
         interval = setInterval(() => {
             program.update();
             if (!program.busy) {

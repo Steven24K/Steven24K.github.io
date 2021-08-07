@@ -1,6 +1,14 @@
 import { Func } from "./func"
 
-export type HtmlTag = 'a' | 'p' | 'code' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div' | 'li' | 'b' | 'i'
+export type HtmlTag = 'a' | 'p' | 'code' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div' | 'li' | 'b' | 'i' | 'img'
+
+export type HtmlAttributes = {
+    href?: string 
+    target?: '_blank' | '_self'
+    src?: string
+}
+
+export const parseAttribute = (attrs: HtmlAttributes): string => Object.entries(attrs).reduce((xs, x) => xs + x[0] + '=' + x[1] + ' ' , '')
 
 export type BootstrapButtonStyle =  'success' | 'primary' | 'danger' | 'warning' | 'link'
 
