@@ -128,7 +128,7 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         let program: StateMachine = [
             this.clear(),
             this.print("Why write your story in text?"),
-            this.print("When you can code!"),
+            this.print("When you can code your story!"),
             this.writeLine("Press the button below to start my coding story.", 100, true),
             this.askInput('Start the show', 'button'),
             this.print("Allright!"),
@@ -155,7 +155,7 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
                 "I still have the robot",
                 "Playing with LEGO never get's old."
             ], 200, true),
-            Timer(500),
+            Timer(1000),
             this.clear(),
             this.writeLines([
                 "Later I learned drawing shapes on the command line",
@@ -166,11 +166,12 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             this.print(drawCircle(6, "*")),
             this.print("and"),
             this.print(drawHollowSquare(5, "*")),
+            this.clear(),
             this.writeLines([
                 "I can make any size",
                 "with any character"
             ]),
-            Timer(500),
+            Timer(1000),
             this.clear(),
             this.print("Give me a number"),
             this.askInput("x", 'number'),
@@ -181,16 +182,18 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             this.printLazy(() => drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
             Timer(500),
             this.printLazy(() => drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
+            Timer(1000),
+            this.clear(),
             this.writeLines([
                 "Wait a second...",
                 "I can make fancy animations with these shapes"
             ], 200, true),
-            Timer(800),
+            Timer(1000),
             this.clear(),
             Seq(this.growingSquare(1, 10), Seq(this.flickeringSquare(10, 10), this.shrinkingSquare(10))),
             this.clear(),
             Seq(this.growingCircle(4, 20), Seq(this.flickeringCircle(20, 10), this.shrinkingCircle(20))),
-            Timer(500),
+            Timer(1000),
             this.clear(),
             this.writeLines([
                 "Looks nice right?",
@@ -209,15 +212,16 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             this.print("Hoped you enjoyed this story in code."),
             this.writeLines([
                 "As more code flows",
-                "my story goes on.",
-                "Currently I work at:"
-            ]),
+                "my story will grow.",
+                "Currently I work as",
+                "a software engineer at:",
+            ], 150, true),
             this.writeHtml('a', 'Vidda Digital', { href: 'https://viddadigital.com/', target: '_blank' }, 100, true),
             this.writeLines([
                 "Curious about my other projects?",
                 "Or want to know how I build this site?",
                 "Check out my GitHub",
-            ]),
+            ], 200, true),
             this.writeHtml('a', 'GitHub', { href: 'https://github.com/Steven24K', target: '_blank' }, 150, true),
             this.print('<h3>Have any questions?</h3>'),
             this.print("<b>Feel free to sent me an email</b>"),

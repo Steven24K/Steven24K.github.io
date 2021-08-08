@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import CodeStory from "../lib/CodeStory"
@@ -28,22 +28,13 @@ class Index extends React.Component {
 
             <h2>Bio</h2>
             <p className="card">
-              to be, or not to be, thats the question Devoutly to be wish'd. to die, to sleep; If we have unearned
-              luck If you pardon, we will mend
+              <span dangerouslySetInnerHTML={{ __html: this.props.data.site.siteMetadata.bio }} />
 
-              Else the puck a liar call; Of edward's heirs the murderer shall be. That make ingrateful man! Those
-              that slew thy virgin knight; The slings and arrows of outrageous fortune, Here's to my love! That my
-              youth suffer'd. My story being done,
-
-              When he himself might his quietus make And so the general of hot desire Which many legions of true
-              hearts had warm'd;
-
-              First, as I am his kinsman and his subject, A dateless bargain to engrossing death!
+              <Link to="/About">Read full bio</Link>
 
               <img className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
-              
-            </p>
 
+            </p>
 
           </div>
 
@@ -61,6 +52,7 @@ query {
         siteMetadata {
             title
             description
+            bio
             author
             email
             github

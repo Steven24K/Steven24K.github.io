@@ -2,6 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Steven Koerts`,
     description: `Mijn eigen website`,
+    bio: `Hoi, ik ben Steven en dit is mijn website. Ik ben afgestudeerd met een bachelor in informatica, geïntresseerd in het oplossen van complexe problemen. 
+    Problem solving en wiskunde zijn in mijn mening de belangrijkste skills als het gaat om computer science. Verder voel ik mij ook thuis in het theater en op het toneel, 
+    het is heerlijk om in de huid van iemand anders te kruipen en een verhaal te vertellen. <br>
+    Programmeren en acteren lijkt niet te rijmen samen maar is beiden het uitvoeren en schrijven van scripts.
+    `,
     author: `Steven Koerts`,
     email: "s.koerts2@gmail.com",
     github: "https://github.com/Steven24K",
@@ -48,7 +53,7 @@ module.exports = {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'uploads',
-              
+
             }
           },
           // Add more remark plugins here...

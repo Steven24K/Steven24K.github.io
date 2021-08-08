@@ -41,26 +41,28 @@ class About extends React.Component {
                             </p>
 
                             <p>
-                                Op dit moment heb ik de meeste ervaring in C#/.NET en Typescript, allebij enterprise talen onderdeel van Microsoft stack. Daarnaast werk ik veel met het 
-                                frontend framework React van Facebook. Een combinatie van deze tools is zeer geschikt om toe te passen op grote complexe systemen, typesafety is erg belangrijk om 
-                                fouten te voorkomen bij een groot systeem. React helpt bij de state management van de applicatie en het maken van herbruikbare bouwblokken. 
+                                Op dit moment heb ik de meeste ervaring in C#/.NET en Typescript, allebij enterprise talen onderdeel van Microsoft stack. Daarnaast werk ik veel met het
+                                frontend framework React van Facebook. Een combinatie van deze tools is zeer geschikt om toe te passen op grote complexe systemen, typesafety is erg belangrijk om
+                                fouten te voorkomen bij een groot systeem. React helpt bij de state management van de applicatie en het maken van herbruikbare bouwblokken.
                             </p>
 
                             <p>
-                                Verder gebruik ik ook nog steeds PHP, dit is mijn favoriete taal als het neerkomt op syntax. Dit is overigens wel een goede oplossing voor low-budget websites. 
-                                Als je vast zit aan een shared webhosting pakket dan is vaak je enige tech stack op de server PHP en Perl. Zo raad ik zelfstandige ondernemers of kleine lokale bedrijven aan 
-                                hun website met WordPress te bouwen. Met duizenden thema's en plugins op de markt, plus een klein beetje eigen PHP code heb je een volledig werkzame website die aan de basis eisen voldoet. 
+                                Verder gebruik ik ook nog steeds PHP, dit is niet mijn favoriete taal als het neerkomt op syntax. Dit is overigens wel een goede oplossing voor low-budget websites.
+                                Als je vast zit aan een shared webhosting pakket dan is vaak je enige tech stack op de server PHP en Perl. Zo raad ik zelfstandige ondernemers of kleine lokale bedrijven aan
+                                hun website met WordPress te bouwen. Met duizenden thema's en plugins op de markt, plus een klein beetje eigen PHP code heb je een volledig werkende website die aan de basis eisen voldoet.
                             </p>
 
                             <h2>Vrij tijd <span aria-label="music" role="img">🎶</span><span aria-label="mic" role="img">🎤</span><span aria-label="theater" role="img">🎭</span></h2>
 
                             <p>
-                                Naast programmeren heb ik een grote passie voor theater, zowel het bezoeken en zelf spelen doe ik graag. Op dit moment ben ik een
-                                <i> grote;) </i>amateurspeler. Van grote rollen in een kleine productie tot kleine rollen in een grote productie. Verder besteed ik mijn vrije tijd
-                                graag aan het schrijven van eigen teksten, ik luister graag naar de kunst van spoken word. Een vrije dicht- en poëzievorm waar de kunstenaar als het ware
-                                een ritme weet te maken met zijn woorden en door de mannier van opschrijven.
+                                Naast programmeren heb ik een grote passie voor theater, zowel het bezoeken en zelf spelen doe ik graag. Ik ben actief 
+                                bij het amateurtoneel en doe daar o.a. ook de website, ik heb een eigen ticket verkoop daarvoor gebouwd. 
+                                Verder besteed ik mijn vrije tijd graag aan het schrijven van eigen teksten, voornamelijk spokenword. Een dichtvorm en story telling stijl waarbij je door de manier van schrijven een heel ritmische
+                                vertelvorm krijgt.
                             </p>
 
+
+                            <h2><i>Programmeren en acteren lijkt niet met elkaar te rijmen, maar is beiden het schrijven en uitvoeren van scripts.</i></h2>
 
 
                         </div>
