@@ -11,7 +11,7 @@ module.exports = {
     email: "s.koerts2@gmail.com",
     github: "https://github.com/Steven24K",
     linkedin: "https://nl.linkedin.com/in/steven-koerts-223aa3135",
-    instagram: "https://www.instagram.com/steven_koerts/",
+    instagram: "https://www.instagram.com/hello_world_my_name_is_steven/",
     youtube: "https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured",
     facebook: "https://www.facebook.com/24ksteven",
     twitter: "https://twitter.com/PoetrySteven",
