@@ -43,19 +43,19 @@ class Posts extends React.Component {
                         <h1 className="under-line">Posts</h1>
 
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-lg-6 col-sm-12 col-sm-12">
                                 <div className="card">
                                     <h1>Some facts about me</h1>
                                     <ol>
                                         <li><b>Favorite IDE:</b> Visual Sudio Code</li>
-                                        <li><b>Currently building:</b> Headless websites with React/Typescript/C#/Wordpress</li>
+                                        <li><b>Currently building:</b> Headless websites with React, Typescript, C#, Wordpress</li>
                                         <li><b>Personal project: </b><a target="_blank" href="https://github.com/Steven24K/CodeGenPHP">CodeGenPHP</a></li>
                                         <li><b>Favorite artists:</b> Johnny Cash &amp; Tupac are both legends</li>
                                     </ol>
                                 </div>
 
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-sm-12 col-sm-12">
                                 <div className="card">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ehPfn2AmZx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 <i>Spoken word: Tweet on the lamppost</i>
@@ -64,13 +64,13 @@ class Posts extends React.Component {
                         </div>
 
                         <div className="row">
-                            <div className="col-4">
+                            <div className="col-lg-4 col-sm-12 col-md-6">
                                 <div className="card">
                                     <img className="img-fluid" alt="profile-steven-koerts" src="../images/home-3.jpg" />
                                     <i>Fotoshoot: Soda fabriek 2019 &copy;</i>
                                 </div>
                             </div>
-                            <div className="col-8">
+                            <div className="col-lg-8 col-sm-12 col-md-6">
                                 <div className="card">
                                     <h2>Archief</h2>
                                     {data.allMarkdownRemark.totalCount === 0 ?
