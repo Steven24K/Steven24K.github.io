@@ -123,84 +123,37 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
     code_my_story() {
         this.setState(s => ({ ...s, isRunning: true }))
-        let interval_time = 700
+        let interval_time = 500
 
         let program: StateMachine = [
             this.clear(),
-            this.print("Why write your story in text?"),
-            this.print("When you can code your story!"),
-            this.writeLine("Press the button below to start my coding story.", 100, true),
-            this.askInput('Start the show', 'button'),
-            this.print("Allright!"),
-            this.writeLines([
-                "...",
-                "...",
-                "...",
-                "Let's get started",
-            ], 200, true),
+            this.print("Welcome to my story."),
+            this.print("This story is a poem I wrote."),
+            this.print("I slowly wrote it in code."),
+            this.writeLine("I always try to stay creative."),
+            this.askInput("Start the show!", "button"),
+
             this.clear(),
+            this.writeHtml('h2', "Code == Poetry"),
+
             this.writeLines([
-                "I started writing my first HTML in highschool,",
-                "with some CSS",
-                "What I did use for the backend?"
-            ], 100, true),
-            this.writeHtml('code', '&lt?php ?&gt;'),
-            this.writeLines([
-                "Yeah, I know...",
-                "Not my favorite language",
-                "but you got to start somewhere",
-                "And it does do the job",
-                "I also learned programming with",
-                "the LEGO Mindstorms block editor",
-                "I still have the robot",
-                "Playing with LEGO never get's old."
-            ], 200, true),
-            Timer(1000),
-            this.clear(),
-            this.writeLines([
-                "Later I learned drawing shapes on the command line",
-                "Like these:"
-            ], 200, true),
-            this.print(drawSquare(5).f("*")),
-            this.print("or"),
-            this.print(drawCircle(6, "*")),
-            this.print("and"),
-            this.print(drawHollowSquare(5, "*")),
-            this.clear(),
-            this.writeLines([
-                "I can make any size",
-                "with any character"
-            ]),
-            Timer(1000),
-            this.clear(),
-            this.print("Give me a number"),
-            this.askInput("x", 'number'),
-            this.print("Now give 1 character or symbol"),
-            this.askInput("char", 'string'),
-            this.clear(),
-            this.printLazy(() => `Drawing shape with size: ${this.getVar('x')} and character: ${this.getVar('char')}`),
-            this.printLazy(() => drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
+                "So people ask:",
+                "How do you do all that coding?",
+                "Well...",
+                "I'am just fluently following following",
+                "the fine flow of my functions",
+                "with a fixed format, finding focus",
+                "ignoring formalities.",
+                "Finally finished fixing factorial faults",
+                "before its Friday and catches fire."
+            ], 500, true),
             Timer(500),
-            this.printLazy(() => drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
-            Timer(1000),
+            this.print("That is my answer."),
+            this.writeLine("Give it some thought"),
+            Timer(1500),
             this.clear(),
-            this.writeLines([
-                "Wait a second...",
-                "I can make fancy animations with these shapes"
-            ], 200, true),
-            Timer(1000),
-            this.clear(),
-            Seq(this.growingSquare(1, 10), Seq(this.flickeringSquare(10, 10), this.shrinkingSquare(10))),
-            this.clear(),
-            Seq(this.growingCircle(4, 20), Seq(this.flickeringCircle(20, 10), this.shrinkingCircle(20))),
-            Timer(1000),
-            this.clear(),
-            this.writeLines([
-                "Looks nice right?",
-                "From there I developed myself",
-                "with the following languages",
-                "and tools."
-            ], 200, true),
+
+            this.writeHtml('h1', "Tech stack"),
             this.mkList('ul',
                 "C#/.NET",
                 "Typescript/Javascript",
@@ -208,15 +161,44 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
                 "Python",
                 "no(SQL)",
             ),
+
+            Timer(1500),
+
+            this.writeHtml('h2', "Want to see some fun stuff?"),
+            Timer(500),
+            this.askInput('Start', 'button'),
+
             this.clear(),
+
+            this.print("Give me a number:"),
+            this.askInput("x", 'number'),
+            this.print("And a character:"),
+            this.askInput("char", 'string'),
+            this.clear(),
+
+            this.printLazy(() => `Drawing shape with size: ${this.getVar('x')} and character: ${this.getVar('char')}`),
+            this.printLazy(() => drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
+            Timer(500),
+            this.printLazy(() => drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
+            Timer(500),
+            this.clear(),
+            this.writeLines([
+                "Wait a second...",
+                "I can make fancy animations with these shapes"
+            ], 200, true),
+            Timer(500),
+            this.clear(),
+            Seq(this.growingSquare(1, 10), Seq(this.flickeringSquare(10, 10), this.shrinkingSquare(10))),
+            this.clear(),
+            Seq(this.growingCircle(4, 20), Seq(this.flickeringCircle(20, 10), this.shrinkingCircle(20))),
+            Timer(500),
+            this.clear(),
+
             this.print("Hoped you enjoyed this story in code."),
             this.writeLines([
                 "As more code flows",
                 "my story will grow.",
-                "Currently I work as",
-                "a software engineer at:",
             ], 150, true),
-            this.writeHtml('a', 'Vidda Digital', { href: 'https://viddadigital.com/', target: '_blank' }, 100, true),
             this.writeLines([
                 "Curious about my other projects?",
                 "Or want to know how I build this site?",
@@ -226,6 +208,8 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             this.print('<h3>Have any questions?</h3>'),
             this.print("<b>Feel free to sent me an email</b>"),
             this.writeHtml('a', 'Mail me', { href: 'mailto:s.koerts2@gmail.com' }, 100, true),
+
+            this.print("-----THE END-----")
 
         ].reduce((xs, x) => Seq(xs, Seq(Seq(Timer(interval_time), this.newLine()), x)), Done())
 
