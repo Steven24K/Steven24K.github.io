@@ -59,7 +59,6 @@ query {
             linkedin
             instagram
             youtube
-            facebook
             twitter
             curriculum
             profileImage
