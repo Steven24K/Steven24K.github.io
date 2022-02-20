@@ -42,6 +42,9 @@ class Posts extends React.Component {
 
                         <h1 className="under-line">Posts</h1>
 
+                        <Link to="/">Terug naar mijn homepage</Link>
+
+
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 col-sm-12">
                                 <div className="card">
@@ -49,7 +52,7 @@ class Posts extends React.Component {
                                     <ol>
                                         <li><b>Favorite IDE:</b> Visual Sudio Code</li>
                                         <li><b>Currently building:</b> Headless websites with React, Typescript, C#, Wordpress</li>
-                                        <li><b>Personal project: </b><a target="_blank" href="https://github.com/Steven24K/CodeGenPHP">CodeGenPHP</a></li>
+                                        <li><b>Personal project: </b><a target="_blank" rel="noreferrer" href="https://github.com/Steven24K/CodeGenPHP">CodeGenPHP</a></li>
                                         <li><b>Favorite artists:</b> Johnny Cash &amp; Tupac are both legends</li>
                                     </ol>
                                 </div>
@@ -72,7 +75,7 @@ class Posts extends React.Component {
                             </div>
                             <div className="col-lg-8 col-sm-12 col-md-6">
                                 <div className="card">
-                                    <h2>Archief</h2>
+                                    <h2>Archief - ({data.allMarkdownRemark.totalCount} stories)</h2>
                                     {data.allMarkdownRemark.totalCount === 0 ?
                                         (<div>Er zijn nog posts, meer content is comming soon</div>) :
                                         (

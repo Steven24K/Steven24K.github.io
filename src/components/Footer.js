@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import "../components/Assets/footer.css"
 
 class Footer extends React.Component {
@@ -21,7 +21,11 @@ class Footer extends React.Component {
             `}
 
             render={data => (<footer className="footer">
-                <p>&copy; {new Date().getFullYear()} Made by {data.site.siteMetadata.author} </p>
+                <p>
+                    &copy; {new Date().getFullYear()} Made by {data.site.siteMetadata.author}
+                    {' | '}
+                    <Link to="/Posts" href="#">My Stories</Link>
+                </p>
             </footer>)}
         />
     }

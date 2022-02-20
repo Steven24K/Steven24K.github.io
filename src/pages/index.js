@@ -12,6 +12,8 @@ class Index extends React.Component {
 
 
   render() {
+    // console.log(this.props.data)
+    let last_story = this.props.data.allMarkdownRemark.edges[0].node
     return <Layout>
 
       <SEO title="Home" keywords={[`Steven Koerts`, `software developer`, `webdeveloper`, `portfolio`, `blog`]} />
@@ -22,6 +24,24 @@ class Index extends React.Component {
 
             <CodeStory />
 
+            <p className="card">
+              <h3>Contact</h3>
+
+              Mij beter leren kennen? Neem contact met mij op!
+
+              <a className="btn btn-primary" href={`mailto: ${this.props.data.site.siteMetadata.email}`}>Mail me!</a>
+
+              <h3 className="under-line">Laatste story</h3>
+
+              <div className="highlight">
+                <Link to={last_story.fields.slug}>
+                  <h4>{last_story.frontmatter.title}</h4>
+                </Link>
+                <p>{last_story.excerpt}</p>
+              </div>
+
+            </p>
+
           </div>
 
           <div className="col-md-4">
@@ -30,7 +50,7 @@ class Index extends React.Component {
             <p className="card">
               <span dangerouslySetInnerHTML={{ __html: this.props.data.site.siteMetadata.bio }} />
 
-              <Link to="/About">Read full bio</Link>
+              <Link className="btn btn-lg btn-primary" to="/About">Read full bio</Link>
 
               <img className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
 
@@ -39,6 +59,7 @@ class Index extends React.Component {
           </div>
 
         </div>
+
       </div>
 
     </Layout>
@@ -64,6 +85,21 @@ query {
             profileImage
         }
     }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
+                edges {
+                    node {
+                        id
+                        frontmatter {
+                            title
+                            category
+                        }
+                        fields {
+                            slug
+                        }
+                        excerpt
+                    }
+                }
+            }
 }
 `
 

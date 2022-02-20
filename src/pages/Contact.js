@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -26,6 +26,9 @@ class Contact extends React.Component {
 
                             <h1 className="under-line">Contact</h1>
 
+                            <Link to="/">Terug naar mijn homepage</Link>
+
+
                             <h2>Mij beter leren kennen?</h2>
 
                             <p>Neem contact met mij op!</p>
@@ -39,7 +42,7 @@ class Contact extends React.Component {
                                 <li>CV opvragen</li>
                                 <li>Freelance opdrachten</li>
                                 <li>Website beheer (WordPress)</li>
-                                <li>(ICT) Bijbaantjes</li>
+                                <li>Kleine ICT klussen of advies </li>
                                 <li>Mij beter leren kennen</li>
                                 <li>Figuratie opdrachten, acteerklussen en filmrollen altijd welkom!</li>
                             </ul>

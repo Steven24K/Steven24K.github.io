@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout";
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/SEO";
 
 class About extends React.Component {
@@ -19,6 +19,8 @@ class About extends React.Component {
                         <div className="card">
 
                             <h1 className="under-line">Over mij</h1>
+
+                            <Link to="/">Terug naar mijn homepage</Link>
 
                             <br />
 

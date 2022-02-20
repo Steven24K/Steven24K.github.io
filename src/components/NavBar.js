@@ -23,12 +23,6 @@ class NavBar extends React.Component {
         <div className={`collapse navbar-collapse ${this.state.showMenu ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/About" className="nav-link" aria-current="page" href="#">Bio</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Posts" className="nav-link" href="#">What's new?</Link>
-            </li>
-            <li className="nav-item">
               <Link to="/Contact" className="nav-link" href="#">Contact</Link>
             </li>
           </ul>

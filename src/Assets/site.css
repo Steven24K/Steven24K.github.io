@@ -209,3 +209,7 @@ iframe {
     border-bottom: 1px solid rgba(216, 215, 206, 0.685);
 }
 
+.highlight {
+    border: 3px solid rgb(7, 68, 180);
+    padding: 10px;
+}
