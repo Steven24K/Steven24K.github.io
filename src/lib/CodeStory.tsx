@@ -233,9 +233,7 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
     render() {
         return <>
-            <h2>My story in code
-                {/* <button disabled={this.state.isRunning} className="btn btn-success" onClick={this.code_my_story}>Start the show!</button> */}
-            </h2>
+            <h2>Welome to my personal homepage!</h2>
 
             <div className="code">
                 {this.state.code_story.toIndexedSeq().toArray().map((value, index) => {
