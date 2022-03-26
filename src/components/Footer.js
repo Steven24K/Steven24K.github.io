@@ -23,8 +23,6 @@ class Footer extends React.Component {
             render={data => (<footer className="footer">
                 <p>
                     &copy; {new Date().getFullYear()} Made by {data.site.siteMetadata.author}
-                    {' | '}
-                    <Link to="/Posts" href="#">My Stories</Link>
                 </p>
             </footer>)}
         />
