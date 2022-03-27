@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import CodeStory from "../lib/CodeStory"
+import Clock from "../lib/CanvasClock"
 
 class Index extends React.Component {
   constructor(props) {
@@ -23,6 +24,11 @@ class Index extends React.Component {
           <div className="col-md-8">
 
             <CodeStory />
+
+            <p className="card">
+              <h3>De tijd tikt altijd door</h3>
+              <Clock />
+            </p>
 
             <p className="card">
               <h3>Contact</h3>

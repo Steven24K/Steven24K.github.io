@@ -24,10 +24,12 @@
     "gatsby-transformer-sharp": "^2.1.18",
     "gh-pages": "^2.0.1",
     "immutable": "^4.0.0-rc.14",
+    "konva": "^8.3.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-konva": "^17.0.2-6",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-plugin-code": "^0.16.19",
@@ -52,8 +54,8 @@
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -b master -d public",
     "deploy-now": "gh-pages -b master -d public",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"", 
-    "tsc": "tsc", 
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "tsc": "tsc",
     "tsc-w": "tsc -w"
   },
   "repository": {

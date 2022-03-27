@@ -213,3 +213,8 @@ iframe {
     border: 3px solid rgb(7, 68, 180);
     padding: 10px;
 }
+
+.clock { 
+    margin-left: auto;
+    margin-right: auto;
+}
