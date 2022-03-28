@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
     ).then(result => {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
             createPage({
-                path: node.fields.slug, 
+                path: node.fields.slug,
                 component: path.resolve("./src/templates/Post.js"),
                 context: {
                     slug: node.fields.slug
@@ -50,3 +50,17 @@ exports.createPages = ({ graphql, actions }) => {
     })
 }
 
+// Thanks to https://github.com/gatsbyjs/gatsby/issues/17661#issuecomment-665800908
+exports.onCreateWebpackConfig = ({
+    stage,
+    rules,
+    loaders,
+    plugins,
+    actions,
+}) => {
+    // if (stage === "build-html") {
+        actions.setWebpackConfig({
+            externals: ['canvas']
+        })
+    // }
+};
