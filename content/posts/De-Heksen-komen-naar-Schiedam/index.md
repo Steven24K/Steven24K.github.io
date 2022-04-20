@@ -18,5 +18,4 @@ De Heksen was de kerstproductie van De Stokerij Schiedam, in theater aan de Schi
 
 ![alt](../De-Heksen-komen-naar-Schiedam\FB_IMG_1544790906839.jpg)
 
-![alt](https://link)
 

@@ -14,25 +14,38 @@ class Posts extends React.Component {
         return <StaticQuery
             query={graphql`
         query {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-                totalCount
-                edges {
-                    node {
-                        id
-                        frontmatter {
-                            title
-                            category
-                            date
-                        }
-                        fields {
-                            slug
-                        }
-                        excerpt
+            allMarkdownRemark(
+                sort: {
+                    fields: [frontmatter___date], order: DESC
+                    }, 
+                    filter: {
+                        fields: {
+                            slug: {
+                                ne: "/What-happened-shiphappens/",
+                                # Add more filters here, like this: 
+                                # ne: "/slug-of-page-to-hide",
+                                }
+                                }
+                            }
+            ) {
+            totalCount
+            edges {
+                node {
+                     id
+                     frontmatter {
+                     title
+                     category
+                     date
                     }
-                }
+                     fields {
+                     slug
+                    }
+                    excerpt
+                    }
             }
         }
-        `}
+    }
+                `}
 
             render={data => (<Layout>
                 <SEO title="Posts" />
@@ -60,8 +73,8 @@ class Posts extends React.Component {
                             </div>
                             <div className="col-lg-6 col-sm-12 col-sm-12">
                                 <div className="card">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/ehPfn2AmZx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <i>Spoken word: Tweet on the lamppost</i>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ehPfn2AmZx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <i>Spoken word: Tweet on the lamppost</i>
                                 </div>
                             </div>
                         </div>
