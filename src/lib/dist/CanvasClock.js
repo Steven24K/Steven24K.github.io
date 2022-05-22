@@ -48,11 +48,11 @@ function Clock() {
             clearInterval(get_time);
         };
     });
-    const canvasWidth = 420;
-    const canvasHeight = 420;
+    const canvasWidth = 350;
+    const canvasHeight = 350;
     const center_x = canvasWidth / 2;
     const center_y = canvasHeight / 2;
-    const clock_radius = 200;
+    const clock_radius = 160;
     const full_round = 2 * Math.PI;
     const hours = time.getHours();
     const minutes = time.getMinutes();
