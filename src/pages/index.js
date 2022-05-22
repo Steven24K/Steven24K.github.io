@@ -26,11 +26,6 @@ class Index extends React.Component {
             <CodeStory />
 
             <p className="card">
-              <h3>De tijd tikt altijd door</h3>
-              <Clock />
-            </p>
-
-            <p className="card">
               <h3>Contact</h3>
 
               Mij beter leren kennen? Neem contact met mij op!
@@ -48,6 +43,11 @@ class Index extends React.Component {
 
             </p>
 
+            <p className="card">
+              <h3>De tijd tikt altijd door</h3>
+              <Clock />
+            </p>
+
           </div>
 
           <div className="col-md-4">
@@ -56,7 +56,7 @@ class Index extends React.Component {
             <p className="card">
               <span dangerouslySetInnerHTML={{ __html: this.props.data.site.siteMetadata.bio }} />
 
-              <Link className="btn btn-lg btn-primary" to="/About">Read full bio</Link>
+              <Link className="btn btn-lg btn-primary" to="/About">Full bio (NL)</Link>
 
               <img className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
 

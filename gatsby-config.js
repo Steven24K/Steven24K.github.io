@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Steven Koerts`,
     description: `Mijn eigen website`,
-    bio: `Hoi, ik ben Steven en dit is mijn website. Ik ben afgestudeerd met een bachelor in informatica, geïntresseerd in het oplossen van complexe problemen. 
-    Problem solving en wiskunde zijn in mijn mening de belangrijkste skills als het gaat om computer science. Verder voel ik mij ook thuis in het theater en op het toneel, 
-    het is heerlijk om in de huid van iemand anders te kruipen en een verhaal te vertellen. <br>
-    Programmeren en acteren lijkt niet te rijmen samen maar is beiden het uitvoeren en schrijven van scripts.
+    bio: `
+    <h4>Hi there,</h4>
+    Dear internet traveler who stumbled upon my website. My name is Steven, I'm a passionate software engineer, who is curious 
+    to learn new technolgies and with a heart for presentation through story telling.
+    <b>Programmeren en acteren lijkt niet te rijmen samen maar is beiden het uitvoeren en schrijven van scripts.</b>
     `,
     author: `Steven Koerts`,
     email: "s.koerts2@gmail.com",

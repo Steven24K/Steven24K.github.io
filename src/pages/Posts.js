@@ -65,8 +65,7 @@ class Posts extends React.Component {
                                     <ol>
                                         <li><b>Favorite IDE:</b> Visual Sudio Code</li>
                                         <li><b>Currently building:</b> Headless websites with React, Typescript, C#, Wordpress</li>
-                                        <li><b>Personal project: </b><a target="_blank" rel="noreferrer" href="https://github.com/Steven24K/CodeGenPHP">CodeGenPHP</a></li>
-                                        <li><b>Favorite artists:</b> Johnny Cash &amp; Tupac are both legends</li>
+                                        <li><b>Side project: </b><a target="_blank" rel="noreferrer" href="https://github.com/Steven24K/CodeGenPHP">CodeGenPHP</a></li>
                                     </ol>
                                 </div>
 
@@ -95,7 +94,7 @@ class Posts extends React.Component {
                                             <ul className="post-grid">
                                                 {data.allMarkdownRemark.edges.map(({ node }) => (
                                                     <li style={{
-                                                        fontSize: getRandomArbitrary(20, 30)
+                                                        fontSize: getRandomArbitrary(10, 25)
                                                     }} className="post-item under-line" key={node.id}>
                                                         <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                                                     </li>
