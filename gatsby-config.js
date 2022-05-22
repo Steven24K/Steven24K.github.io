@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Steven Koerts`,
     description: `Mijn eigen website`,
-    bio: `
-    <h4>Hi there,</h4>
+    bio: `Hi there,<br>
     Dear internet traveler who stumbled upon my website. My name is Steven, I'm a passionate software engineer, who is curious 
     to learn new technolgies and with a heart for presentation through story telling.
     <b>Programmeren en acteren lijkt niet te rijmen samen maar is beiden het uitvoeren en schrijven van scripts.</b>
