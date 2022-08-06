@@ -10,6 +10,7 @@ module.exports = {
     instagram: "https://www.instagram.com/hello_world_my_name_is_steven/",
     youtube: "https://www.youtube.com/channel/UCYoHlYm31DGTR3Soqs6My6Q/featured",
     twitter: "https://twitter.com/PoetrySteven",
+    spotify: "https://open.spotify.com/show/7J5NQpCDfWdpjJLaWQrRuq?si=b5fae49a45bd4047&nd=1",
     curriculum: "./documents/Curriculum_Vitae_Steven_Koerts.pdf",
     profileImage: "./images/profiel.jpg",
   },
