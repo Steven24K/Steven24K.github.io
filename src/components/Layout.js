@@ -29,6 +29,7 @@ class Layout extends React.Component {
   }
 
   render() {
+
     return <StaticQuery
       query={graphql`
       query SiteTitleQuery {
@@ -41,9 +42,9 @@ class Layout extends React.Component {
     `}
       render={data => (
         <div>
-          <NavBar siteTitle={data.site.siteMetadata.title}/>
+          {/* <NavBar siteTitle={data.site.siteMetadata.title}/> */}
 
-          <main>
+          <main className="wrapper">
             {this.props.children}
           </main>
 

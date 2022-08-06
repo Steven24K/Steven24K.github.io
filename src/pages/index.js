@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import CodeStory from "../lib/CodeStory"
 import Clock from "../lib/CanvasClock"
+import { Map } from "immutable"
 
 class Index extends React.Component {
   constructor(props) {
@@ -14,60 +15,37 @@ class Index extends React.Component {
 
   render() {
     // console.log(this.props.data)
-    let last_story = this.props.data.allMarkdownRemark.edges[0].node
+    // let last_story = this.props.data.allMarkdownRemark.edges[0].node
+    let bio = this.props.data.site.siteMetadata.bio
+
+
     return <Layout>
 
       <SEO title="Home" keywords={[`Steven Koerts`, `software developer`, `webdeveloper`, `portfolio`, `blog`]} />
 
-      <div className="container homepage">
+      <div className="container">
         <div className="row">
-          <div className="col-md-8">
-
-            <CodeStory />
-
-            <p className="card">
-              <h3>Contact</h3>
-
-              Mij beter leren kennen? Neem contact met mij op!
-
-              <a className="btn btn-primary" href={`mailto: ${this.props.data.site.siteMetadata.email}`}>Mail me!</a>
-
-              <h3 className="under-line">Laatste story</h3>
-
-              <div className="highlight">
-                <Link to={last_story.fields.slug}>
-                  <h4>{last_story.frontmatter.title}</h4>
-                </Link>
-                <p>{last_story.excerpt}</p>
-              </div>
-
-            </p>
-
-            <p className="card">
-              <h3>De tijd tikt altijd door</h3>
-              <Clock />
-            </p>
-
+          <div className="col-12">
+            <h2 class="title">Hello World My Name Is Steven</h2>
+            <h4 className="sub-title">{bio}</h4>
           </div>
-
-          <div className="col-md-4">
-
-            <h2>Bio</h2>
-            <p className="card">
-              <span dangerouslySetInnerHTML={{ __html: this.props.data.site.siteMetadata.bio }} />
-
-              <Link className="btn btn-lg btn-primary" to="/About">Full bio (NL)</Link>
-
-              <img className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
-
-            </p>
-
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <CodeStory stack={Map()
+              .set('profile_picture_start', <div style={{ width: '250px', marginLeft: 'auto', marginRight: 'auto' }}>
+                <img width={'auto'} className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts1.JPG" />
+              </div>)
+              .set('profile_picture_end', <div style={{ width: '350px', marginLeft: 'auto', marginRight: 'auto' }}>
+                <img width={'auto'} className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
+              </div>)
+              .set('clock', <Clock />)
+            }
+            />
           </div>
-
         </div>
 
       </div>
-
     </Layout>
   }
 }

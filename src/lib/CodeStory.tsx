@@ -6,11 +6,13 @@ import { BootstrapButtonStyle, drawCircle, drawHollowSquare, drawLine, drawSquar
 
 type Text = { kind: 'text', text: string }
 type Input = { kind: 'input', name: string, type: InputType }
+type ReactContent = { kind: 'react', jsx: React.ReactNode }
 
-type CodeStack = Text | Input
+type CodeStack = Text | Input | ReactContent
 
 const mkText = (v: string): Text => ({ kind: 'text', text: v })
 const mkInput = (name: string, type: InputType): Input => ({ kind: 'input', name: name, type: type })
+const mkReact = (jsx: React.ReactNode): ReactContent => ({ kind: 'react', jsx: jsx })
 
 interface CodeStoryState {
     program_counter: number
@@ -26,7 +28,7 @@ const zeroCodeStoryState = (): CodeStoryState => ({
     user_input: Map<string, string | number | boolean>(),
 })
 interface CodeStoryProps {
-
+    stack: Map<string, React.ReactNode>
 }
 
 let interval: any
@@ -38,7 +40,6 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         this.code_my_story = this.code_my_story.bind(this)
         this.printLazy = this.printLazy.bind(this)
         this.getVar = this.getVar.bind(this)
-        // TODO: bind all functions
     }
 
     newLine = (): StateMachine => Call(() => this.setState(s => ({ ...s, program_counter: s.program_counter + 1 })))
@@ -120,6 +121,13 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
         return Seq(this.print(drawCircle(size, "*")), Seq(Timer(400), Seq(this.print(drawCircle(size, "*", true)), Seq(Timer(400), this.flickeringCircle(size, counter - 1)))))
     }
 
+    renderReact = (name: string): StateMachine => {
+        if (this.props.stack.has(name)) {
+            return Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(s.program_counter, mkReact(this.props.stack.get(name))) })))
+        }
+        return Done()
+    }
+
 
     code_my_story() {
         this.setState(s => ({ ...s, isRunning: true }))
@@ -127,29 +135,39 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
         let program: StateMachine = [
             this.clear(),
-            this.print("Welcome to my story."),
+            this.writeHtml("h1", "Welcome to my story."),
+            this.renderReact('profile_picture_start'),
             this.print("This story is a poem I wrote."),
             this.print("I slowly wrote it in code."),
-            this.writeLine("I always try to stay creative."),
+            this.writeHtml("h3", "Stay creative."),
             this.askInput("Start the show!", "button"),
 
             this.clear(),
-            this.writeHtml('h2', "Code == Poetry"),
+            this.writeHtml('h1', "Code == Poetry"),
 
             this.writeLines([
-                "So people ask:",
-                "How do you do all that coding?",
+                "When people ask:",
+                "How do you do all that",
+                "coding?",
                 "Well...",
-                "I'am just fluently following following",
-                "the fine flow of my functions",
-                "with a fixed format, finding focus",
-                "ignoring formalities.",
-                "Finally finished fixing factorial faults",
-                "before its Friday and catches fire."
+                "I'am just fluently",
+                "following",
+                "the fine flow of my",
+                "functions",
+                "with a fixed format,",
+                "finding focus",
+                "filling in formalities.",
+                "That's just a fraction",
+                "of my file.",
+                "Trying to find a flow.",
+                "Finally finished fixing",
+                "factorial faults",
+                "before its Friday",
+                "and catches fire."
             ], 500, true),
             Timer(500),
-            this.print("That is my answer."),
-            this.writeLine("Give it some thought"),
+            this.print("Well..."),
+            this.writeLine("Give that a thought."),
             Timer(1500),
             this.clear(),
 
@@ -159,6 +177,7 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
                 "Typescript/Javascript",
                 "React",
                 "Python",
+                "PHP (when no choice)",
                 "no(SQL)",
             ),
 
@@ -166,7 +185,7 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
             this.writeHtml('h2', "Want to see some fun stuff?"),
             Timer(500),
-            this.askInput('Start', 'button'),
+            this.askInput('Yes show me!', 'button'),
 
             this.clear(),
 
@@ -176,15 +195,19 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             this.askInput("char", 'string'),
             this.clear(),
 
-            this.printLazy(() => `Drawing shape with size: ${this.getVar('x')} and character: ${this.getVar('char')}`),
+            this.print("Let's make some shapes!"),
+            this.printLazy(() => `Size: ${this.getVar('x')}`),
+            this.printLazy(() => `Character: ${this.getVar('char')}`),
             this.printLazy(() => drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
-            Timer(500),
+            Timer(3000),
+            this.clear(),
             this.printLazy(() => drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
-            Timer(500),
+            Timer(3000),
             this.clear(),
             this.writeLines([
                 "Wait a second...",
-                "I can make fancy animations with these shapes"
+                "I can make fancy animations", 
+                "with these shapes",
             ], 200, true),
             Timer(500),
             this.clear(),
@@ -194,22 +217,28 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             Timer(500),
             this.clear(),
 
-            this.print("Hoped you enjoyed this story in code."),
+            this.print("Hoped you enjoyed this"),
+            this.print("story in code."),
             this.writeLines([
                 "As more code flows",
                 "my story will grow.",
             ], 150, true),
             this.writeLines([
-                "Curious about my other projects?",
-                "Or want to know how I build this site?",
-                "Check out my GitHub",
+                "Curious about my other", 
+                "projects?",
+                "Or want to know", 
+                "how I build this site?",
+                "Check out my",
             ], 200, true),
             this.writeHtml('a', 'GitHub', { href: 'https://github.com/Steven24K', target: '_blank' }, 150, true),
             this.print('<h3>Have any questions?</h3>'),
             this.print("<b>Feel free to sent me an email</b>"),
             this.writeHtml('a', 'Mail me', { href: 'mailto:s.koerts2@gmail.com' }, 100, true),
 
-            this.print("-----THE END-----")
+            this.renderReact('profile_picture_end'),
+            Timer(10000),            
+            this.renderReact('clock'),
+            this.print("-----THE END-----"),
 
         ].reduce((xs, x) => Seq(xs, Seq(Seq(Timer(interval_time), this.newLine()), x)), Done())
 
@@ -232,28 +261,27 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
     }
 
     render() {
-        return <>
-            <h2>Welome to my personal homepage!</h2>
+        return <div className='code'>
+            {this.state.code_story.toIndexedSeq().toArray().map((value, index) => {
+                if (value.kind == 'text') {
+                    return <p key={index} dangerouslySetInnerHTML={{ __html: value.text }} />
+                }
+                if (value.kind == 'react') {
+                    return value.jsx
+                }
+                if (value.type == 'string') {
+                    let input = this.state.user_input.has(value.name) ? this.state.user_input.get(value.name)! : ''
+                    return <input key={index} value={(input.toString())} onChange={e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, e.target.value) }))} />
+                }
+                if (value.type == 'number') {
+                    let input = this.state.user_input.has(value.name) ? this.state.user_input.get(value.name)! : ''
+                    return <input key={index} value={(input.toString())} type="number" onChange={e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, Number(e.target.value)) }))} />
 
-            <div className="code">
-                {this.state.code_story.toIndexedSeq().toArray().map((value, index) => {
-                    if (value.kind == 'text') {
-                        return <p key={index} dangerouslySetInnerHTML={{ __html: value.text }} />
-                    }
-                    if (value.type == 'string') {
-                        let input = this.state.user_input.has(value.name) ? this.state.user_input.get(value.name)! : ''
-                        return <input key={index} value={(input.toString())} onChange={e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, e.target.value) }))} />
-                    }
-                    if (value.type == 'number') {
-                        let input = this.state.user_input.has(value.name) ? this.state.user_input.get(value.name)! : ''
-                        return <input key={index} value={(input.toString())} type="number" onChange={e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, Number(e.target.value)) }))} />
-
-                    }
-                    if (value.type == 'button') {
-                        return <button key={index} className={`btn btn-${'success'}`} onClick={() => this.setState(s => ({ ...s, user_input: s.user_input.set(value.name, true) }))}>{value.name}</button>
-                    }
-                })}
-            </div>
-        </>
+                }
+                if (value.type == 'button') {
+                    return <button key={index} className={`btn btn-${'success'}`} onClick={() => this.setState(s => ({ ...s, user_input: s.user_input.set(value.name, true) }))}>{value.name}</button>
+                }
+            })}
+        </div>
     }
 }

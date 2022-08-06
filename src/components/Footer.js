@@ -15,6 +15,7 @@ class Footer extends React.Component {
                 site {
                     siteMetadata {
                         author
+                        email
                     }
                 }
             }
@@ -22,6 +23,7 @@ class Footer extends React.Component {
 
             render={data => (<footer className="footer">
                 <p>
+                    <a href={`mailto:${data.site.siteMetadata.email}`}>{data.site.siteMetadata.email}</a> {` | `}
                     &copy; {new Date().getFullYear()} Made by {data.site.siteMetadata.author}
                 </p>
             </footer>)}
