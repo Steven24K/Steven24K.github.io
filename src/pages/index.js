@@ -1,10 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import CodeStory from "../lib/CodeStory"
 import Clock from "../lib/CanvasClock"
-import { Map } from "immutable"
 
 class Index extends React.Component {
   constructor(props) {

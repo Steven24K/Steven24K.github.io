@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import NavBar from "./NavBar";
 import "../Assets/site.css"
 import "../Assets/button.css"
 import "../Assets/bootstrap.rtl.min.css"
