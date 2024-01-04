@@ -7,7 +7,7 @@ You can visit it at [stevenkoerts.nl](https://stevenkoerts.nl)
 ## Tech 
 
 This website is build with Gatsby, a static site generator for react. I manage the content completed from this repository, including the deployments. 
-This site is being hosted from the master branch to GitHub pages and the content is on the portfolio branch. 
+This site is being hosted from the main branch to GitHub pages and the content is on the portfolio branch. 
 
 The pages are represented as React components and the content is managed through markdown files. 
 
