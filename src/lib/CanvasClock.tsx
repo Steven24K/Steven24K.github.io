@@ -88,7 +88,7 @@ export default function Clock() {
         height={canvasHeight}
         width={canvasWidth}
         style={{
-          backgroundColor: "#73e6da"
+          backgroundColor: "#000000"
         }}
       >
         <Layer>
@@ -96,7 +96,7 @@ export default function Clock() {
             x={center_x}
             y={center_y}
             radius={clock_radius}
-            stroke="#e67f09"
+            stroke="#FFF"
           />
 
           {clock_labels.keySeq().map((numeric) => {
@@ -104,6 +104,7 @@ export default function Clock() {
             return (
               <Text key={numeric}
                 fontSize={20}
+                fill="#FFF"
                 text={clock_labels.get(numeric)}
                 x={center_x + pos.x}
                 y={center_y + pos.y}
@@ -115,7 +116,7 @@ export default function Clock() {
           <Line
             x={0}
             y={0}
-            stroke={"#29023b"}
+            stroke={"#FFF"}
             points={[
               center_x,
               center_y,
@@ -128,7 +129,7 @@ export default function Clock() {
           <Line
             x={0}
             y={0}
-            stroke={"#29023b"}
+            stroke={"#FFF"}
             points={[
               center_x,
               center_y,

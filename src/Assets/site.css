@@ -1,6 +1,6 @@
 body {
     animation: scroll 100s linear infinite;
-    background: url("/images/nick-nice-gPm8h3DS1s4-unsplash.jpg"), #111111;
+    background-color: rgb(36, 34, 34) !important;
     margin: 0;
     padding: 0;
 }
@@ -10,33 +10,13 @@ body {
 }
 
 .under-line {
-    border-bottom: 1px solid rgb(21, 107, 235); 
+    border-bottom: 1px solid rgb(21, 107, 235);
 }
 
 .line {
     border-bottom: 2px solid rgb(65, 65, 201);
     padding-top: 30px;
-    margin-bottom: 30px; 
-}
-
-@media only screen and (max-width: 750px) {
-    .big-image {
-        background-image: url("/images/profiel.jpg"); 
-    }
-}
-
-@media only screen and (min-width: 750px) {
-    .big-image {
-        background-image: url("/images/juggling-cover-BIG.JPG"); 
-    }
-}
-
-.big-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
+    margin-bottom: 30px;
 }
 
 .image-bar {
@@ -59,7 +39,7 @@ body {
 
 .image-bar img {
     max-height: 380px;
-    
+
     /* height: 100px;
     text-align: center;
     width: auto;
@@ -73,7 +53,7 @@ body {
 
 .skills-bar {
     display: grid;
-    
+
 }
 
 .skill-items {
@@ -151,7 +131,7 @@ body {
     font-size: 3em;
     overflow: visible;
     text-overflow: clip;
-    padding-top: 10%; 
+    padding-top: 10%;
     padding-bottom: 10%;
     line-height: 150%;
   }
@@ -191,16 +171,19 @@ iframe {
 }
 
 .code {
+    background-color: #000000;
     font-family: monospace ;
     font-size: xx-large;
     padding: 1%;
     min-height: 400px;
-    max-height: 800px;
-    width: 400px;
+    max-height: 1000px;
+    width: 80%;
+    max-width: 800px;
     overflow-y: visible;
     white-space:pre;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
 }
 
 .code p{
@@ -216,9 +199,14 @@ iframe {
     padding: 10px;
 }
 
-.clock { 
-    margin-left: auto;
-    margin-right: auto;
+.clock-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.clock {
+
 }
 
 
@@ -243,7 +231,7 @@ iframe {
   align-items: center;
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  
+
 }
 
 @keyframes scroll {

@@ -32,19 +32,14 @@ class Index extends React.Component {
         </div>
         <div className="row">
           <div className="col-12">
-            <CodeStory stack={Map()
-              .set('profile_picture_start', <div style={{ width: '250px', marginLeft: 'auto', marginRight: 'auto' }}>
-                <img width={'auto'} className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts1.JPG" />
-              </div>)
-              .set('profile_picture_end', <div style={{ width: '350px', marginLeft: 'auto', marginRight: 'auto' }}>
-                <img width={'auto'} className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts2.JPG" />
-              </div>)
-              .set('clock', <Clock />)
-            }
-            />
+            <CodeStory />
           </div>
         </div>
-
+        <div className="clock-wrapper">
+          <div className="clock">
+            <Clock />
+          </div>
+        </div>
       </div>
     </Layout>
   }
@@ -65,8 +60,6 @@ query {
             instagram
             youtube
             twitter
-            curriculum
-            profileImage
         }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {

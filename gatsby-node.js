@@ -37,17 +37,18 @@ exports.createPages = ({ graphql, actions }) => {
         }
     }
     `
-    ).then(result => {
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-            createPage({
-                path: node.fields.slug,
-                component: path.resolve("./src/templates/Post.js"),
-                context: {
-                    slug: node.fields.slug
-                }
-            })
-        })
-    })
+    )
+    // .then(result => {
+    //     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    //         createPage({
+    //             path: node.fields.slug,
+    //             component: path.resolve("./src/templates/Post.js"),
+    //             context: {
+    //                 slug: node.fields.slug
+    //             }
+    //         })
+    //     })
+    // })
 }
 
 // Thanks to https://github.com/gatsbyjs/gatsby/issues/17661#issuecomment-665800908
