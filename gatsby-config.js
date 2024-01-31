@@ -9,8 +9,8 @@ module.exports = {
     linkedin: "https://nl.linkedin.com/in/steven-koerts-223aa3135",
     instagram: "https://www.instagram.com/hello_world_my_name_is_steven/",
     youtube: "https://youtube.com/@hello_world_my_name_is_steven",
-    twitter: "https://twitter.com/PoetrySteven",
     spotify: "https://open.spotify.com/show/7J5NQpCDfWdpjJLaWQrRuq?si=b5fae49a45bd4047&nd=1",
+    threads: "https://www.threads.net/@hello_world_my_name_is_steven"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

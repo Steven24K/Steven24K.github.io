@@ -58,7 +58,6 @@ query {
             linkedin
             instagram
             youtube
-            twitter
         }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
