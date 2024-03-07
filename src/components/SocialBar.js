@@ -43,13 +43,13 @@ class SocialBar extends React.Component {
       `}
 
             render={data => (<div className="social-bar">
-                <a aria-label="GitHub" href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "github"]} /></a>
-                <a aria-label="YouTube" href={data.site.siteMetadata.youtube} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "youtube"]} /></a>
-                <a aria-label="Instagram" href={data.site.siteMetadata.instagram} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "instagram"]} /></a>
-                <a aria-label="Spotify" href={data.site.siteMetadata.spotify} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "spotify"]} /></a>
-                <a aria-label="Email" href={data.site.siteMetadata.threads} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "threads"]} /></a>
-                <a aria-label="Email" href={`mailto: ${data.site.siteMetadata.email}`} rel="noopener noreferrer"><FontAwesomeIcon icon={["fas", "at"]} /></a>
                 <a aria-label="LinkedIn" href={data.site.siteMetadata.linkedin} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "linkedin"]} /></a>
+                <a aria-label="GitHub" href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "github"]} /></a>
+                <a aria-label="Email" href={`mailto: ${data.site.siteMetadata.email}`} rel="noopener noreferrer"><FontAwesomeIcon icon={["fas", "at"]} /></a>
+                {/* <a aria-label="YouTube" href={data.site.siteMetadata.youtube} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "youtube"]} /></a> */}
+                {/* <a aria-label="Instagram" href={data.site.siteMetadata.instagram} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "instagram"]} /></a> */}
+                {/* <a aria-label="Spotify" href={data.site.siteMetadata.spotify} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "spotify"]} /></a> */}
+                {/* <a aria-label="Threads" href={data.site.siteMetadata.threads} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fab", "threads"]} /></a> */}
             </div>)}
         />
     }

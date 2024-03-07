@@ -1,8 +1,7 @@
 import { Map } from 'immutable'
 import * as React from 'react'
-import { Call, Seq, Done, Timer, StateMachine, Wait, CallIf, } from './statemachine'
-import { BootstrapButtonStyle, drawCircle, drawHollowSquare, drawLine, drawSquare, HtmlAttributes, HtmlTag, InputType, parseAttribute } from './utils'
-import Clock from './CanvasClock'
+import { Call, Seq, Done, Timer, StateMachine, Wait, } from './statemachine'
+import { drawCircle, drawHollowSquare, drawSquare, HtmlAttributes, HtmlTag, InputType, parseAttribute } from './utils'
 
 
 type Text = { kind: 'text', text: string }
@@ -131,7 +130,6 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
 
         let program: StateMachine = [
             this.clear(),
-            this.writeHtml("h1", "Welcome to my script"),
             this.renderReact(<div style={{ width: '200px' }}>
                 <img width={'auto'} className="img-fluid" alt="profile-steven-koerts" src="./images/StevenKoerts1.JPG" />
             </div>),
@@ -147,9 +145,9 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             Timer(1000),
             this.clear(),
             
-            this.writeHtml('h1', "Code == Poetry"),
+            this.writeHtml('h3', "Code == Poetry"),
             this.writeLines([
-                "When people ask:",
+                "For people who have a story to tell",
                 "How do you do all that",
                 "coding?",
                 "Well...",
@@ -157,55 +155,28 @@ export default class CodeStory extends React.Component<CodeStoryProps, CodeStory
             Timer(100),
             this.clear(),
             this.writeLines([
-                "I'am just fluently",
-                "following",
-                "the fine flow of my",
-                "functions",
+                "I'am just fluently following",
+                "the fine flow of my functions",
+                "with a fixed format finding focus",
+                "filling in formalities",
+                "That's just a fraction of my file.",
             ]),
             
-            Timer(100),
-            this.clear(),
-           
-            this.writeLines([
-                "with a fixed format",
-                "finding focus",
-                "filling in formalities",
-                "That's just a fraction",
-                "of my file.",
-
-            ], 200, true),
-            
-            Timer(100),
+            Timer(200),
             this.clear(),
             
             this.writeLines([
                 "Trying to find a flow",
                 "Finally finished fixing",
                 "factorial faults",
-                "before its Friday",
-                "and catches fire"
+                "before its Friday and catches fire"
             ], 100),
-            
-            Timer(200),
-            this.clear(),
-                        
+                                    
             this.print("Well..."),
             this.writeLine("Give that a thought"),
             
             Timer(500),
             this.clear(),
-
-            this.writeHtml('h1', "Tech stack"),
-            this.mkList('ul',
-                "C#/.NET",
-                "Typescript",
-                "React",
-                "Python",
-                "PHP(When no choice)",
-                "no(SQL)",
-            ),
-
-            Timer(1000),
 
             this.writeHtml('h2', "Want to see some fun stuff?"),
             

@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import "../components/Assets/footer.css"
+// import "../components/Assets/footer.css"
 
 class Footer extends React.Component {
     constructor(props) {
@@ -14,6 +14,9 @@ class Footer extends React.Component {
             query getSiteAuthor {
                 site {
                     siteMetadata {
+                        email
+                        github
+                        linkedin
                         author
                         email
                     }
@@ -23,7 +26,9 @@ class Footer extends React.Component {
 
             render={data => (<footer className="footer">
                 <p>
-                    <a href={`mailto:${data.site.siteMetadata.email}`}>{data.site.siteMetadata.email}</a> {` | `}
+                    <a href={data.site.siteMetadata.github}>Github</a>{` | `}
+                    <a href={data.site.siteMetadata.linkedin}>Linkedin</a>{` | `}
+                    <a href={`mailto:${data.site.siteMetadata.email}`}>Email</a> {` | `}
                     &copy; {new Date().getFullYear()} Made by {data.site.siteMetadata.author}
                 </p>
             </footer>)}

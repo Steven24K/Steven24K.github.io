@@ -9,15 +9,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "../Assets/site.css"
-import "../Assets/button.css"
-import "../Assets/bootstrap.rtl.min.css"
-import "../Assets/bootstrap.min.css"
-import "../Assets/bootstrap-utilities.min.css"
-import "../Assets/bootstrap-utilities.rtl.min.css"
-import "../Assets/bootstrap-reboot.rtl.min.css"
-import "../Assets/bootstrap-reboot.min.css"
-import "../Assets/bootstrap-grid.rtl.min.css"
-import "../Assets/bootstrap-grid.min.css"
+// import "../Assets/button.css"
+// import "../Assets/bootstrap.rtl.min.css"
+// import "../Assets/bootstrap.min.css"
+// import "../Assets/bootstrap-utilities.min.css"
+// import "../Assets/bootstrap-utilities.rtl.min.css"
+// import "../Assets/bootstrap-reboot.rtl.min.css"
+// import "../Assets/bootstrap-reboot.min.css"
+// import "../Assets/bootstrap-grid.rtl.min.css"
+// import "../Assets/bootstrap-grid.min.css"
 import Footer from "./Footer";
 import SocialBar from "./SocialBar";
 
@@ -42,14 +42,13 @@ class Layout extends React.Component {
       render={data => (
         <div>
           {/* <NavBar siteTitle={data.site.siteMetadata.title}/> */}
+          <Footer/>
 
           <main className="wrapper">
             {this.props.children}
           </main>
-
+          
           <SocialBar/>
-
-          <Footer/>
 
         </div>
       )}

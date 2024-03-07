@@ -94,11 +94,8 @@ class CodeStory extends React.Component {
             }
             return statemachine_1.Seq(this.print(utils_1.drawCircle(size, "*")), statemachine_1.Seq(statemachine_1.Timer(400), statemachine_1.Seq(this.print(utils_1.drawCircle(size, "*", true)), statemachine_1.Seq(statemachine_1.Timer(400), this.flickeringCircle(size, counter - 1)))));
         };
-        this.renderReact = (name) => {
-            if (this.props.stack.has(name)) {
-                return statemachine_1.Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(s.program_counter, mkReact(this.props.stack.get(name))) })));
-            }
-            return statemachine_1.Done();
+        this.renderReact = (jsx) => {
+            return statemachine_1.Call(() => this.setState(s => ({ ...s, code_story: s.code_story.set(s.program_counter, mkReact(jsx)) })));
         };
         this.state = zeroCodeStoryState();
         this.code_my_story = this.code_my_story.bind(this);
@@ -110,42 +107,45 @@ class CodeStory extends React.Component {
         let interval_time = 500;
         let program = [
             this.clear(),
-            this.writeHtml("h1", "Welcome to my story."),
-            this.renderReact('profile_picture_start'),
-            this.print("This story is a poem I wrote."),
-            this.print("I slowly wrote it in code."),
-            this.writeHtml("h3", "Stay creative."),
+            this.renderReact(React.createElement("div", { style: { width: '200px' } },
+                React.createElement("img", { width: 'auto', className: "img-fluid", alt: "profile-steven-koerts", src: "./images/StevenKoerts1.JPG" }))),
             this.askInput("Start the show!", "button"),
             this.clear(),
-            this.writeHtml('h1', "Code == Poetry"),
+            this.print("This story"),
+            this.print("is a poem I wrote"),
+            this.print("I slowly wrote"),
+            this.print("it in code"),
+            this.print("Always stay creative"),
+            statemachine_1.Timer(1000),
+            this.clear(),
+            this.writeHtml('h3', "Code == Poetry"),
             this.writeLines([
-                "When people ask:",
+                "For people who have a story to tell",
                 "How do you do all that",
                 "coding?",
                 "Well...",
-                "I'am just fluently",
-                "following",
-                "the fine flow of my",
-                "functions",
-                "with a fixed format,",
-                "finding focus",
-                "filling in formalities.",
-                "That's just a fraction",
-                "of my file.",
-                "Trying to find a flow.",
+            ], 300, true),
+            statemachine_1.Timer(100),
+            this.clear(),
+            this.writeLines([
+                "I'am just fluently following",
+                "the fine flow of my functions",
+                "with a fixed format finding focus",
+                "filling in formalities",
+                "That's just a fraction of my file.",
+            ]),
+            statemachine_1.Timer(200),
+            this.clear(),
+            this.writeLines([
+                "Trying to find a flow",
                 "Finally finished fixing",
                 "factorial faults",
-                "before its Friday",
-                "and catches fire."
-            ], 500, true),
-            statemachine_1.Timer(500),
+                "before its Friday and catches fire"
+            ], 100),
             this.print("Well..."),
-            this.writeLine("Give that a thought."),
-            statemachine_1.Timer(1500),
+            this.writeLine("Give that a thought"),
+            statemachine_1.Timer(500),
             this.clear(),
-            this.writeHtml('h1', "Tech stack"),
-            this.mkList('ul', "C#/.NET", "Typescript/Javascript", "React", "Python", "PHP (when no choice)", "no(SQL)"),
-            statemachine_1.Timer(1500),
             this.writeHtml('h2', "Want to see some fun stuff?"),
             statemachine_1.Timer(500),
             this.askInput('Yes show me!', 'button'),
@@ -158,15 +158,18 @@ class CodeStory extends React.Component {
             this.print("Let's make some shapes!"),
             this.printLazy(() => `Size: ${this.getVar('x')}`),
             this.printLazy(() => `Character: ${this.getVar('char')}`),
+            statemachine_1.Timer(800),
+            this.clear(),
             this.printLazy(() => utils_1.drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
-            statemachine_1.Timer(3000),
+            statemachine_1.Timer(2000),
             this.clear(),
             this.printLazy(() => utils_1.drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
-            statemachine_1.Timer(3000),
+            statemachine_1.Timer(1000),
             this.clear(),
             this.writeLines([
                 "Wait a second...",
-                "I can make fancy animations",
+                "I can make",
+                "fancy animations",
                 "with these shapes",
             ], 200, true),
             statemachine_1.Timer(500),
@@ -174,28 +177,32 @@ class CodeStory extends React.Component {
             statemachine_1.Seq(this.growingSquare(1, 10), statemachine_1.Seq(this.flickeringSquare(10, 10), this.shrinkingSquare(10))),
             this.clear(),
             statemachine_1.Seq(this.growingCircle(4, 20), statemachine_1.Seq(this.flickeringCircle(20, 10), this.shrinkingCircle(20))),
-            statemachine_1.Timer(500),
+            statemachine_1.Timer(1000),
             this.clear(),
             this.print("Hoped you enjoyed this"),
-            this.print("story in code."),
+            this.print("story in code"),
             this.writeLines([
                 "As more code flows",
-                "my story will grow.",
+                "my story will grow",
             ], 150, true),
+            statemachine_1.Timer(1000),
+            this.clear(),
             this.writeLines([
                 "Curious about my other",
                 "projects?",
                 "Or want to know",
                 "how I build this site?",
-                "Check out my",
             ], 200, true),
+            statemachine_1.Timer(500),
+            this.clear(),
+            this.print('Check out my'),
             this.writeHtml('a', 'GitHub', { href: 'https://github.com/Steven24K', target: '_blank' }, 150, true),
-            this.print('<h3>Have any questions?</h3>'),
-            this.print("<b>Feel free to sent me an email</b>"),
-            this.writeHtml('a', 'Mail me', { href: 'mailto:s.koerts2@gmail.com' }, 100, true),
-            this.renderReact('profile_picture_end'),
-            statemachine_1.Timer(10000),
-            this.renderReact('clock'),
+            this.print('Have any questions?'),
+            this.print("Feel free to sent me"),
+            this.print("an email"),
+            this.writeHtml('a', 's.koerts2@gmail.com', { href: 'mailto:s.koerts2@gmail.com' }, 100, true),
+            this.renderReact(React.createElement("div", { style: { width: '200px' } },
+                React.createElement("img", { width: 'auto', className: "img-fluid", alt: "profile-steven-koerts", src: "./images/StevenKoerts2.JPG" }))),
             this.print("-----THE END-----"),
         ].reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Seq(statemachine_1.Timer(interval_time), this.newLine()), x)), statemachine_1.Done());
         interval = setInterval(() => {
@@ -222,14 +229,15 @@ class CodeStory extends React.Component {
             }
             if (value.type == 'string') {
                 let input = this.state.user_input.has(value.name) ? this.state.user_input.get(value.name) : '';
-                return React.createElement("input", { key: index, value: (input.toString()), onChange: e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, e.target.value) })) });
+                return React.createElement("input", { key: index, maxLength: 1, autoFocus: true, value: (input.toString()), onChange: e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, e.target.value) })) });
             }
             if (value.type == 'number') {
                 let input = this.state.user_input.has(value.name) ? this.state.user_input.get(value.name) : '';
-                return React.createElement("input", { key: index, value: (input.toString()), type: "number", onChange: e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, Number(e.target.value)) })) });
+                return React.createElement("input", { key: index, value: (input.toString()), autoFocus: true, type: "number", onChange: e => this.setState(({ ...this.state, user_input: this.state.user_input.set(value.name, Number(e.target.value)) })) });
             }
             if (value.type == 'button') {
-                return React.createElement("button", { key: index, className: `btn btn-${'success'}`, onClick: () => this.setState(s => ({ ...s, user_input: s.user_input.set(value.name, true) })) }, value.name);
+                return React.createElement("div", null,
+                    React.createElement("button", { key: index, className: `btn btn-${'success'}`, onClick: () => this.setState(s => ({ ...s, user_input: s.user_input.set(value.name, true) })) }, value.name));
             }
         }));
     }

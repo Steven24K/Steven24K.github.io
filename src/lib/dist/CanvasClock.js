@@ -79,21 +79,21 @@ function Clock() {
         .set(12, "XII");
     return (React.createElement(React.Fragment, null,
         React.createElement(react_konva_1.Stage, { className: "clock", height: canvasHeight, width: canvasWidth, style: {
-                backgroundColor: "#73e6da"
+                backgroundColor: "#FFF"
             } },
             React.createElement(react_konva_1.Layer, null,
-                React.createElement(react_konva_1.Circle, { x: center_x, y: center_y, radius: clock_radius, stroke: "#e67f09" }),
+                React.createElement(react_konva_1.Circle, { x: center_x, y: center_y, radius: clock_radius, stroke: "#000000" }),
                 clock_labels.keySeq().map((numeric) => {
                     let pos = get_number_pos(numeric, clock_radius, full_round);
-                    return (React.createElement(react_konva_1.Text, { key: numeric, fontSize: 20, text: clock_labels.get(numeric), x: center_x + pos.x, y: center_y + pos.y }));
+                    return (React.createElement(react_konva_1.Text, { key: numeric, fontSize: 20, fill: "#000000", text: clock_labels.get(numeric), x: center_x + pos.x, y: center_y + pos.y }));
                 }),
-                React.createElement(react_konva_1.Line, { x: 0, y: 0, stroke: "#29023b", points: [
+                React.createElement(react_konva_1.Line, { x: 0, y: 0, stroke: "#000000", points: [
                         center_x,
                         center_y,
                         center_x + hour_pos_x,
                         center_y - hour_pos_y
                     ] }),
-                React.createElement(react_konva_1.Line, { x: 0, y: 0, stroke: "#29023b", points: [
+                React.createElement(react_konva_1.Line, { x: 0, y: 0, stroke: "#000000", points: [
                         center_x,
                         center_y,
                         center_x + minute_pos_x,
