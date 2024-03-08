@@ -41,15 +41,14 @@ class Layout extends React.Component {
     `}
       render={data => (
         <div>
-          {/* <NavBar siteTitle={data.site.siteMetadata.title}/> */}
+          <SocialBar/>
+
           <Footer/>
 
           <main className="wrapper">
             {this.props.children}
           </main>
           
-          <SocialBar/>
-
         </div>
       )}
     />

@@ -31,25 +31,6 @@ class Index extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2 class="title">Hello world, my name is Steven</h2>
-            <h4 className="sub-title">{bio}</h4>
-          </div>
-        </div>
-        <div className="row">
-          <h1>My tech stack:</h1>
-          <ul>
-            {skills.map(skill => <li id={skill}>{skill}</li>)}
-          </ul>
-        </div>
-        <div className="clock-wrapper">
-          <div className="clock">
-            <h1>Always keep track of the time</h1>
-            <Clock />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <h1>My coding story</h1>
             <CodeStory />
           </div>
         </div>

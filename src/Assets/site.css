@@ -5,18 +5,14 @@ body {
 
 .code {
     background-color: #f3f2c9;
-    font-family: monospace ;
-    font-size: xx-large;
-    padding: 1%;
-    min-height: 400px;
-    max-height: 1000px;
     width: 80%;
-    max-width: 800px;
-    overflow-y: visible;
-    white-space:pre;
+    min-width: 300px;
+    min-height: 600px;
+    padding: 1%;
+    font-family: monospace ;
+    font-size: x-large;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
 }
 
 .code p{

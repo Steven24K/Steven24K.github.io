@@ -52,11 +52,11 @@ class CodeStory extends React.Component {
             return ({ ...s, code_story: s.code_story.set(s.program_counter, newText) });
         }));
         this.clear = () => statemachine_1.Call(() => this.setState(s => ({ ...s, program_counter: 0, code_story: immutable_1.Map() })));
-        this.writeLine = (sentence, timeout = 100, accellerate = false) => sentence.split("").reduce((xs, x, i) => {
+        this.writeLine = (sentence, timeout = 10, accellerate = false) => sentence.split("").reduce((xs, x, i) => {
             return statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Timer(timeout / (accellerate ? i + 1 : 1)), this.appendText(x)));
         }, statemachine_1.Done());
-        this.writeLines = (phrases, timeout = 100, accellerate = false) => phrases.map(phrase => this.writeLine(phrase, timeout, accellerate)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(this.newLine(), x)), statemachine_1.Done());
-        this.writeHtml = (tag, innerText, attr = {}, timeout = 100, accellerate = false) => statemachine_1.Seq(this.appendText(`<${tag} ${utils_1.parseAttribute(attr)} >`), statemachine_1.Seq(this.writeLine(innerText, timeout, accellerate), this.appendText(`</${tag}>`)));
+        this.writeLines = (phrases, timeout = 10, accellerate = false) => phrases.map(phrase => this.writeLine(phrase, timeout, accellerate)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(this.newLine(), x)), statemachine_1.Done());
+        this.writeHtml = (tag, innerText, attr = {}, timeout = 10, accellerate = false) => statemachine_1.Seq(this.appendText(`<${tag} ${utils_1.parseAttribute(attr)} >`), statemachine_1.Seq(this.writeLine(innerText, timeout, accellerate), this.appendText(`</${tag}>`)));
         this.mkList = (list_type, ...items) => statemachine_1.Seq(this.appendText(`<${list_type}>`), statemachine_1.Seq(items.map(item => this.writeHtml('li', item, {}, 100, true)).reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Timer(200), x)), statemachine_1.Done()), this.appendText(`</${list_type}>`)));
         this.growingSquare = (start_size, max_size) => {
             if (start_size >= max_size) {
@@ -105,105 +105,30 @@ class CodeStory extends React.Component {
     code_my_story() {
         this.setState(s => ({ ...s, isRunning: true }));
         let interval_time = 500;
+        let year_graduated = 2020;
+        let years_of_experience = new Date().getUTCFullYear() - year_graduated;
         let program = [
-            this.clear(),
-            this.renderReact(React.createElement("div", { style: { width: '200px' } },
-                React.createElement("img", { width: 'auto', className: "img-fluid", alt: "profile-steven-koerts", src: "./images/StevenKoerts1.JPG" }))),
-            this.askInput("Start the show!", "button"),
-            this.clear(),
-            this.print("This story"),
-            this.print("is a poem I wrote"),
-            this.print("I slowly wrote"),
-            this.print("it in code"),
-            this.print("Always stay creative"),
-            statemachine_1.Timer(1000),
-            this.clear(),
-            this.writeHtml('h3', "Code == Poetry"),
+            this.writeHtml('h1', 'Hello world, I am Steven!'),
+            this.writeLine('I am a passionate software developer living in Rotterdam, The Netherlands.'),
+            this.writeLine(`Currently I have ${years_of_experience} years of experience as a fullstack developer. The main tech stack I use is:`),
+            this.mkList('ul', 'C#/.NET', 'Typescript', 'React', 'Python', 'PHP (Only if there is no budget)', 'no(SQL)'),
             this.writeLines([
-                "For people who have a story to tell",
-                "How do you do all that",
-                "coding?",
-                "Well...",
-            ], 300, true),
-            statemachine_1.Timer(100),
-            this.clear(),
-            this.writeLines([
-                "I'am just fluently following",
-                "the fine flow of my functions",
-                "with a fixed format finding focus",
-                "filling in formalities",
-                "That's just a fraction of my file.",
+                'Allthough I would consider myself a backend developer, these modern days the frontend is getting more and more powerfull than ever before.',
+                'So it becomes more common that a backend developer is also needed to program the frontend.',
+                'I rather do not touch the design or CSS for the frontend (I mean look at this site),',
+                'but you can always wake me up in the middle of the night to discuss a complex or abstact programming paradigm.'
             ]),
-            statemachine_1.Timer(200),
-            this.clear(),
-            this.writeLines([
-                "Trying to find a flow",
-                "Finally finished fixing",
-                "factorial faults",
-                "before its Friday and catches fire"
-            ], 100),
-            this.print("Well..."),
-            this.writeLine("Give that a thought"),
-            statemachine_1.Timer(500),
-            this.clear(),
-            this.writeHtml('h2', "Want to see some fun stuff?"),
-            statemachine_1.Timer(500),
-            this.askInput('Yes show me!', 'button'),
-            this.clear(),
-            this.print("Give me a number:"),
-            this.askInput("x", 'number'),
-            this.print("And a character:"),
-            this.askInput("char", 'string'),
-            this.clear(),
-            this.print("Let's make some shapes!"),
-            this.printLazy(() => `Size: ${this.getVar('x')}`),
-            this.printLazy(() => `Character: ${this.getVar('char')}`),
-            statemachine_1.Timer(800),
-            this.clear(),
-            this.printLazy(() => utils_1.drawSquare(Number(this.getVar('x'))).f(String(this.getVar('char'))[0])),
-            statemachine_1.Timer(2000),
-            this.clear(),
-            this.printLazy(() => utils_1.drawCircle(Number(this.getVar('x')), String(this.getVar('char'))[0])),
-            statemachine_1.Timer(1000),
-            this.clear(),
-            this.writeLines([
-                "Wait a second...",
-                "I can make",
-                "fancy animations",
-                "with these shapes",
-            ], 200, true),
-            statemachine_1.Timer(500),
-            this.clear(),
-            statemachine_1.Seq(this.growingSquare(1, 10), statemachine_1.Seq(this.flickeringSquare(10, 10), this.shrinkingSquare(10))),
-            this.clear(),
-            statemachine_1.Seq(this.growingCircle(4, 20), statemachine_1.Seq(this.flickeringCircle(20, 10), this.shrinkingCircle(20))),
-            statemachine_1.Timer(1000),
-            this.clear(),
-            this.print("Hoped you enjoyed this"),
-            this.print("story in code"),
-            this.writeLines([
-                "As more code flows",
-                "my story will grow",
-            ], 150, true),
-            statemachine_1.Timer(1000),
-            this.clear(),
-            this.writeLines([
-                "Curious about my other",
-                "projects?",
-                "Or want to know",
-                "how I build this site?",
-            ], 200, true),
-            statemachine_1.Timer(500),
-            this.clear(),
-            this.print('Check out my'),
+            this.writeLine('If you want to see some projects I have worked on then checkout my'),
             this.writeHtml('a', 'GitHub', { href: 'https://github.com/Steven24K', target: '_blank' }, 150, true),
-            this.print('Have any questions?'),
-            this.print("Feel free to sent me"),
-            this.print("an email"),
+            this.writeLine("Feel free to sent me an email if you have any questions for me"),
             this.writeHtml('a', 's.koerts2@gmail.com', { href: 'mailto:s.koerts2@gmail.com' }, 100, true),
-            this.renderReact(React.createElement("div", { style: { width: '200px' } },
-                React.createElement("img", { width: 'auto', className: "img-fluid", alt: "profile-steven-koerts", src: "./images/StevenKoerts2.JPG" }))),
-            this.print("-----THE END-----"),
+            this.writeLine('In real life you can spot me at the theatre, a poetry night or open mic event performing stand-up comedy.'),
+            this.writeLine('I am greeting you in the most human way possible a software developer knows how.'),
+            this.writeHtml('h3', 'Kind regards,'),
+            this.writeHtml('h2', 'Steven Koerts'),
+            this.renderReact(React.createElement("div", null,
+                React.createElement("img", { style: { maxWidth: '300px', width: '40%', display: 'inline-block' }, width: 'auto', alt: "profile-steven-koerts", src: "./images/StevenKoerts1.JPG" }),
+                React.createElement("img", { style: { maxWidth: '300px', width: '40%', display: 'inline-block' }, width: 'auto', alt: "profile-steven-koerts", src: "./images/StevenKoerts2.JPG" }))),
         ].reduce((xs, x) => statemachine_1.Seq(xs, statemachine_1.Seq(statemachine_1.Seq(statemachine_1.Timer(interval_time), this.newLine()), x)), statemachine_1.Done());
         interval = setInterval(() => {
             program.update();
