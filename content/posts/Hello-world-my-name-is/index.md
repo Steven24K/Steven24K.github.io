@@ -1,5 +1,5 @@
 ---
-title: "Hello world my name is Steven"
+title: "Hallo wereld, mijn naam is"
 date: "2024-01-04"
 category: Story
 ---
