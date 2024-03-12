@@ -1,2 +1,26 @@
+User-agent: *
+Disallow: /
+
 User-agent: ia_archiver
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Facebot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: Twitterbot
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+User-agent: GPTBot
 Disallow: /
