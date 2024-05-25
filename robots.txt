@@ -7,6 +7,9 @@ Disallow: /
 User-agent: Googlebot
 Disallow: /
 
+User-agent: Googlebot
+Allow: /Een-goed-gesprek-met/feed.rss
+
 User-agent: Facebot
 Disallow: /
 
