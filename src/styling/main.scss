@@ -20,7 +20,7 @@ body {
 }
 
 .menu-button {
-    z-index: 4;
+    z-index: 5;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -63,7 +63,7 @@ body {
 .sidebar {
     background: $terminal-black;
     color: $just-white;
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     right: 0;
     top: 0;
