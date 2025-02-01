@@ -385,6 +385,14 @@
     globals "^13.2.0"
     nullthrows "^1.1.1"
 
+"@parcel/packager-raw-url@2.13.3":
+  version "2.13.3"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-raw-url/-/packager-raw-url-2.13.3.tgz#235b7a8bdecb0290d64043c4342ea46a7d0aff23"
+  integrity sha512-Dc8WeVagLGEUzVP4FqJBljXN59XSkvLoZaHeysvN9P33eznocrhIvc9T/OAQjOmsCj18X8jwxm0dIE7LNJbVCA==
+  dependencies:
+    "@parcel/plugin" "2.13.3"
+    "@parcel/utils" "2.13.3"
+
 "@parcel/packager-raw@2.13.3":
   version "2.13.3"
   resolved "https://registry.npmjs.org/@parcel/packager-raw/-/packager-raw-2.13.3.tgz"
@@ -587,6 +595,15 @@
   integrity sha512-rrq0ab6J0w9ePtsxi0kAvpCmrUYXXAx1Z5PATZakv89rSYbHBKEdXxyCoKFui/UPVCUEGVs5r0iOFepdHpIyeA==
   dependencies:
     "@parcel/plugin" "2.13.3"
+    json5 "^2.2.0"
+
+"@parcel/transformer-jsonld@2.13.3":
+  version "2.13.3"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-jsonld/-/transformer-jsonld-2.13.3.tgz#c49e958c583a96d019556ddabcf4fa100b0fb251"
+  integrity sha512-M4ODqUAdN98kxIx2ovgN02IX6dozUTdg3/cd1VigbX0COAMGe15cGVUEDlHMQGKMfymmpl3kdQ5qZyEbcNTpSg==
+  dependencies:
+    "@parcel/plugin" "2.13.3"
+    "@parcel/types" "2.13.3"
     json5 "^2.2.0"
 
 "@parcel/transformer-postcss@2.13.3":

@@ -258,6 +258,10 @@ body {
   padding-top: 25px;
 }
 
+.card ul, .card-nested ul {
+  padding: 25px;
+}
+
 #bio {
   z-index: 3;
 }
