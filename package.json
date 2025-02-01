@@ -2,13 +2,8 @@
   "name": "stevenkoertsnl",
   "version": "1.0.0",
   "source": "src/index.html",
-  "targets": {
-    "default": {
-      "distDir": "./"
-    }
-  },
   "scripts": {
-    "start": "parcel"
+    "start": "parcel --dist-dir ./docs"
   },
   "author": "",
   "license": "ISC",
