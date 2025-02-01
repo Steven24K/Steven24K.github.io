@@ -7,6 +7,11 @@ const toggleNavbar = ()=>{
 const toggleCard = (id)=>{
     const card = document.getElementById(id);
     if (card) {
+        window.scrollTo({
+            behavior: 'smooth',
+            left: 0,
+            top: 0
+        });
         card.classList.toggle('card-open');
         if (navbar && navbar.classList.contains('open')) toggleNavbar();
     }

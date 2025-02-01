@@ -114,7 +114,6 @@ body {
   background-color: #000;
   border-top: 1px solid #fff;
   width: 70%;
-  font-size: 1.4em;
   position: fixed;
   bottom: 0;
   left: 15%;
@@ -158,6 +157,12 @@ body {
   font-size: 2.8em;
 }
 
+@media screen and (width <= 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+}
+
 .hero p {
   padding-top: 5px;
   font-size: 1.1em;
@@ -183,6 +188,12 @@ body {
   width: 100%;
   margin-top: 25px;
   display: flex;
+}
+
+@media screen and (width <= 768px) {
+  .content {
+    justify-content: center;
+  }
 }
 
 .skill {
@@ -239,7 +250,7 @@ body {
   .card, .card-nested {
     height: 140vh;
     margin: 0;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 10rem;
   }
 }
 
