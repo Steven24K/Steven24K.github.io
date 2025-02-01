@@ -1,10 +1,11 @@
-const navbar = document.getElementById('sidebar');
 const toggleNavbar = ()=>{
+    const navbar = document.getElementById('sidebar');
     if (navbar !== null) navbar.classList.toggle('open');
     const bars = document.getElementsByClassName('bar');
     for(let i = 0; i < bars.length; i++)bars[i].classList.toggle('cross');
 };
 const toggleCard = (id)=>{
+    const navbar = document.getElementById('sidebar');
     const card = document.getElementById(id);
     if (card) {
         window.scrollTo({
