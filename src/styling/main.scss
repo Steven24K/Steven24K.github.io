@@ -258,6 +258,10 @@ body {
     }
 }
 
+#bio {
+    z-index: 3;
+}
+
 .card-nested {
     @extend .card;
     z-index: 2;

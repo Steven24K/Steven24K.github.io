@@ -1,6 +1,6 @@
-const navbar = document.getElementById('sidebar');
-
 const toggleNavbar = () => {
+    const navbar = document.getElementById('sidebar');
+
     if (navbar !== null) {
         navbar.classList.toggle('open')
     }
@@ -12,9 +12,10 @@ const toggleNavbar = () => {
 }
 
 const toggleCard = (id: string) => {
+    const navbar = document.getElementById('sidebar');
     const card = document.getElementById(id)
     if (card) {
-        window.scrollTo({behavior: 'smooth', left: 0, top: 0})
+        window.scrollTo({ behavior: 'smooth', left: 0, top: 0 })
         card.classList.toggle('card-open')
         if (navbar && navbar.classList.contains('open')) {
             toggleNavbar()
