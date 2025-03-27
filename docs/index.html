@@ -34,9 +34,9 @@
     </button>
     <nav id="sidebar" class="sidebar">
         <ul id="navbar" class="nav">
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a onclick="toggleCard('bio')" href="#">Bio</a></li>
-            <li class="nav-item"><a href="mailto:s.koerts2@gmail.com">Contact</a></li>
+            <li class="nav-item"><a href="/">🏠Home</a></li>
+            <li class="nav-item"><a onclick="toggleCard('bio')" href="#">📃Bio</a></li>
+            <li class="nav-item"><a href="mailto:s.koerts2@gmail.com">📨E-Mail</a></li>
         </ul>
         <div class="sidebar-footer">
             <ul>
@@ -79,9 +79,13 @@
                 <img src="/image.fe047325.png" height="100px" width="100px">
                 <h2>open_mic.jpg</h2>
             </div>
+            <div class="folder" onclick="toggleCard('SDAM4LIFE')">
+                <img src="/SDAM750-label_RGB-wit.096bad45.png" height="100px" width="100px">
+                <h2>SDAM4LIFE.png</h2>
+            </div>
             <div class="folder" onclick="toggleCard('thoughts')">
                 <img src="/folder.4d27be7d.png" height="100px" width="100px">
-                <h2>Idea's</h2>
+                <h2>Blog</h2>
             </div>
         </section>
 
@@ -128,6 +132,29 @@
             </p>
         </div>
 
+        <div id="SDAM4LIFE" class="card">
+            <p>
+                <button class="back-btn" onclick="toggleCard('SDAM4LIFE')">
+                    <span>&#8617;</span>
+                </button>
+            </p>
+
+            <h2>Ode aan Schiedam</h2>
+            <p>
+                Ter gelegenheid van 750 jaar stadsrechten Schiedam heb ik een storytelling
+                platform gebouwd om zoveel mogelijk verhalen uit de stad te verzamelen.
+                Deel jouw verhaal met de stad en breng een mooie ode!
+            </p>
+
+            <p>
+                Bekijk de site op <a class="white-link" target="_blank" href="https://odeaanschiedam.nl">odeaanschiedam.nl</a>
+            </p>
+
+            <img src="/SDAM750-label_RGB-wit.096bad45.png" width="400px" height="auto">
+            <p>
+            </p>
+        </div>
+
         <div id="thoughts" class="card">
             <p>
                 <button class="back-btn" onclick="toggleCard('thoughts')">
@@ -146,7 +173,65 @@
                     <img src="/541500.f1fe23f8.png" height="100px" width="100px">
                     <h2>Func.ts</h2>
                 </div>
+                <div class="folder" onclick="toggleCard('90s4ever')">
+                    <img src="/clippy.408d02a5.png" height="100px" width="100px">
+                    <h2>The90sWeb.exe</h2>
+                </div>
             </section>
+
+            <div id="90s4ever" class="card-nested">
+                <p>
+                    <button class="back-btn" onclick="toggleCard('90s4ever')">
+                        <span>&#8617;</span>
+                    </button>
+                </p>
+
+                <h2>Why I love the internet of 90s</h2>
+                <p>
+                    <i>FYI: I'm born in 1997, so what do I know. ;)</i>
+                </p>
+
+                <p>
+                    The possibilities of modern web applications are becomming more and more advanced.
+                    With the rise of new technologies like React, Angular and Vue.js, the web is changing rapidly. With
+                    just HTML, Javascript and CSS you can build a full scale application.
+                </p>
+                <p>
+                    But, what about the old days? The days of the internet of the 90s. The days of the <b>blink</b> tag,
+                    the <b>marquee</b> tag or the <b>headbanging_banana.gif</b> <img src="/200w.5c9795ec.gif" width="50px" height="auto">.
+                </p>
+                <p>
+                    The internet allowed you to have a personal homepage (PHP) where you can just express
+                    yourself. A little online creative space where you show to the world who you are (or who you are
+                    not).
+                </p>
+                <p>
+                    The 90s web is the inspiration for this website. Since I am the only maintainer of my portfolio
+                    website, why should I configure a complicated CMS, maintain a database and have a complex build
+                    process?
+                </p>
+                <p>
+                    I can just write some HTML, CSS and Javascript and put it on the internet. The 90s seemed to have figured out simplicity perfectly. 
+                    No need for a fancy build process, no need for a database, no need for a
+                    CMS. By removing unnescary complexity, I also reduce the risk of breaking things in the future.
+                    Being able to write a piece of text and put it live through a single document is a very elegant way of maintaining a website. 
+                    Look at the <a class="white-link" href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it" target="_blank">YAGNI</a> principle.
+                    By going back to the basics, it gives room to think about the essence why you are creating something
+                    in the first place.
+                </p>
+
+                <p>
+                    <img class="responsive-image" src="/90sWEBCLYPPY.be9da6a4.jpg" width="500px" height="auto">
+                </p>
+
+                <p>
+                    </p><blockquote>
+                        Sidenote: Who remembers hyves.nl?
+                    </blockquote>
+                <p></p>
+
+
+            </div>
 
             <div id="blog1" class="card-nested">
                 <p>
@@ -181,11 +266,12 @@
                 </p>
 
                 <h2>The beauty of functional programming</h2>
-                
+
                 <p>
                     Functional Programming is one of those skills that not every programmer has
                     and where the opinions among developers deviate whether they think it is usefull, or not.
-                    Where one programmer will see pure beauty within closures, lambda expressions, immutability, function compositions
+                    Where one programmer will see pure beauty within closures, lambda expressions, immutability,
+                    function compositions
                     and curried functions.
                     Others are completely confused by the syntax.
                 </p>
@@ -195,43 +281,54 @@
                 </p>
 
                 <p>
-                    Functional Programming might not get you a job in the real world, but it definitely gives the engineer a 
-                    higher level of understanding about the computer science world. In most cases you probably also don't need any functional 
-                    programming knowledge. Nevertheless, the few programmers who know it will be able to set themselves apart from the crowd. 
+                    Functional Programming might not get you a job in the real world, but it definitely gives the
+                    engineer a
+                    higher level of understanding about the computer science world. In most cases you probably also
+                    don't need any functional
+                    programming knowledge. Nevertheless, the few programmers who know it will be able to set themselves
+                    apart from the crowd.
                 </p>
 
                 <p>
-                    I am one of those programmers who sees the beauty within functional programming paradigms and once in a while
+                    I am one of those programmers who sees the beauty within functional programming paradigms and once
+                    in a while
                     it is nice to fiddle some draft functions in a blanco project.
                 </p>
 
                 <p>
-                    Let's take a look at the above code snippet written in Typescript, that I picked up while following a software
-                    engineering minor and that I still use today. 
+                    Let's take a look at the above code snippet written in Typescript, that I picked up while following
+                    a software
+                    engineering minor and that I still use today.
                     (Guess what, something I learned in school is still usefull.)
                 </p>
 
                 <p>
-                    The snippet includes an interface Func, that simulates the structure of a lambda, simular to the Func in C#. 
-                    Each attribute is a function. 
+                    The snippet includes an interface Func, that simulates the structure of a lambda, simular to the
+                    Func in C#.
+                    Each attribute is a function.
                     <br><br>
-                    Where: 
-                    </p><ul>
-                        <li><b>f: </b>Is the orignal expression.</li>
-                        <li><b>then: </b>A function composition that composes two functions and returns them as one.</li>
-                        <li><b>repeat: </b>Mimics the concept of a loop by composing the same function <b>n-</b>times.</li>
-                        <li><b>repeatUntil: </b>Mimics the concept of a <b>do while</b> by also composing the function based on a guard condition.</li>
-                    </ul>
+                    Where:
+                </p><ul>
+                    <li><b>f: </b>Is the orignal expression.</li>
+                    <li><b>then: </b>A function composition that composes two functions and returns them as one.</li>
+                    <li><b>repeat: </b>Mimics the concept of a loop by composing the same function <b>n-</b>times.</li>
+                    <li><b>repeatUntil: </b>Mimics the concept of a <b>do while</b> by also composing the function based
+                        on a guard condition.</li>
+                </ul>
 
-                    This little snippet is a powerfull starting point to build libraries, frameworks or even a new programming language.
-                    A possible use case might be an undo function, like the one in Google Drive or MS Word. With function composition you can easily track back 
-                    every single step. 
+                This little snippet is a powerfull starting point to build libraries, frameworks or even a new
+                programming language.
+                A possible use case might be an undo function, like the one in Google Drive or MS Word. With function
+                composition you can easily track back
+                every single step.
                 <p></p>
 
                 <p>
-                    Understanding every inch of these concepts is a long road. Eventually functional programming practices the concept 
-                    of writing code that doesn't break over time. Being able to write code that does not break, that sounds like music 
-                    to my ears and that is what every self respecting developer tries to strive towards. 
+                    Understanding every inch of these concepts is a long road. Eventually functional programming
+                    practices the concept
+                    of writing code that doesn't break over time. Being able to write code that does not break, that
+                    sounds like music
+                    to my ears and that is what every self respecting developer tries to strive towards.
                 </p>
 
                 <p>
@@ -248,7 +345,7 @@
         <ul>
             <li><a href="https://github.com/Steven24K" target="_blank">Github</a></li>
             <li><a href="https://www.linkedin.com/in/steven-k-223aa3135/" target="_blank">Linkedin</a></li>
-            <li><a href="mailto:s.koerts2@gmail.com" target="_blank">E-Mail</a></li>
+            <li><a href="mailto:s.koerts2@gmail.com" target="_blank">s.koerts2@gmail.com</a></li>
         </ul>
     </footer>
 

@@ -294,3 +294,22 @@ body {
     padding: 1px 0;
     margin: 10px 0;
 }
+
+.white-link {
+    color: $just-white;
+
+    &:hover {
+        color: $terminal-green;
+    }
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (max-width: $mobile-width) {
+        max-width: 90%;
+    }
+}

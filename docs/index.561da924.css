@@ -293,4 +293,25 @@ body {
   margin: 10px 0;
   padding: 1px 0;
 }
+
+.white-link {
+  color: #fff;
+}
+
+.white-link:hover {
+  color: #8ae234;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (width <= 768px) {
+  .responsive-image {
+    max-width: 90%;
+  }
+}
 /*# sourceMappingURL=index.561da924.css.map */
