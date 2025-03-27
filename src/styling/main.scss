@@ -126,7 +126,7 @@ body {
     z-index: 3;
     background-color: $just-black;
     border-top: 1px solid white;
-    position: fixed;
+    position: sticky;
     width: 70%;
     bottom: 0;
     left: 15%;
@@ -135,6 +135,7 @@ body {
         left: 1%;
         right: 1%;
         width: 98%;
+        font-size: 0.9rem;
     }
     li {
         display: inline-block;
@@ -180,10 +181,10 @@ body {
 }
 
 .container {
-    margin: 0 15%;
+    margin: 30px 15%;
 
     @media screen and (max-width: $mobile-width) {
-        margin: 0 20px;
+        margin: 20% 20px;
     }
 }
 
@@ -250,7 +251,6 @@ body {
     @media screen and (max-width: $mobile-width) {
         padding: 2rem 1rem 10rem 1rem;
         margin: 0;
-        height: 140vh;
     }
 
     p {
