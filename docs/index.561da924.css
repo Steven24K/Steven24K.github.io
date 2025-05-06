@@ -110,7 +110,7 @@ body {
 }
 
 .footer {
-  z-index: 3;
+  z-index: 0;
   background-color: #000;
   border-top: 1px solid #fff;
   width: 70%;
