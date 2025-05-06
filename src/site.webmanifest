@@ -1,0 +1,16 @@
+{
+    "name": "Steven Koerts",
+    "short_name": "S.K.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#8ae234",
+    "description": "Steven Koerts is a software engineer, web developer and a passionate storyteller. He graduated in 2020 from a Bachelor (BSc) of Computer Science from the Rotterdam University of Applied Sciences.",
+    "icons": [
+        {
+            "src": "/images/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
