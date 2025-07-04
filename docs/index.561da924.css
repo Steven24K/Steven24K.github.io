@@ -188,29 +188,15 @@ body {
   gap: 10px;
   width: 100%;
   margin-top: 25px;
+  margin-bottom: 25px;
   display: flex;
-}
-
-@media screen and (width <= 768px) {
-  .content {
-    justify-content: center;
-  }
 }
 
 .skill {
   color: #fff;
-  background-color: #000;
-  border: 2px solid #8ae234;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 2em;
-}
-
-@media screen and (width <= 768px) {
-  .skill {
-    padding: 4px;
-    font-size: 1.2em;
-  }
+  border-bottom: 1px solid #fff;
+  padding: 2px;
+  font-size: 1.2em;
 }
 
 .back-btn {
@@ -235,7 +221,7 @@ body {
   color: #fff;
   background-color: #000;
   width: 100vw;
-  height: 100vh;
+  height: 1500px;
   min-height: 100vh;
   padding: 4rem 25%;
   font-size: 1.2em;
@@ -280,7 +266,10 @@ body {
   color: #fff;
   text-align: center;
   border-bottom: 1px solid #fff;
-  margin: 20px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  transition: transform .3s ease-in-out;
 }
 
 .folder:hover {
