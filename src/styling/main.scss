@@ -123,9 +123,10 @@ body {
 }
 
 .footer {
+    margin-top: 300px;
     z-index: 0;
     background-color: $just-black;
-    border-top: 1px solid white;
+    border-top: 2px solid white;
     position: sticky;
     width: 70%;
     bottom: 0;

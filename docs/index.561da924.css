@@ -112,8 +112,9 @@ body {
 .footer {
   z-index: 0;
   background-color: #000;
-  border-top: 1px solid #fff;
+  border-top: 2px solid #fff;
   width: 70%;
+  margin-top: 300px;
   position: sticky;
   bottom: 0;
   left: 15%;
