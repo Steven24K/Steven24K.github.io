@@ -14,8 +14,11 @@ const toggleCard = (id)=>{
             top: 0
         });
         card.classList.toggle('card-open');
+        document.location.hash = id;
         if (navbar && navbar.classList.contains('open')) toggleNavbar();
     }
 };
+const id = document.location.hash.replace('#', '');
+if (id) toggleCard(id);
 
 //# sourceMappingURL=index.a1b1167a.js.map

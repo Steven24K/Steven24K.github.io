@@ -251,7 +251,7 @@ body {
   padding-top: 25px;
 }
 
-.card ul, .card-nested ul {
+.card ul, .card-nested ul, .card ol, .card-nested ol {
   padding: 25px;
 }
 

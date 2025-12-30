@@ -17,9 +17,14 @@ const toggleCard = (id: string) => {
     if (card) {
         window.scrollTo({ behavior: 'smooth', left: 0, top: 0 })
         card.classList.toggle('card-open')
+        document.location.hash = id
         if (navbar && navbar.classList.contains('open')) {
             toggleNavbar()
         }
     }
 }
 
+const id = document.location.hash.replace('#', '');
+if (id) {
+    toggleCard(id)
+}
