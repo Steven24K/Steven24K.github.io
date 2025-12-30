@@ -158,10 +158,12 @@ body {
 
 .hero {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     margin: 20px 0px;
     padding-bottom: 10px;
-    width: 80%;
+    width: 100%;
     color: $just-white;
     border-bottom: 2px solid $terminal-green;
 
@@ -183,6 +185,10 @@ body {
     img {
         border-radius: 50px;
     }
+}
+
+.hero-content {
+    text-align: center;
 }
 
 .container {
@@ -274,15 +280,34 @@ body {
 .folder {
     cursor: pointer;
     color: $just-white;
-    border-bottom: 1px solid $just-white;
+    background-color: $terminal-black;
+    border: 2px solid $terminal-green;
+    border-radius: 10px;
     text-align: center;
-    margin: 2px;
-    width: 150px;
-    height: 150px;
-    transition: transform 0.3s ease-in-out;
+    margin: 12px auto;
+    padding: 20px;
+    width: 100%;
+    // max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
+
+    img {
+        height: 60px;
+        width: 60px;
+        flex-shrink: 0;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1.2em;
+    }
 
     &:hover {
-        transform: scale(110%);
+        background-color: $light-black;
+        border-color: $just-white;
+        transform: translateX(5px);
     }
 }
 

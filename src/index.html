@@ -57,11 +57,11 @@
     <main class="container">
         <div class="hero">
             <div class="hero-image">
-                <img width="100px" height="auto" src="images/IMG_0992.jpg">
+                <img width="250px" height="auto" src="images/profile.jpg" alt="Steven Koerts" />
             </div>
             <div class="hero-content">
                 <h1>Steven Koerts</h1>
-                <p>Software Engineer, Programmer, Web Developer and Storyteller.</p>
+                <p>Software Engineer, Programmer, Web Developer, teacher and poet.</p>
             </div>
         </div>
         <h2 style="color:white">Tech Stack</h2>
@@ -95,10 +95,6 @@
             <div class="folder" onclick="toggleCard('open-mic')">
                 <img src="images/image.png" height="100px" width="100px" />
                 <h3>open_mic.jpg</h3>
-            </div>
-            <div class="folder" onclick="toggleCard('SDAM4LIFE')">
-                <img src="images/SDAM750-label_RGB-wit.png" height="100px" width="100px" />
-                <h3>SDAM4LIFE.png</h3>
             </div>
             <div class="folder" onclick="toggleCard('thoughts')">
                 <img src="images/folder.png" height="100px" width="100px" />
@@ -175,30 +171,6 @@
             </p>
         </div>
 
-        <div id="SDAM4LIFE" class="card">
-            <p>
-                <button class="back-btn" onclick="toggleCard('SDAM4LIFE')">
-                    <span>&#8617;</span>
-                </button>
-            </p>
-
-            <h2>Ode aan Schiedam</h2>
-            <p>
-                Ter gelegenheid van 750 jaar stadsrechten Schiedam heb ik een storytelling
-                platform gebouwd om zoveel mogelijk verhalen uit de stad te verzamelen.
-                Deel jouw verhaal met de stad en breng een mooie ode!
-            </p>
-
-            <p>
-                Bekijk de site op <a class="white-link" target="_blank"
-                    href="https://odeaanschiedam.nl">odeaanschiedam.nl</a>
-            </p>
-
-            <img class="responsive-image" src="images/SDAM750-label_RGB-wit.png" width="400px" height="auto" />
-            <p>
-            </p>
-        </div>
-
         <div id="thoughts" class="card">
             <p>
                 <button class="back-btn" onclick="toggleCard('thoughts')">
@@ -209,9 +181,9 @@
             <div class="white-line"></div>
 
             <section id="folders" class="content">
-                <div class="folder" onclick="toggleCard('blog1')">
-                    <img src="images/text.png" height="100px" width="100px" />
-                    <h3>blog1.txt</h3>
+                <div class="folder" onclick="toggleCard('SDAM4LIFE')">
+                    <img src="images/SDAM750-label_RGB-wit.png" height="100px" width="100px" />
+                    <h3>SDAM4LIFE.png</h3>
                 </div>
                 <div class="folder" onclick="toggleCard('func')">
                     <img src="images/541500.png" height="100px" width="100px" />
@@ -224,6 +196,10 @@
                 <div class="folder" onclick="toggleCard('tech-books')">
                     <img src="images/text.png" height="100px" width="100px" />
                     <h3>MyBooks.txt</h3>
+                </div>
+                <div class="folder" onclick="toggleCard('blog1')">
+                    <img src="images/text.png" height="100px" width="100px" />
+                    <h3>blog1.txt</h3>
                 </div>
             </section>
 
@@ -435,6 +411,35 @@
                 </p>
             </div>
 
+            <div id="SDAM4LIFE" class="card-nested">
+                <p>
+                    <button class="back-btn" onclick="toggleCard('SDAM4LIFE')">
+                        <span>&#8617;</span>
+                    </button>
+                </p>
+
+                <h2>Ode aan Schiedam</h2>
+                <p>
+                    Ter gelegenheid van 750 jaar stadsrechten Schiedam heb ik een storytelling
+                    platform gebouwd om zoveel mogelijk verhalen uit de stad te verzamelen.
+                    Deel jouw verhaal met de stad en breng een mooie ode!
+                </p>
+
+                <p>
+                    Bekijk de site op <a class="white-link" target="_blank"
+                        href="https://odeaanschiedam.nl">odeaanschiedam.nl</a>
+                </p>
+
+                <p>
+                    And for the techies reading this. The project is made with state of the art technologies. 
+                    This project gave me the liberty to expirment with Strapi headless CMS and Next.js.
+                </p>
+
+                <img class="responsive-image" src="images/SDAM750-label_RGB-wit.png" width="400px" height="auto" />
+                <p>
+                </p>
+            </div>
+
         </div>
 
         <div id="trash" class="card">
@@ -457,12 +462,12 @@
             </p>
 
             <p>
-                For instance this barcode scanner I wrote for <a style="color:white;" href="https://zelfzorg.nl"
-                    target="_blank">zelfzorg.nl</a>:
+                For instance this Force Directed Graph layouting algorithm using Freuchterman-Reingold that I wrote as
+                part of my graduation thesis.
             </p>
 
             <p>
-                <script src="https://gist.github.com/Steven24K/425efe000a797ef65f8838d00c909bbe.js"></script>
+                <script src="https://gist.github.com/Steven24K/c780927a81efac158fcd1ff3aca2d798.js"></script>
             </p>
         </div>
 
