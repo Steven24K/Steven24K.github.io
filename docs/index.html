@@ -37,16 +37,18 @@
         <div class="bar"></div>
     </button>
     <nav id="sidebar" class="sidebar">
-        <ul id="navbar" class="nav">
-            <li class="nav-item"><a href="/">🏠Home</a></li>
-            <li class="nav-item"><a onclick="toggleCard('bio')" href="#">📃Bio</a></li>
-            <li class="nav-item"><a href="mailto:s.koerts2@gmail.com">📨E-Mail</a></li>
-        </ul>
+        <div class="sidebar-header">
+            <h1>Recent logs</h1>
+            <i>I created a blog called log</i>
+        </div>
+        <ul id="navbar" class="nav"></ul>
         <div class="sidebar-footer">
             <ul>
                 <li><a href="https://github.com/Steven24K" target="_blank">Github - </a></li>
                 <li><a href="https://www.linkedin.com/in/steven-k-223aa3135/" target="_blank">Linkedin - </a></li>
-                <li><a href="mailto:s.koerts2@gmail.com" target="_blank">E-Mail</a></li>
+                <li><a href="mailto:s.koerts2@gmail.com" target="_blank">E-Mail - </a></li>
+                <li><a href="https://logs.stevenkoerts.nl/" target="_blank">Read logs</a></li>
+
             </ul>
         </div>
     </nav>
@@ -176,6 +178,10 @@
             <div class="white-line"></div>
 
             <section id="folders" class="content">
+                <div class="folder" onclick="toggleCard('log-blog')">
+                    <img src="/Notepad_WinXP.85511dab.webp" height="100px" width="100px">
+                    <h3>Log Blog - TODO: WIP!</h3>
+                </div>
                 <div class="folder" onclick="toggleCard('keep-learning')">
                     <img src="/image.fe047325.png" height="100px" width="100px">
                     <h3>keep-learning.jpg</h3>
@@ -205,6 +211,31 @@
                     <h3>blog1.txt</h3>
                 </div>
             </section>
+
+            <div id="log-blog" class="card-nested">
+                <p>
+                    <button class="back-btn" onclick="toggleCard('log-blog')">
+                        <span>&#8617;</span>
+                    </button>
+                </p>
+                <h1>Log Blog</h1>
+                <p>
+                    I created a blog called logs, get it?
+                    A collection of thoughts, concepts and ideas.
+                </p>
+                <p>
+                    <b>// TODO: WIP!</b><br>
+                    Don't wait until your ideas are finished, just share them.
+                    Put it on your TODO list and call it a work in progress. It's all
+                    part of the process. Enjoy it! Embrace it!
+                </p>
+                <p>
+                    Read all about it at:
+                    <a class="white-link" href="https://logs.stevenkoerts.nl" target="_blank">logs.stevenkoerts.nl</a>
+                    <br><br>
+                    The ideas are live on the internet. A website makes it real.
+                </p>
+            </div>
 
             <div id="keep-learning" class="card-nested">
                 <p>
@@ -238,14 +269,19 @@
                     <li><a class="white-link" target="_blank" href="https://jaarverslag.frieslandcampina.com/">jaarverslagfrieslandcampina.com</a></li>
                     <li><a class="white-link" target="_blank" href="https://vanoord.com">vanoord.com</a></li>
                     <li><a class="white-link" target="_blank" href="https://yukisoftware.com">yukisoftware.com</a></li>
-                    <li><a class="white-link" target="_blank" href="https://www.hellorider.com/">hellorider.com/</a></li>
+                    <li><a class="white-link" target="_blank" href="https://www.hellorider.com/">hellorider.com/</a>
+                    </li>
                     <li><a class="white-link" target="_blank" href="https://genderdiversiteitindeoverheid.nl/">genderdiversiteitindeoverheid.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.bs-group-sa.com/">B&S</a></li>
-                    <li><a class="white-link" target="_blank" href="https://careers.bs-group-sa.com/">B&S Careers</a></li>
+                    <li><a class="white-link" target="_blank" href="https://careers.bs-group-sa.com/">B&S Careers</a>
+                    </li>
                     <li><a class="white-link" target="_blank" href="https://eurozaken.nl/">eurozaken.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.werkenbijmiddin.nl/">werkenbijmiddin.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.beren.nl/">beren.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.refresco.nl/nl/">refresco.nl</a></li>
+                    <li><a class="white-link" target="_blank" href="https://www.hypotrust.nl">hypotrust.nl</a></li>
+                    <li><a class="white-link" target="_blank" href="https://www.clarianwonen.nl/">clarianwonen.nl</a>
+                    </li>
                     <li><a class="white-link" target="_blank" href="https://www.metagro.com/">metagro.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.dubbeldam.com/nl/">dubbeldam.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.gastronomixs.com/nl">gastronomixs.com</a></li>
@@ -255,7 +291,8 @@
                     <li><a class="white-link" target="_blank" href="https://www.timon.nl/">timon.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://www.movir.nl/">movir.nl</a></li>
                     <li><a class="white-link" target="_blank" href="https://koersvo.schoolprofielen.nl/#">koersvo.schoolprofielen.nl</a></li>
-                    <li><a class="white-link" target="_blank" href="https://www.viddadigital.com/">viddadigital.com</a></li>
+                    <li><a class="white-link" target="_blank" href="https://www.viddadigital.com/">viddadigital.com</a>
+                    </li>
                     <li><a class="white-link" target="_blank" href="https://www.hoppinger.com/nl">hoppinger.com</a></li>
                 </ul>
                 <h2>Community projects projects:</h2>

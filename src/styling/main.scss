@@ -22,8 +22,8 @@ body {
 .menu-button {
     z-index: 5;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 10px;
+    top: 10px;
     height: 50px;
     width: 50px;
     background-color: transparent;
@@ -70,9 +70,22 @@ body {
     height: 100vh;
     width: 50vw;
     min-width: 350px;
-    max-width: 500px;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
+
+    @media screen and (max-width: $mobile-width) {
+        width: 90vw;
+    }
+}
+
+.sidebar-header {
+    margin: 25px 50px;
+    text-underline-offset: 15px;
+
+    h1 {
+        padding-bottom: 15px;
+        text-decoration: underline;
+    }
 }
 
 .open {
@@ -80,8 +93,8 @@ body {
 }
 
 .nav {
-    margin: 25% 50px;
-    font-size: 3em;
+    margin: 0 50px;
+    font-size: 2.5em;
 }
 
 .nav-item {
@@ -258,7 +271,8 @@ body {
         padding-top: 25px;
     }
 
-    ul, ol {
+    ul,
+    ol {
         padding: 25px;
     }
 }
